@@ -14,5 +14,4 @@ Relatório de Objetivos do TCC – WhyBuy – p/ dia 05/09/17
 
 •	Trecho do BD que supre as necessidades dos objetivos atuais pronto; (Fílicio Rocha)
 
-•	API de integração do banco de dados (firebase). (Bruno Guimarães, Filicio Rocha)
 
