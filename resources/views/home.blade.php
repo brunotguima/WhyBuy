@@ -1,23 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="images/Banner-1.png"></a>
+    <a class="carousel-item" href="#two!"><img src="images/Banner-2.jpg"></a>
+  </div>
+        
+<script> $('.carousel.carousel-slider').carousel({fullWidth: true});</script>
 @endsection

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -11,19 +10,19 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <link href="{{ asset('css/materialize.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div id="app">
             <header class="page-header">
                 <nav class="nav-wrapper">
                     <div class='row'>
-                        <div class="col s3"><a href="/" class="brand-logo"><img src="images/logotipo.png" alt="Logotipo" height='64' width="120"></a></div>
+                        <div class="col s3"><a href="/" class="brand-logo"><img src="images/logotipo.png" alt="Logotipo" height='110' width="150"></a></div>
                         <div class="col s4"><ul id="nav-mobile" class="right hide-on-med-and-down">
                                 <li><a href="/">Inicio</a></li>
                                 <li><a href="/downloads">Download</a></li>
                                 <li><a href="/sobrenos">Sobre Nós</a></li>
                                 <li><a href="/suporte">Suporte</a></li>
-
                             </ul></div>
                         <div class="col s5 right-align">
                             @if (Auth::guest())
@@ -55,22 +54,26 @@
                 </nav>
             </header>
             <main>
-                @yield('content')
+                    @yield('content')
             </main>
             <footer class="page-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col l6 s12">
                             <h5 class="white-text">Projeto WhyBuy</h5>
-                            <p class="grey-text text-lighten-4">Blablabla</p>
+                            <p class="grey-text text-lighten-4">O projeto é desenvolvido por alunos do 3ºEMIA!</p>
                         </div>
                         <div class="col l4 offset-l2 s12">
-                            <h5 class="white-text">Blablabla</h5>
+                            <h5 class="white-text">Contatos Pessoais</h5>
                             <ul>
-                                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Bruno Guimarães</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Luana Caetano</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Filicio Rocha</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Gabriel Pereira</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Victor Hugo Martoni</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Gustavo Borborena</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Milena Callavaro</a></li>
+                                <li><a class="grey-text text-lighten-3" href="#!">Juliana Ferreira</a></li>
                             </ul>
                         </div>
                     </div>
