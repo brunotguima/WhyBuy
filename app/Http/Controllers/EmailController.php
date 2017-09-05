@@ -13,12 +13,13 @@ class EmailController extends Controller {
 
     public function postContato(Request $request) {
         $this->validate($request, [
-            'nome' => 'required',
+            'name' => 'required',
             'email' => 'required|email',
             'mensagem' => 'required']);
+
         
         $infoContato = array(
-            'nome' => $request->nome,
+            'name' => $request->name,
             'email' => $request->email,
             'mensagem' => $request->mensagem
         );

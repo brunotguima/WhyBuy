@@ -23,8 +23,11 @@ Route::get('/downloads', function (){
 Route::get('/sobrenos', function (){
     return view('/sobrenos');
 });
+Route::get('/sobrenos', function (){
+    return view('/sobrenos');
+});
 Route::get('suporte','EmailController@getContato');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index')->name('home');
