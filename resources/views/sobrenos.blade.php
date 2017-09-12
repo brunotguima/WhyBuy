@@ -67,7 +67,7 @@
                                                                         <h4>
                                                                             </span>
                                                                             <span class="black-text">                
-                                                                                <p class="center">Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas.Gosta de games, adora dança, etc.</p>
+                                                                                <p class="center">Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</p>
                                                                             </span>
                                                                             </div>
                                                                             </div>

@@ -29,7 +29,7 @@ class EmailController extends Controller {
             $mensagem->to('whybuy.tcc1@gmail.com','whybuytcc');
             $mensagem->subject($infoContato['mensagem']);
         });
-        Session::flash('message','OK');
+        return \Redirect::route('suporte.get')->withSucess(true);
     }
 
 }

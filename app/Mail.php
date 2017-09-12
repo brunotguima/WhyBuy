@@ -29,6 +29,6 @@ class Mail extends Mailable
     public function build()
     {
         return $this->from('whybuy.tcc1@gmail.com')
-        ->route('suporte.get1');
+        ->route('suporte.get');
     }
 }

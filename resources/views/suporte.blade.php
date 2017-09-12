@@ -27,9 +27,7 @@
                 </form>
             </div>
             </div>
-<script>
-    if(Session::has('mensagem')){
-    Materialize.toast('Sua mensagem foi enviada com sucesso e responderemos em breve!!', 4000);
-    }
-    </script>
+    @if(Session::has('sucess'))
+    <script>Materialize.toast('Sua mensagem foi enviada com sucesso e responderemos em breve!!', 4000);</script>
+    @endif
             @endsection
