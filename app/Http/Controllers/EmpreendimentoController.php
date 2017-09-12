@@ -14,6 +14,7 @@ class InformacoesController extends Controller
      */
     public function index()
     {
+        if()
         return view ('informacoes');
     }
 
