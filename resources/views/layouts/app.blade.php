@@ -25,14 +25,14 @@
                         <div class="col s8 right-align">
                             <div class="row">
                                 @if (Auth::guest())
-                                <a class='dropdown-button btn red darken-1'  data-activates='dropdown1'>Login ou Cadastro</a>
+                                <a class='dropdown-button btn orange darken-4'  data-activates='dropdown1'>Login ou Cadastro</a>
                                 <ul id='dropdown1' class='dropdown-content'>
                                     <li><a href="{{ route('login') }}">Entre</a></li>
                                     <li class="divider"></li>
                                     <li><a href="{{ route('register') }}">Cadastre-se</a></li>
                                 </ul>
                                 @else
-                                <a class='dropdown-button btn red darken-1' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
+                                <a class='dropdown-button btn orange darken-4' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
                                 <ul id='dropdown1' class='dropdown-content'>
                                     <li><a href="">
                                             Painel de Controle
