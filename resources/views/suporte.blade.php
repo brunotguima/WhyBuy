@@ -3,29 +3,33 @@
 @section('content')
 
 <div class="container">
-<h2 class="center"><span class="orange-text text-darken-2 center">Suporte</span><h2>
-        <div class="col s5 m5 l5">
-            <div class="container">
-                <h4 class="center">Envie um email com sugestões, criticas, e duvidas sobre o uso de nossa aplicação. Envie seu nome e mail para retornarmos sua mensagem. A equipe FOX developers agradece o contato.</h4>
+    <h2 class="center"><span class="orange-text text-darken-2 center">Suporte</span><h2>
+            <div class="col s5 m5 l5">
+                <div class="container">
+                    <h4 class="center">Envie um email com sugestões, criticas, e duvidas sobre o uso de nossa aplicação. Envie seu nome e mail para retornarmos sua mensagem. A equipe FOX developers agradece o contato.</h4>
+                </div>
             </div>
-        </div>
-        <div class="col s5 m5 l5">
-            <form action="{{route('suporte.post')}}" method="post">
-                {{csrf_field()}}
-                <label for="name" class="control-label">Nome Completo:</label>
-                <input id="name" type="text" class="form-control" name="name" placeholder="Insira seu nome aqui!" required autofocus>
+            <div class="col s5 m5 l5">
+                <form action="{{route('suporte.post')}}" method="post">
+                    {{csrf_field()}}
+                    <label for="name" class="control-label">Nome Completo:</label>
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Insira seu nome aqui!" required autofocus>
 
-                <label for="email" class="control-label">Email:</label>
-                <input id="email" type="text" class="form-control" name="email" placeholder="exemplo@exemplo.com" required autofocus>
+                    <label for="email" class="control-label">Email:</label>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="exemplo@exemplo.com" required autofocus>
 
-                <label for="mensagem" class="control-label">Digite sua mensagem:</label>
-                <textarea id="mensagem" type="text" class="materialize-textarea" name="mensagem" placeholder="Digite sua mensagem!" required autofocus></textarea>
+                    <label for="mensagem" class="control-label">Digite sua mensagem:</label>
+                    <textarea id="mensagem" type="text" class="materialize-textarea" name="mensagem" placeholder="Digite sua mensagem!" required autofocus></textarea>
 
-                <button type="submit" class="btn btn-primary orange darken-4">
-                    Enviar!
-                </button>
-            </form>
-        </div>
-</div>
-
-        @endsection
+                    <button type="submit" class="btn btn-primary orange darken-4">
+                        Enviar!
+                    </button>
+                </form>
+            </div>
+            </div>
+<script>
+    if(Session::has('mensagem')){
+    Materialize.toast('Sua mensagem foi enviada com sucesso e responderemos em breve!!', 4000);
+    }
+    </script>
+            @endsection

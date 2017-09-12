@@ -16,45 +16,44 @@
         <div id="app">
             <header class="page-header">
                 <nav class="nav-wrapper">
-                    <div class='row'>
-                        <div class="col s3"><a href="/" class="brand-logo"><img src="images/logotipo.png" alt="Logotipo" height='110' width="150"></a></div>
-                        <div class="col s4"><ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <div class='row'><a href="/" class="brand-logo center"><img src="images/logocabeca.png" alt="Logotipo" height='100' width="100"></a>
+                        <div class="col s4"><ul id="nav-mobile" class="left hide-on-med-and-down">
                                 <li><a href="/">Inicio</a></li>
-                                <li><a href="/downloads">Download</a></li>
                                 <li><a href="/sobrenos">Sobre Nós</a></li>
                                 <li><a href="/suporte">Suporte</a></li>
                             </ul></div>
-                        <div class="col s5 right-align">
-                            @if (Auth::guest())
-                            <a class='dropdown-button btn orange darken-4'  data-activates='dropdown1'>Login ou Cadastro</a>
-                            <ul id='dropdown1' class='dropdown-content'>
-                                <li><a href="{{ route('login') }}">Entre</a></li>
-                                <li class="divider"></li>
-                                <li><a href="{{ route('register') }}">Cadastre-se</a></li>
-                            </ul>
-                            @else
-                            <a class='dropdown-button btn orange darken-4' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
-                            <ul id='dropdown1' class='dropdown-content'>
-                                <li><a href="">
-                                        Painel de Controle
-                                    </a></li>
-                                <li><a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                        <div class="col s8 right-align">
+                            <div class="row">
+                                @if (Auth::guest())
+                                <a class='dropdown-button btn red darken-1'  data-activates='dropdown1'>Login ou Cadastro</a>
+                                <ul id='dropdown1' class='dropdown-content'>
+                                    <li><a href="{{ route('login') }}">Entre</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                                </ul>
+                                @else
+                                <a class='dropdown-button btn red darken-1' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
+                                <ul id='dropdown1' class='dropdown-content'>
+                                    <li><a href="">
+                                            Painel de Controle
+                                        </a></li>
+                                    <li><a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
     document.getElementById('logout-form').submit();">
-                                        Sair
-                                    </a></li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    {{ csrf_field() }}
-                                </form>
-                            </ul>
-                            </li>
-                            @endif
-                        </div>  
+                                            Sair
+                                        </a></li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </ul>
+                                @endif
+                            </div>  
+                        </div>
                     </div>
                 </nav>
             </header>
             <main>
-                    @yield('content')
+                @yield('content')
             </main>
             <footer class="page-footer">
                 <div class="container">
@@ -66,14 +65,14 @@
                         <div class="col l4 offset-l2 s12">
                             <h5 class="white-text">Contatos Pessoais</h5>
                             <ul>
-                                <li><a class="grey-text text-lighten-3" href="#!">Bruno Guimarães</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Luana Caetano</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Filicio Rocha</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Gabriel Pereira</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Victor Hugo Martoni</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Gustavo Borborena</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Milena Callavaro</a></li>
-                                <li><a class="grey-text text-lighten-3" href="#!">Juliana Ferreira</a></li>
+                                <li><a class="grey-text text-lighten-3"     href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
+                                <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
                             </ul>
                         </div>
                     </div>
@@ -81,7 +80,7 @@
                 <div class="footer-copyright">
                     <div class="container">
                         © 2017 WhyBuy - 3ºEmia - Etec Pedro Ferreira Alves
-                        <a class="grey-text text-lighten-4 right" href="#!">blablabla</a>
+                        <a class="grey-text text-lighten-4 right" href="#!">Baixe o App na Google Play!</a>
                     </div>
                 </div>            
             </footer>

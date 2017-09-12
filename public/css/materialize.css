@@ -2881,7 +2881,7 @@ ul.staggered-list li {
     margin-top: 10px; 
   padding-top: 20px;
   color: #fff;
-  background-color: #FF6900;
+  background-color: #F59A07;
 }
 
 .page-footer .footer-copyright {
@@ -4208,7 +4208,7 @@ nav ul a span.badge {
 
 nav {
   color: #fff;
-  background-color:#FF6900;
+  background-color:#F59A07;
   width: 100%;
   height: 56px;
   line-height: 56px;
@@ -4270,7 +4270,8 @@ nav .brand-logo {
   color: #fff;
   display: inline-block;
   font-size: 2.1rem;
-  padding: 0;
+  left:25px;
+  padding: 5px;
 }
 
 nav .brand-logo.center {
@@ -9386,4 +9387,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   stroke-width: 4;
   stroke-linecap: round;
   /*shape-rendering: crispEdges;*/
+}
+
+.div-margem-centro{
+  left: 50px;
+  border-right: 50px;
 }

@@ -17,17 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/downloads', function (){
-    return view('/downloads');
-});
 Route::get('/sobrenos', function (){
     return view('/sobrenos');
 });
-Route::get('/sobrenos', function (){
-    return view('/sobrenos');
-});
-Route::get('suporte','EmailController@getContato');
+Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
-
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('informacoes','InformacoesController');

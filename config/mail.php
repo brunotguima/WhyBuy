@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('whybuy.tcc1@gmail.com'),
+    'username' => env('MAIL_USERNAME','afe6ac9d8a60be'),
 
-    'password' => env('whybuytcc'),
+    'password' => env('MAIL_PASSWORD','fae31b156d0c99'),
 
     /*
     |--------------------------------------------------------------------------
