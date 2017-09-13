@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('/home');
 });
 
+Route::get('/home', function () {
+    return view('/home');
+});
+
 Auth::routes();
 
 Route::get('/sobrenos', function (){
@@ -23,3 +27,4 @@ Route::get('/sobrenos', function (){
 Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
 Route::resource('informacoes','InformacoesController');
+Route::resource('perfil','PerfilController');
