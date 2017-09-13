@@ -11,6 +11,7 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <link href="{{ asset('css/materialize.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
     <body>
         <div id="app">

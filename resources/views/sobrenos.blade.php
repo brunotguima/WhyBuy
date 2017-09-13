@@ -5,9 +5,9 @@
 
 <div class="container">
 
-    <h2 class="center"><span class="orange-text">Sobre Nós</span><h2>
+    <h2 class="center text-principal"><span class="orange-text">SOBRE NÓS</span><h2>
 
-            <h5><span class="black-text">
+            <h5 class="center"><span class="black-text text-principal">
                     O Why Buy é um projeto que teve início no primeiro semestre de 2017, suprindo o tema no nosso Trabalho de Conclusão de Curso para a ETEC Pedro Ferreira Alves, cuja a ideia foi desenvolvida pelo aluno e regente do projeto Bruno Guimarães. 
                     A equipe é constituída também por mais outros 7 membros que fazem parte de todo o desenvolvimento.</span><h5>
                     <br>
@@ -27,7 +27,7 @@
                                         </h4>
                                     </span>
                                     <span class="black-text">                
-                                        <p class="center">Curte programação e informática, pretende cursar Engenharia da Computação. Adora jogar games, pesquisar sobre a àrea, etc.</p>
+                                        <h5 class="center">Curte programação e informática, pretende cursar Engenharia da Computação. Curte jogar games, pesquisar sobre a àrea, etc.</h5>
                                     </span>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@
                                             <h4>
                                                 </span>
                                                 <span class="black-text">                
-                                                    <p class="center">Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</p>
+                                                    <h5 class="center">Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</h5>
                                                 </span>
                                                 </div>
                                                 </div>
@@ -67,7 +67,7 @@
                                                                         <h4>
                                                                             </span>
                                                                             <span class="black-text">                
-                                                                                <p class="center">Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</p>
+                                                                                <h5 class="center">Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</h5>
                                                                             </span>
                                                                             </div>
                                                                             </div>
@@ -87,7 +87,7 @@
                                                                                                     <h4>
                                                                                                         </span>
                                                                                                         <span class="black-text">                
-                                                                                                            <p class="center">Curte música, pretende cursar direito. Adora jogar games, etc.</p>
+                                                                                                            <h5 class="center">Curte música e pretende cursar direito. Adora jogar games, etc.</h5>
                                                                                                         </span>
                                                                                                         </div>
                                                                                                         </div>
@@ -107,7 +107,7 @@
                                                                                                                                 <h4>
                                                                                                                                     </span>
                                                                                                                                     <span class="black-text">                
-                                                                                                                                        <p class="center">Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</p>
+                                                                                                                                        <h5 class="center">Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</h5>
                                                                                                                                     </span>
                                                                                                                                     </div>
                                                                                                                                     </div>
@@ -127,7 +127,7 @@
                                                                                                                                                             <h4>
                                                                                                                                                                 </span>
                                                                                                                                                                 <span class="black-text">                
-                                                                                                                                                                    <p class="center">Curte basquete, pretende cursar ed.física. Adora jogar games, basquete, etc.</p>
+                                                                                                                                                                    <h5 class="center">Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</h5>
                                                                                                                                                                 </span>
                                                                                                                                                                 </div>
                                                                                                                                                                 </div>
@@ -147,7 +147,7 @@
                                                                                                                                                                                         <h4>
                                                                                                                                                                                             </span>
                                                                                                                                                                                             <span class="black-text">                
-                                                                                                                                                                                                <p class="center">Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</p>
+                                                                                                                                                                                                <h5 class="center">Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</h5>
                                                                                                                                                                                             </span>
                                                                                                                                                                                             </div>
                                                                                                                                                                                             </div>
@@ -167,7 +167,7 @@
                                                                                                                                                                                                         <h4>
                                                                                                                                                                                                         </span>
                                                                                                                                                                                                         <span class="black-text">                
-                                                                                                                                                                                                        <p class="center">Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</p>
+                                                                                                                                                                                                        <h5 class="center">Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</h5>
                                                                                                                                                                                                         </span>
                                                                                                                                                                                                         </div>
                                                                                                                                                                                                         </div>

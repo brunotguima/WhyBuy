@@ -9393,3 +9393,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   left: 50px;
   border-right: 50px;
 }
+
+.text-principal{
+  font-family: 'Roboto', serif;}
