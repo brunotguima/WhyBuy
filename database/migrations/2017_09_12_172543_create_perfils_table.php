@@ -15,6 +15,13 @@ class CreatePerfilsTable extends Migration
     {
         Schema::create('perfils', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome');
+            $table->string('cpf');
+            $table->string('rg');
+            $table->string('sexo');
+            $table->string('telUm');
+            $table->string('cell');
+            $table->date('dataNasc');
             $table->timestamps();
         });
     }
