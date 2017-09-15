@@ -14,7 +14,9 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        //
+        $perfils = Perfil::all();
+         return view('perfil.index', compact('perfils'));
+       
     }
 
     /**
@@ -24,7 +26,7 @@ class PerfilController extends Controller
      */
     public function create()
     {
-        //
+        return view('perfil.create');
     }
 
     /**
@@ -35,7 +37,13 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $perfil->nome->$request->nome;
+        $perfil->dataNasc->$request->dataNasc;
+        $perfil->rg->$request->rg;
+        $perfil->cpf->$request->cpf;
+        $perfil->sexo->$request->sexo;
+        $perfil->telUm->$request->telUm;
+        $perfil->cell->$request->cell;
     }
 
     /**

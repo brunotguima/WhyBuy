@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Informacoes;
+use App\Empreendimentos;
 use Illuminate\Http\Request;
 
-class InformacoesController extends Controller
+class EmpreendimentosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class InformacoesController extends Controller
      */
     public function index()
     {
-        return view ('informacoes');
+        return view ('empreendimentos');
     }
 
     /**
