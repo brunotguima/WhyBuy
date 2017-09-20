@@ -1,17 +1,13 @@
-Relatório de Objetivos do TCC – WhyBuy – p/ dia 05/09/17
+Entrega Final - Objetivos de Entrega do TCC
 
-•	Página inicial semi-pronta (com algumas imagens e informações genéricas à primeiro momento); (Luana Caetano, Gustavo)
+-Sistema de Cadastro de Perfil, Empreendimento, Promoções (Bruno Guimarães, Filicio Rocha);
+    ->Crud funcionando;
+    ->Implementação dos formulários por Ajax;
+-Remake do html e css (visual) (para melhorar experiência do usuário) (Luana Caetano, Victor Hugo, Gabriel Pereira, Gustavo Borborena);
 
-•	Página de Download semi-pronta (com direcionamentos de download não funcionais); (Victor Hugo, Gustavo)
+-->Aplicativo com mostra de lojas próximas ao usuário;
+     ->Filtragem de categorias de produtos;
+     ->Maps integrado.
 
-•	Pagina sobre nós pronta; (Gabriel Pereira, Milena, Juliana)
-
-•	Login funcional; (Bruno Guimarães, Luana Caetano, Victor Hugo)
-
-•	Cadastro funcional; (Bruno Guimarães, Luana Caetano, Victor Hugo)
-
-•	Página de suporte funcional (encaminhando emails); (Victor Hugo, Gustavo)
-
-•	Trecho do BD que supre as necessidades dos objetivos atuais pronto; (Fílicio Rocha)
 
 
