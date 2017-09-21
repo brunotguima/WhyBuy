@@ -8,7 +8,7 @@
                 <div class="panel-heading"><h1 class="center">Registro</h1></div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('perfil') }}">
                         {{ csrf_field() }}
 
                         <label for="name" class="col-md-4 control-label">Nome Completo</label>
