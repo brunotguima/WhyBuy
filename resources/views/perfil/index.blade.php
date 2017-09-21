@@ -52,13 +52,13 @@
                                             <button class="btn btn-danger">Apagar</button>
 
                                         </form>
-                                        <a href="/perfils/create" class="btn btn-primary">Cadastrar</a>
+                                       
                                     </td>
                                 </tr>
                                 @endforeach
                             </tbody>
                         </table>
-
+                         <a href="/perfils/create" class="btn btn-primary">Cadastrar</a>
 
                     </div>
                 </div>
