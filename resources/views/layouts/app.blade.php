@@ -35,8 +35,8 @@
                                 @else
                                 <a class='dropdown-button btn orange darken-4' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
                                 <ul id='dropdown1' class='dropdown-content'>
-                                    <li><a href="">
-                                            Painel de Controle
+                                    <li><a href="/perfil">
+                                            cadastro de Perfil
                                         </a></li>
                                     <li><a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
