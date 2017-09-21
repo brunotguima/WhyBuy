@@ -44,6 +44,8 @@ class PerfilController extends Controller
         $perfil->sexo->$request->sexo;
         $perfil->telUm->$request->telUm;
         $perfil->cell->$request->cell;
+        $perfil->save;
+        return redirect('perfil');
     }
 
     /**

@@ -58,7 +58,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                         <a href="/perfils/create" class="btn btn-primary">Cadastrar</a>
+                         <a href="/perfil/create" class="btn btn-primary">Cadastrar</a>
 
                     </div>
                 </div>
