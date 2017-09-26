@@ -12,10 +12,13 @@ class PerfilController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     public function __construct(){
+         $this->middleware('auth');
+     }
     public function index()
     {
-        $perfils = Perfil::all();
-         return view('perfil.index', compact('perfils'));
+        $mainPerfil = Perfil::table('perfil')->select('nome','dataNasc','rg','cpf','sexo','telUm','cell','image');
+         return view('perfil.index', compact('mainPerfil'));
        
     }
 
@@ -44,6 +47,7 @@ class PerfilController extends Controller
         $perfil->sexo->$request->sexo;
         $perfil->telUm->$request->telUm;
         $perfil->cell->$request->cell;
+        $perfil->
         $perfil->save;
         return redirect('perfil');
     }

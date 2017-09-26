@@ -31,3 +31,6 @@ Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
 Route::resource('informacoes','InformacoesController');
 Route::resource('perfil','PerfilController');
+Route::get('/teste', function(){
+    return view('/layouts/control_panel');
+});

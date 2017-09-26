@@ -1,18 +1,14 @@
-    @extends('layouts.app')
+    @extends('layouts.control_panel')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h1 class="page-header">
-                    Lista de Perfis
+                Seu Perfil
                 </h1>
-
-
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dados da tabela</div>
                     <div class="panel-body">
-
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -39,11 +35,11 @@
                                     <td>{{$perfil->telUm}}</td>
                                     <td>{{$perfil->cell}}</td>
                                     <td>
-                                        <a class="btn btn-primary" href="/perfils/{{$perfil->id}}/edit">
+                                        <a class="btn btn-primary" href="/perfil/{{$perfil->id}}/edit">
                                             Editar
                                         </a>
 
-                                        <form style="display: inline;" action="{{route('perfils.destroy', $perfil->id)}}" method="post">
+                                        <form style="display: inline;" action="{{route('perfil.destroy', $perfil->id)}}" method="post">
                                         
                                              {{csrf_field()}}
 

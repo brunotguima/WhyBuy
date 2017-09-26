@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.control_panel')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div class="panel-heading"><h1 class="center">Registro</h1></div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('perfil') }}">
+                    <form class="form-horizontal" method="POST" action="{{ route('perfil') }}" file ="true">
                         {{ csrf_field() }}
 
                         <label for="name" class="col-md-4 control-label">Nome Completo</label>
@@ -40,6 +40,10 @@
                         <label for="cell" class="col-md-4 control-label">Celular</label>
                         <div class="col-md-6">
                             <input id="cell" type="text" class="form-control" name="cell"required>
+                        </div>
+                        <label for="profile_image" class="col-md-4 control-label">Sua foto de Perfil</label>
+                        <div class="col-md-6">
+                        <input id="profile_image" type="file" class="form-control" name="profile_image">
                         </div>
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit" class="btn btn-primary orange darken-4">

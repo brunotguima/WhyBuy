@@ -34,6 +34,6 @@ class CreateEmpreendimentoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informacoes');
+        Schema::dropIfExists('Empreendimento');
     }
 }
