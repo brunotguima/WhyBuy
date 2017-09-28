@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Empreendimentos;
+use App\Empreendimento;
 use Illuminate\Http\Request;
 
-class EmpreendimentosController extends Controller
+class EmpreendimentoController extends Controller
 {
     /**
      * Display a listing of the resource.

@@ -26,11 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-     public function perfils(){
-return $this->hasOne('App/Perfil');
+
+     public function perfil(){
+        return $this->hasOne('App\Perfil');
 
     }
+
+    
     public function empreendimentos(){
-        return $this->hasMany('App/Empreendimento');
+        return $this->hasMany('App\Empreendimento');
     }
 }

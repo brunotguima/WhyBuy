@@ -1,9 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Perfil;
+use App\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Auth;
+use File;
+use Image;
 
 class PerfilController extends Controller
 {
@@ -17,7 +22,7 @@ class PerfilController extends Controller
      }
     public function index()
     {
-        $mainPerfil = Perfil::table('perfil')->select('nome','dataNasc','rg','cpf','sexo','telUm','cell','image');
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
          return view('perfil.index', compact('mainPerfil'));
        
     }
@@ -29,7 +34,9 @@ class PerfilController extends Controller
      */
     public function create()
     {
-        return view('perfil.create');
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        $mainUser = User::select('name','dateNasc','email')->find(Auth::user()->id);
+        return view('perfil.create', compact('mainUser','mainPerfil'));
     }
 
     /**
@@ -40,15 +47,20 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        $perfil->nome->$request->nome;
-        $perfil->dataNasc->$request->dataNasc;
-        $perfil->rg->$request->rg;
-        $perfil->cpf->$request->cpf;
-        $perfil->sexo->$request->sexo;
-        $perfil->telUm->$request->telUm;
-        $perfil->cell->$request->cell;
-        $perfil->
-        $perfil->save;
+        if($request->hasFile('image')){
+        $image = time().'.'.$request->image->getClientOriginalExtension();
+        $request->image->move(public_path('images\perfils'),$image);
+        }
+
+        $perfil = new Perfil();
+        $perfil->user_id = Auth::user()->id;
+        $perfil->rg = $request->rg;
+        $perfil->cpf = $request->cpf;
+        $perfil->sexo = $request->sexo;
+        $perfil->telUm = $request->telUm;
+        $perfil->cell = $request->cell;
+        $perfil->image = $image;
+        $perfil->save();
         return redirect('perfil');
     }
 

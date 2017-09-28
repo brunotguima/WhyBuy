@@ -5,20 +5,25 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading"><h1 class="center">Registro</h1></div>
+                <div class="panel-heading"><h1 class="center">Registre o perfil do seu Usuário</h1></div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('perfil') }}" file ="true">
+                    <form class="form-horizontal" method="POST" action="{{ route('perfil.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
-                        <label for="name" class="col-md-4 control-label">Nome Completo</label>
+                        <label for="name" class="col-md-4 control-label">Nome:</label>
                         <div class="col-md-6">
-                            <input id="name" type="text" class="form-control" name="name" placeholder="Insira seu nome aqui!" required autofocus>
+                            <p>{{$mainUser->name}}</p>
                         </div>
 
-                        <label for="dateNasc" class="col-md-4 control-label">Data de Nascimento</label>
+                        <label for="dateNasc" class="col-md-4 control-label">Data de Nascimento:</label>
                         <div class="col-md-6">
-                            <input id="dateNasc" type="date" class="form-control" name="dateNasc" required>
+                            <p>{{$mainUser->dateNasc}}</p>
+                        </div>
+
+                        <label for="email" class="col-md-4 control-label">Email:</label>
+                        <div class="col-md-6">
+                            <p>{{$mainUser->email}}</p>
                         </div>
 
                         <label for="sexo" class="col-md-4 control-label">Sexo</label>
@@ -41,9 +46,9 @@
                         <div class="col-md-6">
                             <input id="cell" type="text" class="form-control" name="cell"required>
                         </div>
-                        <label for="profile_image" class="col-md-4 control-label">Sua foto de Perfil</label>
+                        <label for="image" class="col-md-4 control-label">Sua foto de Perfil</label>
                         <div class="col-md-6">
-                        <input id="profile_image" type="file" class="form-control" name="profile_image">
+                        <input id="image" type="file" class="form-control" name="image">
                         </div>
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit" class="btn btn-primary orange darken-4">

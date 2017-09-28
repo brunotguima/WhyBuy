@@ -13,17 +13,20 @@
     </head>
     <body>
         <div id="app">
-            <header>
+                <div class="col l4">
+        <header>
              <ul id="slide-out" class="side-nav fixed">
     <li><div class="user-view">
       <div class="background">
         <img src="http://www.appm.pt/wp-content/uploads/2013/12/background.jpg">
       </div>
-      <img class="circle" src="asset('images/perfils' . $perfil->image)"></a>
-      <span class="white-text name">{{$user->name}}</span></a>
-      <span class="white-text email">{{$user->email}}</span></a>
+      @isset($mainPerfil->perfil->image)
+      <img class="circle" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}"></a>
+      @endisset
+      <span class="white-text name">{{$mainPerfil->name}}</span></a>
+      <span class="white-text email">{{$mainPerfil->email}}</span></a>
     </div></li>
-    <li><a href="perfil"><i class="material-icons">profile</i>Seu Perfil</a></li>
+    <li><a href="perfil"><i class="material-icons">person</i>Seu Perfil</a></li>
     <li><a href="#!">Second Link</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>
@@ -31,5 +34,13 @@
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-              @yield('content')
-</header>
+</header> 
+  </div>
+</div class="col l8 offset-l8 right">
+<main>
+
+<div class='container right'>
+@yield('content')
+</div>
+</main>
+</div>
