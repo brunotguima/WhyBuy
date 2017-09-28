@@ -23,6 +23,7 @@ class CreateEmpreendimentoTable extends Migration
             $table->string('estado');
             $table->string('ramoAtiv');
             $table->string('nomeFant');
+             $table->string('image'); 
             $table->timestamps();
         });
     }
