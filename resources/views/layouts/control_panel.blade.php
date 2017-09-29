@@ -21,13 +21,13 @@
         <img src="http://www.appm.pt/wp-content/uploads/2013/12/background.jpg">
       </div>
       @isset($mainPerfil->perfil->image)
-      <img class="circle" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}"></a>
+      <img class="circle responsive-img" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}"></a>
       @endisset
       <span class="white-text name">{{$mainPerfil->name}}</span></a>
       <span class="white-text email">{{$mainPerfil->email}}</span></a>
     </div></li>
     <li><a href="perfil"><i class="material-icons">person</i>Seu Perfil</a></li>
-    <li><a href="#!">Second Link</a></li>
+    <li><a href="empreendimento">Empreendimento</a></li>
     <li><div class="divider"></div></li>
     <li><a class="subheader">Subheader</a></li>
     <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
@@ -39,7 +39,7 @@
 </div class="col l8 offset-l8 right">
 <main>
 
-<div class='container right'>
+<div class='container'>
 @yield('content')
 </div>
 </main>
