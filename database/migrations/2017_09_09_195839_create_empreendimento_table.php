@@ -15,6 +15,8 @@ class CreateEmpreendimentoTable extends Migration
     {
         Schema::create('Empreendimento', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('perfil_id')->unsigned();
+            $table->foreign('perfil_id')->references('id')->on('perfils');
             $table->string('nomeEstab');
             $table->string('cnpj');
             $table->string('inscEst');

@@ -17,7 +17,7 @@
         <div id="app">
             <header class="page-header">
                 <nav class="nav-wrapper">
-                    <div class='row'><a href="/" class="brand-logo center"><img src="images/logocabeca.png" alt="Logotipo" height='100' width="100"></a>
+                    <div class='row'><a href="/" class="brand-logo center"><img src="../images/logocabeca.png" alt="logotipo"></a>
                         <div class="col s4"><ul id="nav-mobile" class="left hide-on-med-and-down">
                               <li><a href="/Inicio">Início</a></li>
                                 <li><a href="/sobrenos">Sobre Nós</a></li>

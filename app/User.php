@@ -33,7 +33,7 @@ class User extends Authenticatable
     }
 
     
-    public function empreendimentos(){
+    public function empreendimento(){
         return $this->hasMany('App\Empreendimento');
     }
 }

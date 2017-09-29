@@ -1,10 +1,16 @@
     @extends('layouts.control_panel')
 
 @section('content')
-
-<div class="col l4">
-<h2>Seu perfil</h2>
+<div class="container">
+<div class="row">
+<div class="col s11 right-align"><h2>Seu perfil</h2>
 </div>
-<div class="col l4">
+<div class="row">
+<div class="col s8 center">
+
+<h3></h3>
+
+</div>
+</div>
 </div>
     @endsection

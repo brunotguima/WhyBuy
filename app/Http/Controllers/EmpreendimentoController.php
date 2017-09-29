@@ -1,8 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Empreendimento;
+use App\User;
+use Auth;
+use App\Perfil;
 use Illuminate\Http\Request;
 
 class EmpreendimentoController extends Controller
@@ -12,12 +15,13 @@ class EmpreendimentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct(){
-         $this->middleware('auth');
-     }
+     //public function __construct(){
+       //  $this->middleware('auth');
+     //}
     public function index()
     {
-        return view ('empreendimentos.index',compact('empreendimentos'));
+         $mainPerfil = Perfil::with('empreendimento')->find(Auth::perfil()->id);
+        return view ('empreendimentos.index',compact('mainPerfil'));
     }
 
     /**
@@ -27,6 +31,7 @@ class EmpreendimentoController extends Controller
      */
     public function create()
     {
+                $mainPerfil = Perfil::with('empreendimento')->find(Perfil::perfil()->id);
         return view ('empreendimentos.create');
     }
 
@@ -43,6 +48,7 @@ class EmpreendimentoController extends Controller
         $request->image->move(public_path('images\empreendimento'),$image);
         }
         $empreendimentos = new Empreendimento();
+        $empreendimentos->perfil_id = Auth::perfil()->id;
         $empreendimentos ->nomeEstab = $request->nomeEstab;
         $empreendimentos ->cnpj = $request ->cnpj;
         $empreendimentos ->inscEst = $request ->inscEst;
