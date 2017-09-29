@@ -31,7 +31,7 @@ class EmpreendimentoController extends Controller
      */
     public function create()
     {
-                $mainPerfil = Perfil::with('empreendimento')->find(Auth::perfil()->id);
+                $mainPerfil = Perfil::with('empreendimento')->find(Perfil::perfil()->id);
         return view ('empreendimentos.create');
     }
 
