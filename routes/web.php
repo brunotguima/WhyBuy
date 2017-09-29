@@ -24,8 +24,11 @@ Auth::routes();
 Route::get('/sobrenos', function (){
     return view('/sobrenos');
 });
+Route::get('/empreendimentos', function (){
+    return view('/empreendimentos');
+});
 
 Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
-Route::resource('empreendimento','EmpreendimentoController');
+Route::resource('empreendimentos','EmpreendimentoController');
 Route::resource('perfil','PerfilController');

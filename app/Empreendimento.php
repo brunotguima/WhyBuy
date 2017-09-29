@@ -8,6 +8,5 @@ class Empreendimento extends Model
 {
   public function perfil(){
         return $this->hasOne('App\Perfil');
-
-    }
+  }
 }
