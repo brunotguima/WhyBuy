@@ -29,7 +29,7 @@
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h1 class="center light-orange-text"><i class="material-icons">file_download</i></h1>
+            <h1 class="center light-orange-text"><i class="material-icons">local_grocery_store</i></h1>
             <h4 class="center">Não é um site de compras online!</h4>
 
             <h5 class="light center">Se você gosta de comprar em lojas físicas, e procura sempre pelo mais barato, esse é o site pra você não perder mais tempo!</h5>

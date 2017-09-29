@@ -19,18 +19,20 @@
                 <nav class="nav-wrapper">
                     <div class='row'><a href="/" class="brand-logo center"><img src="images/logocabeca.png" alt="Logotipo" height='100' width="100"></a>
                         <div class="col s4"><ul id="nav-mobile" class="left hide-on-med-and-down">
-                                <li><a href="/">Inicio</a></li>
+                              <li><a href="/Inicio">Início</a></li>
                                 <li><a href="/sobrenos">Sobre Nós</a></li>
-                                <li><a href="/suporte">Suporte</a></li>
+                              <li><a href="/suporte">Suporte</a></li>
                             </ul></div>
                         <div class="col s8 right-align">
                             <div class="row">
                                 @if (Auth::guest())
+                                <ul id="nav-mobile" class="right hide-and-down">
                                 <a class='dropdown-button btn orange darken-4'  data-activates='dropdown1'>Login ou Cadastro</a>
                                 <ul id='dropdown1' class='dropdown-content'>
                                     <li><a href="{{ route('login') }}">Entre</a></li>
                                     <li class="divider"></li>
                                     <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                                    </ul>
                                 </ul>
                                 @else
                                 <a class='dropdown-button btn orange darken-4' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
@@ -81,7 +83,7 @@
                 <div class="footer-copyright">
                     <div class="container">
                         © 2017 WhyBuy - 3ºEmia - Etec Pedro Ferreira Alves
-                        <a class="grey-text text-lighten-4 right" href="#!">Baixe o App na Google Play!</a>
+                        <a class="grey-text text-lighten-4 right" href="#!">Experimente também em seu Smartphone!</a>
                     </div>
                 </div>            
             </footer>
