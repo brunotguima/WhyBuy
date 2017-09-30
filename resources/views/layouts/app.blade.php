@@ -8,7 +8,7 @@
         <title>{{ config('app.name', 'WhyBuy') }}</title>
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="{{ asset('js/materialize.js') }}"></script>
         <link href="{{ asset('css/materialize.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -19,9 +19,29 @@
                 <nav class="nav-wrapper">
                     <div class='row'><a href="/" class="brand-logo center"><img src="../images/logocabeca.png" alt="logotipo"></a>
                         <div class="col s4"><ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a></li>
+						
+	<ul id="slide-out" class="side-nav">
+    <!-- aqui é as informações do usuario -->
+    <li><div class="user-view">
+      <div class="background">
+        <!-- aqui tu bota uma imagem ou nao -->
+	<img src="{{ asset('images/victor.jpg')}}">
+      </div>
+	<!-- aqui são as informações do usuario -->
+      <a href="#!user"><img class="circle" src="{{ asset('images/fifi.jpg')}}"></a>
+      <a href="#!name"><span class="white-text name">Felicio</span></a>
+      <a href="#!email"><span class="white-text email">felicio@gmail.com</span></a>
+    </div></li>
+    <!-- aqui são os links -->
+    <li><a href="/home"><i class="material-icons">home</i>Home</a></li>
+  </ul>
+  
+  
                               <li><a href="/Inicio">Início</a></li>
                                 <li><a href="/sobrenos">Sobre Nós</a></li>
                               <li><a href="/suporte">Suporte</a></li>
+                              
                             </ul></div>
                         <div class="col s8 right-align">
                             <div class="row">
@@ -54,6 +74,10 @@
                         </div>
                     </div>
                 </nav>
+                
+
+
+
             </header>
             <main>
                 @yield('content')
@@ -88,5 +112,8 @@
                 </div>            
             </footer>
         </div>
+        <script>
+$(".button-collapse").sideNav();
+</script>
     </body>
 </html>
