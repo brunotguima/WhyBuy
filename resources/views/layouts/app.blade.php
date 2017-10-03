@@ -93,6 +93,7 @@
                         <h5 class="white-text">Projeto WhyBuy</h5>
                         <p class="grey-text text-lighten-4">O projeto é desenvolvido por alunos do 3ºEMIA!</p>
                     </div>
+<<<<<<< HEAD
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Contatos Pessoais</h5>
                         <ul>
@@ -105,6 +106,13 @@
                             <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
                             <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
                         </ul>
+=======
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2017 WhyBuy - 3ºEmia - Etec Pedro Ferreira Alves
+                        <a class="grey-text text-lighten-4 right" href="https://play.google.com/store/apps?hl=pt_BR">Experimente também em seu Smartphone!</a>
+>>>>>>> 99d136fe8c8445fb9003775b3e9cad869e7cd2be
                     </div>
                 </div>
             </div>
