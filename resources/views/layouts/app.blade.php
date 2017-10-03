@@ -107,7 +107,7 @@
                 <div class="footer-copyright">
                     <div class="container">
                         © 2017 WhyBuy - 3ºEmia - Etec Pedro Ferreira Alves
-                        <a class="grey-text text-lighten-4 right" href="#!">Experimente também em seu Smartphone!</a>
+                        <a class="grey-text text-lighten-4 right" href="https://play.google.com/store/apps?hl=pt_BR">Experimente também em seu Smartphone!</a>
                     </div>
                 </div>            
             </footer>
