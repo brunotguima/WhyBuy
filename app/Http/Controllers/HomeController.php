@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        return view('home', compact('mainPerfil'));
     }
 }
