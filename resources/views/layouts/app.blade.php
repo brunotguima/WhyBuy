@@ -35,13 +35,13 @@
                                         <!-- aqui são as informações do usuario -->
                                         @isset($mainPerfil->perfil->image)
                                         <img class="circle responsive-img" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}"></a>
-                                        @endisset @isset($mainPerfil->nome)
-                                        <a href="#!name"><span class="white-text name">{{$mainPerfil->name}}</span></a> @endisset
-                                        @empty($mainPerfil->nome)
+                                        @endisset 
+                                        @isset($mainPerfil->name)
+                                        <a href="#!name"><span class="white-text name">{{$mainPerfil->name}}</span></a> 
+                                        <a href="#!email"><span class="white-text email">{{$mainPerfil->email}}</span></a>                                       
+                                        @endisset 
+                                        @empty($mainPerfil->name)
                                         <a href="{{route('login')}}"><span class="white-text">Faça o Login</span>
-                                        @endempty
-                                        @isset($mainPerfil->email)
-                                        <a href="#!email"><span class="white-text email">{{$mainPerfil->email}}</span></a>                                        @endisset @empty($mainPerfil->email)
                                         <a href="{{route('register')}}"><span class="white-text">Ou registre-se</span>
                                         @endempty
     </div></li>
@@ -49,35 +49,17 @@
     <li><a href="/"><i class="material-icons">home</i>Home</a></li>
                                 <li><a href="/sobrenos"><i class="material-icons">group</i>Sobre Nós</a></li>
                                 <li><a href="/suporte"><i class="material-icons">contact_mail</i>Suporte</a></li>
+                                @isset($mainPerfil)
+                                        <a href="perfil"><span class="white-text email">{{$mainPerfil->email}}</span></a>                                       
+                                        @endisset 
                             </ul>
                         </ul>
                         </div>
                         <div class="col s8 right-align">
                             <div class="row">
-                                @if (Auth::guest())
                                 <ul id="nav-mobile" class="right hide-and-down">
-                                    <a class='dropdown-button btn orange darken-4' data-activates='dropdown1'>Login ou Cadastro</a>
-                                    <ul id='dropdown1' class='dropdown-content'>
-                                        <li><a href="{{ route('login') }}">Entre</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="{{ route('register') }}">Cadastre-se</a></li>
-                                    </ul>
+                                    <a class='dropdown-button btn orange darken-4' data-activates='dropdown1'>Acesse o App!</a>
                                 </ul>
-                                @else
-                                <a class='dropdown-button btn orange darken-4' href='#' data-activates='dropdown1'>Olá {{ Auth::user()->name }}!</a>
-                                <ul id='dropdown1' class='dropdown-content'>
-                                    <li><a href="/perfil">
-                                            cadastro de Perfil
-                                        </a></li>
-                                    <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
-    document.getElementById('logout-form').submit();">
-                                            Sair
-                                        </a></li>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </ul>
-                                @endif
                             </div>
                         </div>
                     </div>
