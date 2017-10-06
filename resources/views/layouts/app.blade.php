@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <div id="app">
         <header class="page-header">
             <nav class="nav-wrapper">
@@ -30,7 +31,7 @@
                                     <div class="user-view">
                                         <div class="background">
                                             <!-- aqui tu bota uma imagem ou nao -->
-                                            <img src="{{ asset('images/victor.jpg')}}">
+                                            <img src="{{ asset('images/laranja.jpg')}}">
                                         </div>
                                         <!-- aqui são as informações do usuario -->
                                         @isset($mainPerfil->perfil->image)
@@ -46,21 +47,30 @@
                                         @endempty
     </div></li>
     <!-- aqui são os links -->
-    <li><a href="/"><i class="material-icons">home</i>Home</a></li>
+    <li><a href="/"><i class="material-icons">home</i>Página Inicial</a></li>
                                 <li><a href="/sobrenos"><i class="material-icons">group</i>Sobre Nós</a></li>
                                 <li><a href="/suporte"><i class="material-icons">contact_mail</i>Suporte</a></li>
+                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
+    document.getElementById('logout-form').submit();"> <i class="material-icons">cancel</i>
+                                            Sair
+                                        </a></li>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
                                 @isset($mainPerfil)
-                                        <a href="perfil"><span class="white-text email">{{$mainPerfil->email}}</span></a>                                       
+                                        <a href="perfil"><i class="material-icons">contact_mail</i><span class="black-text email">{{$mainPerfil->email}}</span></a>                                       
                                         @endisset 
                             </ul>
                         </ul>
                         </div>
-                        <div class="col s8 right-align">
-                            <div class="row">
-                                <ul id="nav-mobile" class="right hide-and-down">
-                                    <a class='dropdown-button btn orange darken-4' data-activates='dropdown1'>Acesse o App!</a>
+                        <nav>
+                            <div class="nav-wrapper">
+                                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                    <li><a class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
+                                    
                                 </ul>
                             </div>
+                        </nav>
                         </div>
                     </div>
             </nav>
