@@ -2145,8 +2145,13 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+ @font-face {
+  font-family: Roboto;
+  src: url('https://fonts.googleapis.com/css?family=Roboto:300  ');
+ }
+
 html {
-  font-family: 'Roboto-Thin', sans-serif;
+  font-family: 'Roboto', Arial;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -2159,6 +2164,8 @@ html {
  */
 body {
   margin: 0;
+  font-family:'Roboto',Arial;
+  background:url(http://divulgardinheiro.com/wp-content/uploads/2016/07/background-amarelo.jpg);
 }
 
 /* HTML5 display definitions
@@ -4482,6 +4489,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto';
   font-weight: 400;
   line-height: 1.1;
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use App\Perfil;
 use App\User;
@@ -17,14 +18,14 @@ class PerfilController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct(){
-         $this->middleware('auth');
-     }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
          return view('perfil.index', compact('mainPerfil'));
-       
     }
 
     /**
@@ -35,8 +36,8 @@ class PerfilController extends Controller
     public function create()
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        $mainUser = User::select('name','dateNasc','email')->find(Auth::user()->id);
-        return view('perfil.create', compact('mainUser','mainPerfil'));
+        $mainUser = User::select('name', 'dateNasc', 'email')->find(Auth::user()->id);
+        return view('perfil.create', compact('mainUser', 'mainPerfil'));
     }
 
     /**
@@ -47,9 +48,9 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('image')){
-        $image = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images\perfils'),$image);
+        if ($request->hasFile('image')) {
+            $image = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\perfils'), $image);
         }
 
         $perfil = new Perfil();
@@ -83,7 +84,7 @@ class PerfilController extends Controller
      */
     public function edit(Perfil $perfil)
     {
-        //
+        return view ("perfil.edit", compact('perfil'));
     }
 
     /**
@@ -95,7 +96,15 @@ class PerfilController extends Controller
      */
     public function update(Request $request, Perfil $perfil)
     {
-        //
+        if ($request->hasFile('image')) {
+            $image = time().'.'.$request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images\perfils'), $image);
+        }
+        $perfil->image = $image;
+        $perfil->telUm = $request->telUm;
+        $perfil->cell = $request->cell;
+        $perfil->save();
+        return redirect('perfil');
     }
 
     /**

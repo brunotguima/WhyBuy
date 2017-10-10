@@ -14,10 +14,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -26,13 +22,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        if (Auth::check()){
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        }
         return view('home', compact('mainPerfil'));
     }
 
     public function sobrenos()
     {
+        if (Auth::check()){
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        }
         return view ('sobrenos', compact('mainPerfil'));
     }
 
