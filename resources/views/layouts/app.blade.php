@@ -94,14 +94,14 @@
                         
                         <ul>
                         <div class="row">
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
-                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
                         </ul>
                         </div>
                     </div>
