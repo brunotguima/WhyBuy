@@ -40,7 +40,8 @@
 @else
 <br>
 <div class="col s12 center">
-            <h3 class="center"><span class="black-text">Você ainda não possui cadastro no seu perfil, complete-o.</span></h3>
+            <h4 class="center"><span class="orange-text">Você ainda não possui cadastro no seu perfil, complete-o.</span></h4>
+            <br>
             <button class="btn waves-effect deep-orange" onClick="window.location.href='perfil/create'">Editar o Perfil</button>
 </div>
 <br>

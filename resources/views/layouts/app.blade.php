@@ -84,30 +84,33 @@
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
-                        <h5 class="white-text">Projeto WhyBuy</h5>
+                        <h5 class="center-align" class="white-text">Projeto WhyBuy</h5>
                         <li class="divider"></li>
-                        <p class="grey-text text-lighten-4">O projeto é desenvolvido por alunos do 3ºEMIA!</p>
+                        <p class="center-align" class="grey-text text-lighten-4">O projeto é desenvolvido por alunos do 3ºEMIA!</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Contatos Pessoais</h5>
+                        <h5 class="center-align" class="white-text" >Contato</h5>
                         <li class="divider"></li>
+                        
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
+                        <div class="row">
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
+                            <li><a class="col s6" class="grey-text text-lighten-3" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
                         </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="footer-copyright">
                 <div class="container">
                     © 2017 WhyBuy - 3ºEmia - Etec Pedro Ferreira Alves
-                    <a class="grey-text text-lighten-4 right" href="#!">Experimente também em seu Smartphone!</a>
+                    <a class="grey-text text-lighten-4 right" href="#!">Experimente em seu Smartphone!</a>
                 </div>
             </div>
         </footer>
