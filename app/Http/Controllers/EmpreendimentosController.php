@@ -2,26 +2,26 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
-use App\Empreendimento;
+use App\Empreendimentos;
 use App\User;
 use Auth;
 use App\Perfil;
 use Illuminate\Http\Request;
 
-class EmpreendimentoController extends Controller
+class EmpreendimentosController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-     //public function __construct(){
-       //  $this->middleware('auth');
-     //}
+     public function __construct(){
+      $this->middleware('auth');
+     }
     public function index()
     {
-         $mainPerfil = Perfil::with('empreendimento')->find(Auth::perfil()->id);
-        return view ('empreendimentos.index',compact('mainPerfil'));
+    $empreendimentos = DB::table('users')->where('id','id')->get();
+         return view ('empreendimentos.index',compact('empreendimentos'));
     }
 
     /**
@@ -31,7 +31,7 @@ class EmpreendimentoController extends Controller
      */
     public function create()
     {
-                $mainPerfil = Perfil::with('empreendimento')->find(Perfil::perfil()->id);
+        $empreendimentos = User::with('empreendimentos')->find(User::user()->id);
         return view ('empreendimentos.create');
     }
 
@@ -45,7 +45,7 @@ class EmpreendimentoController extends Controller
     {
         if($request->hasFile('image')){
         $image = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images\empreendimento'),$image);
+        $request->image->move(public_path('images\empreendimentos'),$image);
         }
         $empreendimentos = new Empreendimento();
         $empreendimentos->perfil_id = Auth::perfil()->id;
@@ -59,7 +59,7 @@ class EmpreendimentoController extends Controller
         $empreendimentos ->nomeFant = $request ->nomeFant;
         $empreendimentos ->image = $image;
         $empreendimentos -> save();
-        return redirect('empreendimentos');
+        return redirect('empreendimentos',compact('empreendimentos'));
     }
 
     /**

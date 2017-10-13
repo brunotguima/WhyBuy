@@ -47,9 +47,9 @@
                         <div class="col-md-6">
                             <input id="nomeFant" type="text" class="form-control" name="nomeFant"required>
                         </div>
-                        <label for="image" class="col-md-4 control-label">Sua foto de Perfil</label>
+                        <label for="image" class="col-md-4 control-label">Empreendimento Foto</label>
                         <div class="col-md-6">
-                        <input id="image" type="file" class="form-control" name="image">
+                        <input id="EmpImage" type="file" class="form-control" name="image">
                         </div>
                         <div class="col-md-6 col-md-offset-4">
                             <button type="submit" class="btn btn-primary orange darken-4">

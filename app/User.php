@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use App\Empreendimentos;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -33,7 +34,7 @@ class User extends Authenticatable
     }
 
     
-    public function empreendimento(){
-        return $this->hasMany('App\Empreendimento');
+    public function empreendimentos(){
+        return $this->hasOne('App\Empreendimentos');
     }
 }

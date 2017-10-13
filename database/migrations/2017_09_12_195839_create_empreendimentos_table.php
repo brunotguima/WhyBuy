@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEmpreendimentoTable extends Migration
+class CreateEmpreendimentosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateEmpreendimentoTable extends Migration
      */
     public function up()
     {
-        Schema::create('empreendimento', function (Blueprint $table) {
+        Schema::create('empreendimentos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('perfil_id')->unsigned();
-            $table->foreign('perfil_id')->references('id')->on('perfils');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('nomeEstab');
             $table->string('cnpj');
             $table->string('inscEst');
@@ -25,7 +25,7 @@ class CreateEmpreendimentoTable extends Migration
             $table->string('estado');
             $table->string('ramoAtiv');
             $table->string('nomeFant');
-            $table->string('image'); 
+            $table->string('EmpImage'); 
             $table->timestamps();
         });
     }
@@ -37,6 +37,6 @@ class CreateEmpreendimentoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Empreendimento');
+        Schema::dropIfExists('Empreendimentos');
     }
 }
