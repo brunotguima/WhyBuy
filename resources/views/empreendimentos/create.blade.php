@@ -1,4 +1,4 @@
-@extends('layouts.control_panel')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div class="panel-heading"><h1 class="center">Registro de Empreendimento </h1></div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('empreendimento.store') }}" enctype="multipart/form-data">
+                    <form class="form-horizontal" method="POST" action="{{ route('empreendimentos.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <label for="name" class="col-md-4 control-label">Nome do Estabelecimento:</label>

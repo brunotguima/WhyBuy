@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\DB;
 use App\Empreendimentos;
 use App\User;
 use Auth;
-use App\Perfil;
+use Image;
 use Illuminate\Http\Request;
 
 class EmpreendimentosController extends Controller
@@ -20,7 +20,7 @@ class EmpreendimentosController extends Controller
      }
     public function index()
     {
-    $empreendimentos = DB::table('users')->where('id','id')->get();
+    $empreendimentos = DB::table('users')->where('id','auth')->get();
          return view ('empreendimentos.index',compact('empreendimentos'));
     }
 
@@ -31,7 +31,7 @@ class EmpreendimentosController extends Controller
      */
     public function create()
     {
-        $empreendimentos = User::with('empreendimentos')->find(User::user()->id);
+//        $empreendimentos = User::with('user')->find(User::user()->id);
         return view ('empreendimentos.create');
     }
 
@@ -47,8 +47,8 @@ class EmpreendimentosController extends Controller
         $image = time().'.'.$request->image->getClientOriginalExtension();
         $request->image->move(public_path('images\empreendimentos'),$image);
         }
-        $empreendimentos = new Empreendimento();
-        $empreendimentos->perfil_id = Auth::perfil()->id;
+        $empreendimentos = new Empreendimentos();
+        $empreendimentos->user_id = Auth::user()->id;
         $empreendimentos ->nomeEstab = $request->nomeEstab;
         $empreendimentos ->cnpj = $request ->cnpj;
         $empreendimentos ->inscEst = $request ->inscEst;
@@ -57,7 +57,7 @@ class EmpreendimentosController extends Controller
         $empreendimentos ->estado = $request ->estado;
         $empreendimentos ->ramoAtiv = $request ->ramoAtiv;
         $empreendimentos ->nomeFant = $request ->nomeFant;
-        $empreendimentos ->image = $image;
+        $empreendimentos ->EmpImage = $request ->EmpImage;
         $empreendimentos -> save();
         return redirect('empreendimentos',compact('empreendimentos'));
     }
