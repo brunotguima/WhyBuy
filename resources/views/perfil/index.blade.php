@@ -40,7 +40,7 @@
 @else
 <br>
 <div class="col s12 center">
-  <i class="large material-icons orange">sentiment_very_dissatisfied</i>
+  <i class="large material-icons">sentiment_very_dissatisfied</i>
             <h4 class="center"><span class="orange-text">Você ainda não possui cadastro no seu perfil, complete-o.</span></h4>
             <br>
             <button class="btn waves-effect deep-orange" onClick="window.location.href='perfil/create'">Editar o Perfil</button>

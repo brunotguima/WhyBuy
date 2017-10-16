@@ -20,8 +20,9 @@ class EmpreendimentosController extends Controller
      }
     public function index()
     {
-    $empreendimentos = DB::table('users')->where('id','auth')->get();
-         return view ('empreendimentos.index',compact('empreendimentos'));
+    $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+    $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
+         return view ('empreendimentos.index',compact('empreendimentos','mainPerfil'));
     }
 
     /**
@@ -43,23 +44,35 @@ class EmpreendimentosController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('image')){
-        $image = time().'.'.$request->image->getClientOriginalExtension();
-        $request->image->move(public_path('images\empreendimentos'),$image);
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        if($request->hasFile('EmpImage')){
+        $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
+        $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
         }
-        $empreendimentos = new Empreendimentos();
-        $empreendimentos->user_id = Auth::user()->id;
-        $empreendimentos ->nomeEstab = $request->nomeEstab;
-        $empreendimentos ->cnpj = $request ->cnpj;
-        $empreendimentos ->inscEst = $request ->inscEst;
-        $empreendimentos ->cep = $request ->cep;
-        $empreendimentos ->cidade = $request ->cidade;
-        $empreendimentos ->estado = $request ->estado;
-        $empreendimentos ->ramoAtiv = $request ->ramoAtiv;
-        $empreendimentos ->nomeFant = $request ->nomeFant;
-        $empreendimentos ->EmpImage = $request ->EmpImage;
-        $empreendimentos -> save();
-        return redirect('empreendimentos',compact('empreendimentos'));
+        $teste = DB::table('empreendimentos')->where('nomeEstab','=','$request->nomeEstab')
+        ->orWhere('cnpj','=','$request->cnpj');
+        if($teste != null){
+            $errorMessage = true; 
+            $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
+            return view('empreendimentos.index',compact('empreendimentos','mainPerfil','errorMessage'));
+        }else{
+            $empreendimentos = new Empreendimentos();
+            $empreendimentos->user_id = Auth::user()->id;
+            $empreendimentos->nomeEstab = $request->nomeEstab;
+            $empreendimentos->cnpj = $request ->cnpj;
+            $empreendimentos->inscEst = $request ->inscEst;
+            $empreendimentos->cep = $request ->cep;
+            $empreendimentos->cidade = $request ->cidade;
+            $empreendimentos->estado = $request ->estado;
+            $empreendimentos->ramoAtiv = $request ->ramoAtiv;
+            $empreendimentos->nomeFant = $request ->nomeFant;
+            $empreendimentos->EmpImage = $EmpImage;
+            $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
+            $empreendimentos-> save();
+            unset($empreendimentos);
+            $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
+            return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
+        }
     }
 
     /**
@@ -105,5 +118,10 @@ class EmpreendimentosController extends Controller
     public function destroy(Empreendimentos $empreendimentos)
     {
         //
+    }
+    public function criar_slug($nomeEstab){
+        $pre = ['ã','á','â','ê','é','í','õ','ô','ó','ú',' '];
+        $pos = ['a','a','a','e','e','i','o','o','o','u','-'];
+        return str_replace($pre,$pos,mb_strtolower($nomeEstab));
     }
 }
