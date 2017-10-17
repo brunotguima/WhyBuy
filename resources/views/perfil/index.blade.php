@@ -5,7 +5,7 @@
     <div class="row">
                 <h3 class="center"><span class="orange-text">SUAS INFORMAÇÕES</span></h3>
         </div>
-        @if ($mainPerfil->perfil != null)
+      @if ($mainPerfil->perfil != null)
 <div class="row">
 <div class="col s4 center">
 </br>
