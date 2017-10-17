@@ -45,15 +45,13 @@
     </div>
 </li>
     <!-- aqui são os links -->
-    <li>
-        <a href="/"><i class="material-icons">home</i>Página Inicial</a>
-    </li>
+                                <li><a href="/"><i class="material-icons">home</i>Página Inicial</a></li>
                                 <li><a href="/sobrenos"><i class="material-icons">group</i>Sobre Nós</a></li>
                                 <li><a href="/suporte"><i class="material-icons">contact_mail</i>Suporte</a></li>
                                 <li class="divider"></li>
-                                @isset($mainPerfil)
-                                <li><a href="perfil"><i class="material-icons">person</i>Seu Perfil</a></li>                                       
-                                @endisset 
+                                @if (Auth::check()) 
+                                <li><a href="perfil"><i class="material-icons">person</i>Seu Perfil</a></li>     
+                                <li><a href="empreendimentos"><i class="material-icons">shopping_basket</i>Seus Empreendimentos</a></li>                               
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
     document.getElementById('logout-form').submit();"> <i class="material-icons">cancel</i>
                                             Sair
@@ -61,7 +59,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
-                                
+                                @endif
                             </ul>
                         </ul>
                         </div>
