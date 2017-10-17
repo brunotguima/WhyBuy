@@ -9,17 +9,18 @@
 </div>
 <div class="row">
 <div class="col s12 center">
-@empty($empreendimentos->nomeEstab)
+@if($empreendimentos != null)
   <i class="large material-icons">sentiment_very_dissatisfied</i>
             <h4 class="center"><span class="orange-text">Você ainda não possui um empreendimento cadastrado.</span></h4>
-            @endempty
-            @isset($empreendimentos->nomeEstab)
+            @else
 @foreach ($empreendimentos as $e)
         <div class="col s6 m4 center">
           <div class="card">
+          @if ($empreendimentos->EmpImage != null)
             <div class="card-image">
               <img src="{{asset('/images/empreendimentos')}}/{{$e->EmpImage}}"> 
             </div>
+            @endif
             <div class="card-content">
               <span class="card-title black-text center">{{$e->nomeEstab}}</span>
               <span>CNPJ:</span><p>{{$e->cnpj}}</p>
@@ -36,7 +37,7 @@
           </div>
         </div>
 @endforeach
-@endisset
+@endif
       </div>
   </div>
   @isset($errorMessage)
