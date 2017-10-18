@@ -84,7 +84,7 @@ class PerfilController extends Controller
      */
     public function edit(Perfil $perfil)
     {
-        return view ("perfil.edit", compact('perfil'));
+        return view ("perfil.edit", compact('mainPerfil'));
     }
 
     /**
