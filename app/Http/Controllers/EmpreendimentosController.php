@@ -50,13 +50,6 @@ class EmpreendimentosController extends Controller
         $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
         $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
         }
-        /*$teste = DB::table('empreendimentos')->where('nomeEstab', $request->nomeEstab)
-        ->orWhere('cnpj', $request->cnpj)->count();
-        if($teste >= 1){
-            $errorMessage = true; 
-            $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
-            return view('empreendimentos.index',compact('empreendimentos','mainPerfil','errorMessage'));
-        }else{ */
             $empreendimentos = new Empreendimentos();
             $empreendimentos->user_id = Auth::user()->id;
             $empreendimentos->nomeEstab = $request->nomeEstab;
@@ -67,15 +60,13 @@ class EmpreendimentosController extends Controller
             $empreendimentos->estado = $request ->estado;
             $empreendimentos->ramoAtiv = $request ->ramoAtiv;
             $empreendimentos->nomeFant = $request ->nomeFant;
-            if($request->hasFile('EmpImage')){
             $empreendimentos->EmpImage = $EmpImage;
-            }
             $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
             $empreendimentos-> save();
             unset($empreendimentos);
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
-        // }
+        
     }
 
     /**
