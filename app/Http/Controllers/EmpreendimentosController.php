@@ -117,7 +117,7 @@ class EmpreendimentosController extends Controller
      */
     public function destroy(Empreendimentos $empreendimentos)
     {
-         $empreendimentos->delete();
+        $empreendimentos->delete();
         return redirect('empreendimentos');
     }
     
