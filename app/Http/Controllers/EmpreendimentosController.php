@@ -46,7 +46,14 @@ class EmpreendimentosController extends Controller
     public function store(Request $request)
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        if($request->hasFile('EmpImage')){
+        $testeNotRepeat = DB::table('empreendimentos')->where('nomeEstab', $request->nomeEstab)
+        ->orWhere('cnpj',$request->cnpj)->count();
+        if($testeNotRepeat >= 1) {
+            $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
+            $errorMessage = true;
+            return view('empreendimentos.index',compact('empreendimentos','mainPerfil','errorMessage'));
+        }else{
+        if($request->hasImage('EmpImage')){
         $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
         $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
         }
@@ -66,9 +73,8 @@ class EmpreendimentosController extends Controller
             unset($empreendimentos);
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
-        
     }
-
+}
     /**
      * Display the specified resource.
      *

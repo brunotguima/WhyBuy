@@ -11,7 +11,7 @@
 </br>
 <img class="circle" width="100" height="100" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}">
 <h5 class="orange-text">{{$mainPerfil->name}}</h5>
-<button class="btn waves-effect deep-orange" onClick="window.location.href='perfil/edit'">Editar o Perfil</button>
+<button class="btn waves-effect deep-orange" onClick="window.location.href='/perfil/edit'">Editar o Perfil</button>
 </div>
 </br>
     <div class="col s8 center">

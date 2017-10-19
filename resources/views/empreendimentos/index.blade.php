@@ -9,10 +9,11 @@
 </div>
 <div class="row">
 <div class="col s12 center">
-@if($empreendimentos == null)
+@empty($empreendimentos)
   <i class="large material-icons">sentiment_very_dissatisfied</i>
             <h4 class="center"><span class="orange-text">Você ainda não possui um empreendimento cadastrado.</span></h4>
-            @else
+            @endempty
+@isset($empreendimentos)
 @foreach ($empreendimentos as $e)
         <div class="col s6 m4 center">
           <div class="card">
@@ -23,13 +24,13 @@
 
             <div class="card-content">
               <span class="card-title black-text center">{{$e->nomeEstab}}</span>
-              <span>CNPJ:</span><p>{{$e->cnpj}}</p>
+             <!-- <span>CNPJ:</span><p>{{$e->cnpj}}</p>
               <span>Inscrição Estadual:</span><p>{{$e->inscEst}}</p>
               <span>CEP:</span><p>{{$e->cep}}</p>
               <span>Cidade:</span><p>{{$e->cidade}}</p>
               <span>Estado:</span><p>{{$e->estado}}</p>
               <span>Ramo de Atividade:</span><p>{{$e->ramoAtiv}}</p>
-              <span>Nome Fantasia:</span><p>{{$e->nomeFant}}</p>
+              <span>Nome Fantasia:</span><p>{{$e->nomeFant}}</p> -->
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
@@ -37,7 +38,7 @@
           </div>
         </div>
 @endforeach
-@endif
+@endisset
       </div>
   </div>
   @isset ($errorMessage)
