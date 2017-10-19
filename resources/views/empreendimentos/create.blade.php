@@ -41,6 +41,10 @@
                         </div>
                         <label for="ramoAtiv" class="col-md-4 control-label">Telefone</label>
                         <div class="col-md-6">
+                            <input id="telUm" type="text" class="form-control" name="telUm"required>
+                        </div>
+                        <label for="ramoAtiv" class="col-md-4 control-label">Ramo de Atividade</label>
+                        <div class="col-md-6">
                             <input id="ramoAtiv" type="text" class="form-control" name="ramoAtiv"required>
                         </div>
                         <label for="nomeFant" class="col-md-4 control-label">Nome Fantasia</label>
