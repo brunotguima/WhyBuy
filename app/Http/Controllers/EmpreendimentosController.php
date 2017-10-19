@@ -117,8 +117,10 @@ class EmpreendimentosController extends Controller
      */
     public function destroy(Empreendimentos $empreendimentos)
     {
-        //
+         $empreendimentos->delete();
+        return redirect('empreendimentos');
     }
+    
     public function criar_slug($nomeEstab){
         $pre = ['ã','á','â','ê','é','í','õ','ô','ó','ú',' '];
         $pos = ['a','a','a','e','e','i','o','o','o','u','-'];

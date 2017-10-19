@@ -115,6 +115,8 @@ class PerfilController extends Controller
      */
     public function destroy(Perfil $perfil)
     {
-        //
+        $perfil->delete();
+        return redirect('perfil');
     }
+    
 }

@@ -33,7 +33,11 @@
               <span>Nome Fantasia:</span><p>{{$e->nomeFant}}</p> -->
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <form style="display: inline;" action="{{route('empreendimentos.destroy', $e->id)}}" method="post">
+                                    {{csrf_field()}}
+                  <input type="hidden" name="_method" value="delete">
+                  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+               </form>
             </div>
           </div>
         </div>
