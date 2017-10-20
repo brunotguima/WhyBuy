@@ -25,7 +25,7 @@ class CreateEmpreendimentosTable extends Migration
             $table->string('estado');
             $table->string('ramoAtiv');
             $table->string('nomeFant');
-            $table->string('EmpImage'); 
+            $table->string('EmpImage')->default(('images/empresa.png')); 
             $table->string('slug');
             $table->timestamps();
         });

@@ -53,11 +53,11 @@ class EmpreendimentosController extends Controller
             $errorMessage = true;
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil','errorMessage'));
         }else{
-        if($request->hasImage('EmpImage')){
+        if($request->has('EmpImage')){
         $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
         $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
-        }
-            $empreendimentos = new Empreendimentos();
+
+        $empreendimentos = new Empreendimentos();
             $empreendimentos->user_id = Auth::user()->id;
             $empreendimentos->nomeEstab = $request->nomeEstab;
             $empreendimentos->cnpj = $request ->cnpj;
@@ -73,8 +73,25 @@ class EmpreendimentosController extends Controller
             unset($empreendimentos);
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
+        }else{
+            $empreendimentos = new Empreendimentos();
+            $empreendimentos->user_id = Auth::user()->id;
+            $empreendimentos->nomeEstab = $request->nomeEstab;
+            $empreendimentos->cnpj = $request ->cnpj;
+            $empreendimentos->inscEst = $request ->inscEst;
+            $empreendimentos->cep = $request ->cep;
+            $empreendimentos->cidade = $request ->cidade;
+            $empreendimentos->estado = $request ->estado;
+            $empreendimentos->ramoAtiv = $request ->ramoAtiv;
+            $empreendimentos->nomeFant = $request ->nomeFant;
+            $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
+            $empreendimentos-> save();
+            unset($empreendimentos);
+            $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
+            return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
     }
 }
+    }
     /**
      * Display the specified resource.
      *
