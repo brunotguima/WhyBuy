@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
 <div class="row">
-<div class="col l12 center">
-<h2>Seu Empreendimento <a class="btn-floating btn-large waves-effect waves-light red right" href="/empreendimentos/create"><i class="material-icons">add</i></a> </h2> 
+<div class="col l12 center orange-text">
+<h2>Seu Empreendimento <a class="btn-floating btn-large waves-effect waves-light orange right" href="/empreendimentos/create"><i class="material-icons">add</i></a> </h2> 
 </div>
 </div>
 <div class="row">

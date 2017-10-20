@@ -15,7 +15,7 @@
 
 
                     <div class="col s1 m8 offset-m2 l6 offset-l3">
-                        <div class="card-panel orange">
+                        <div class="card-panel orange lighten-1">
                             <div class="row valign-wrapper">
                                 <div class="col s2">
                                     <img src="images/brunotguima.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -23,11 +23,11 @@
                                 <div class="col s10"> 
                                     <span class="white-text">
                                         <h4>
-                                            Bruno
+                                            BRUNO
                                         </h4>
                                     </span>
-                                    <span class="black-text">                
-                                        <h5 class="center">Curte programação e informática, pretende cursar Engenharia da Computação. Curte jogar games, pesquisar sobre a àrea, etc.</h5>
+                                    <span class="white-text">                
+                                        <h5>Curte programação e informática, pretende cursar Engenharia da Computação. Curte jogar games, pesquisar sobre a àrea, etc.</h5>
                                     </span>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="col s12 m8 offset-m2 l6 offset-l3">
-                        <div class="card-panel orange">
+                        <div class="card-panel orange lighten-1">
                             <div class="row valign-wrapper">
                                 <div class="col s2">
                                     <img src="images/fifi.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -43,11 +43,11 @@
                                 <div class="col s10">
                                     <span class="white-text">
                                         <h4>
-                                            Filício
+                                            FILÍCIO
                                             <h4>
                                                 </span>
-                                                <span class="black-text">                
-                                                    <h5 class="center">Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</h5>
+                                                <span class="white-text">                
+                                                    <h5>Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</h5>
                                                 </span>
                                                 </div>
                                                 </div>
@@ -55,7 +55,7 @@
                                                 </div>
 
                                                 <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                    <div class="card-panel orange">
+                                                    <div class="card-panel orange lighten-1">
                                                         <div class="row valign-wrapper">
                                                             <div class="col s2">
                                                                 <img src="images/luana.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -63,11 +63,11 @@
                                                             <div class="col s10">
                                                                 <span class="white-text">
                                                                     <h4>
-                                                                        Luana
+                                                                        LUANA
                                                                         <h4>
                                                                             </span>
-                                                                            <span class="black-text">                
-                                                                                <h5 class="center">Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</h5>
+                                                                            <span class="white-text">                
+                                                                                <h5>Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</h5>
                                                                             </span>
                                                                             </div>
                                                                             </div>
@@ -75,7 +75,7 @@
                                                                             </div>
 
                                                                             <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                <div class="card-panel orange">
+                                                                                <div class="card-panel orange lighten-1">
                                                                                     <div class="row valign-wrapper">
                                                                                         <div class="col s2">
                                                                                             <img src="images/gabriel.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -83,11 +83,11 @@
                                                                                         <div class="col s10">
                                                                                             <span class="white-text">
                                                                                                 <h4>
-                                                                                                    Gabriel
+                                                                                                    GABRIEL
                                                                                                     <h4>
                                                                                                         </span>
-                                                                                                        <span class="black-text">                
-                                                                                                            <h5 class="center">Curte música e pretende cursar direito. Adora jogar games, etc.</h5>
+                                                                                                        <span class="white-text">                
+                                                                                                            <h5>Curte música e pretende cursar direito. Adora jogar games, etc.</h5>
                                                                                                         </span>
                                                                                                         </div>
                                                                                                         </div>
@@ -95,7 +95,7 @@
                                                                                                         </div>
 
                                                                                                         <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                            <div class="card-panel orange">
+                                                                                                            <div class="card-panel orange lighten-1">
                                                                                                                 <div class="row valign-wrapper">
                                                                                                                     <div class="col s2">
                                                                                                                         <img src="images/victor.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -103,11 +103,11 @@
                                                                                                                     <div class="col s10">
                                                                                                                         <span class="white-text">
                                                                                                                             <h4>
-                                                                                                                                Victor Hugo
+                                                                                                                                VICTOR HUGO
                                                                                                                                 <h4>
                                                                                                                                     </span>
-                                                                                                                                    <span class="black-text">                
-                                                                                                                                        <h5 class="center">Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</h5>
+                                                                                                                                    <span class="white-text">                
+                                                                                                                                        <h5>Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</h5>
                                                                                                                                     </span>
                                                                                                                                     </div>
                                                                                                                                     </div>
@@ -115,7 +115,7 @@
                                                                                                                                     </div>
 
                                                                                                                                     <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                                                        <div class="card-panel orange">
+                                                                                                                                        <div class="card-panel orange lighten-1">
                                                                                                                                             <div class="row valign-wrapper">
                                                                                                                                                 <div class="col s2">
                                                                                                                                                     <img src="images/gustavo.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -123,11 +123,11 @@
                                                                                                                                                 <div class="col s10">
                                                                                                                                                     <span class="white-text">
                                                                                                                                                         <h4>
-                                                                                                                                                            Gustavo
+                                                                                                                                                            GUSTAVO
                                                                                                                                                             <h4>
                                                                                                                                                                 </span>
-                                                                                                                                                                <span class="black-text">                
-                                                                                                                                                                    <h5 class="center">Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</h5>
+                                                                                                                                                                <span class="white-text">                
+                                                                                                                                                                    <h5>Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</h5>
                                                                                                                                                                 </span>
                                                                                                                                                                 </div>
                                                                                                                                                                 </div>
@@ -135,7 +135,7 @@
                                                                                                                                                                 </div>
 
                                                                                                                                                                 <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                                                                                    <div class="card-panel orange">
+                                                                                                                                                                    <div class="card-panel orange lighten-1">
                                                                                                                                                                         <div class="row valign-wrapper">
                                                                                                                                                                             <div class="col s2">
                                                                                                                                                                                 <img src="images/milena2.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
@@ -143,11 +143,11 @@
                                                                                                                                                                             <div class="col s10">
                                                                                                                                                                                 <span class="white-text">
                                                                                                                                                                                     <h4>
-                                                                                                                                                                                        Milena
+                                                                                                                                                                                        MILENA
                                                                                                                                                                                         <h4>
                                                                                                                                                                                             </span>
-                                                                                                                                                                                            <span class="black-text">                
-                                                                                                                                                                                                <h5 class="center">Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</h5>
+                                                                                                                                                                                            <span class="white-text">                
+                                                                                                                                                                                                <h5>Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</h5>
                                                                                                                                                                                             </span>
                                                                                                                                                                                             </div>
                                                                                                                                                                                             </div>
@@ -155,19 +155,19 @@
 
 
                                                                                                                                                                                             <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                                                                                                                <div class="card-panel orange">
+                                                                                                                                                                                                <div class="card-panel orange lighten-1">
                                                                                                                                                                                                     <div class="row valign-wrapper">
                                                                                                                                                                                                         <div class="col s2">
                                                                                                                                                                                                         <img src="images/juliana2.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                                                                                                                                                                                         </div>
-                                                                                                                                                                                                        <div class="col s10">
+                                                                                                                                                                                                        <div class="col s10 ">
                                                                                                                                                                                                         <span class="white-text">
                                                                                                                                                                                                         <h4>
-                                                                                                                                                                                                        Juliana
+                                                                                                                                                                                                        JULIANA
                                                                                                                                                                                                         <h4>
                                                                                                                                                                                                         </span>
-                                                                                                                                                                                                        <span class="black-text">                
-                                                                                                                                                                                                        <h5 class="center">Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</h5>
+                                                                                                                                                                                                        <span class="white-text">                
+                                                                                                                                                                                                        <h5>Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</h5>
                                                                                                                                                                                                         </span>
                                                                                                                                                                                                         </div>
                                                                                                                                                                                                         </div>
