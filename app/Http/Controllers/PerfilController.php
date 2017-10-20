@@ -84,6 +84,7 @@ class PerfilController extends Controller
      */
     public function edit(Perfil $perfil)
     {
+        $mainPerfil = DB::table('perfil')->find(Auth::user()->id);
         return view ("perfil.edit", compact('mainPerfil'));
     }
 
