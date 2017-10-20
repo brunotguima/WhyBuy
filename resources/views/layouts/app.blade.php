@@ -66,7 +66,7 @@
                         <nav>
                             <div class="nav-wrapper">
                                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                    <li><a class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
+                                    <li><a href='gps.blade.php'class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
                                     
                                 </ul>
                             </div>
