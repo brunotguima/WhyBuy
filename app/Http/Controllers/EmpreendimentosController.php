@@ -43,6 +43,15 @@ class EmpreendimentosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+     protected function validator(Request $request)
+     {
+         return validator::make($request, [
+             'nomeFantasia' => 'required|string|max:255',
+             'cnpj' => 'required|formato_cnpj|cnpj',
+             'inscEst' => 'string|max:15',
+             'razaoSocial' => 'required|string|max:255',
+         ]);
+     }
     public function store(Request $request)
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
@@ -59,14 +68,14 @@ class EmpreendimentosController extends Controller
 
         $empreendimentos = new Empreendimentos();
             $empreendimentos->user_id = Auth::user()->id;
-            $empreendimentos->nomeEstab = $request->nomeEstab;
+            $empreendimentos->nomeFantasia = $request->nomeFantasia;
             $empreendimentos->cnpj = $request ->cnpj;
             $empreendimentos->inscEst = $request ->inscEst;
             $empreendimentos->cep = $request ->cep;
             $empreendimentos->cidade = $request ->cidade;
             $empreendimentos->estado = $request ->estado;
             $empreendimentos->ramoAtiv = $request ->ramoAtiv;
-            $empreendimentos->nomeFant = $request ->nomeFant;
+            $empreendimentos->razaoSocial = $request ->razaoSocial;
             $empreendimentos->EmpImage = $EmpImage;
             $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
             $empreendimentos-> save();
@@ -76,14 +85,14 @@ class EmpreendimentosController extends Controller
         }else{
             $empreendimentos = new Empreendimentos();
             $empreendimentos->user_id = Auth::user()->id;
-            $empreendimentos->nomeEstab = $request->nomeEstab;
+            $empreendimentos->nomeFantasia = $request->nomeFantasia;
             $empreendimentos->cnpj = $request ->cnpj;
             $empreendimentos->inscEst = $request ->inscEst;
             $empreendimentos->cep = $request ->cep;
             $empreendimentos->cidade = $request ->cidade;
             $empreendimentos->estado = $request ->estado;
             $empreendimentos->ramoAtiv = $request ->ramoAtiv;
-            $empreendimentos->nomeFant = $request ->nomeFant;
+            $empreendimentos->razaoSocial = $request ->razaoSocial;
             $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
             $empreendimentos-> save();
             unset($empreendimentos);
@@ -138,9 +147,9 @@ class EmpreendimentosController extends Controller
         return redirect('empreendimentos');
     }
     
-    public function criar_slug($nomeEstab){
+    public function criar_slug($nomeFantasia){
         $pre = ['ã','á','â','ê','é','í','õ','ô','ó','ú',' '];
         $pos = ['a','a','a','e','e','i','o','o','o','u','-'];
-        return str_replace($pre,$pos,mb_strtolower($nomeEstab));
+        return str_replace($pre,$pos,mb_strtolower($nomeFantasia));
     }
 }

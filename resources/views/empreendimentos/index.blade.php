@@ -23,7 +23,7 @@
             </div>
 
             <div class="card-content">
-              <span class="card-title black-text center">{{$e->nomeEstab}}</span>
+              <span class="card-title black-text center">{{$e->nomeFantasia}}</span>
              <!-- <span>CNPJ:</span><p>{{$e->cnpj}}</p>
               <span>Inscrição Estadual:</span><p>{{$e->inscEst}}</p>
               <span>CEP:</span><p>{{$e->cep}}</p>
@@ -33,7 +33,7 @@
               <span>Nome Fantasia:</span><p>{{$e->nomeFant}}</p> -->
             </div>
             <div class="card-action">
-              <form style="display: inline;" action="{{route('empreendimentos.destroy', $e->nomeEstab)}}" method="post">
+              <form style="display: inline;" action="{{route('empreendimentos.destroy', $e->nomeFantasia)}}" method="post">
                                     {{csrf_field()}}
                   <input type="hidden" name="_method" value="delete">
                   <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>

@@ -11,9 +11,9 @@
                     <form class="form-horizontal" method="POST" action="{{ route('empreendimentos.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
-                        <label for="name" class="col-md-4 control-label">Nome do Estabelecimento:</label>
+                        <label for="name" class="col-md-4 control-label">Nome Fantasia:</label>
                         <div class="col-md-6">
-                        <input id="nomeEstab" type="text" class="form-control" name="nomeEstab"required>
+                        <input id="nomeFantasia" type="text" class="form-control" name="nomeFantasia"required>
                         </div>
 
                         <label for="dateNasc" class="col-md-4 control-label">CNPJ:</label>
@@ -39,7 +39,7 @@
                         <div class="col-md-6">
                             <input id="estado" type="text" class="form-control" name="estado"required>
                         </div>
-                        <label for="ramoAtiv" class="col-md-4 control-label">Telefone</label>
+                        <label for="telUm" class="col-md-4 control-label">Telefone</label>
                         <div class="col-md-6">
                             <input id="telUm" type="text" class="form-control" name="telUm"required>
                         </div>
@@ -47,9 +47,9 @@
                         <div class="col-md-6">
                             <input id="ramoAtiv" type="text" class="form-control" name="ramoAtiv"required>
                         </div>
-                        <label for="nomeFant" class="col-md-4 control-label">Nome Fantasia</label>
+                        <label for="razaoSocial" class="col-md-4 control-label">Razão Social</label>
                         <div class="col-md-6">
-                            <input id="nomeFant" type="text" class="form-control" name="nomeFant"required>
+                            <input id="razaoSocial" type="text" class="form-control" name="razaoSocial"required>
                         </div>
                         <label for="EmpImage" class="col-md-4 control-label">Empreendimento Foto</label>
                         <div class="col-md-6">

@@ -17,14 +17,14 @@ class CreateEmpreendimentosTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('nomeEstab');
+            $table->string('nomeFantasia');
             $table->string('cnpj');
             $table->string('inscEst');
             $table->string('cep');
             $table->string('cidade');
             $table->string('estado');
             $table->string('ramoAtiv');
-            $table->string('nomeFant');
+            $table->string('razaoSocial');
             $table->string('EmpImage')->default(('images/empresa.png')); 
             $table->string('slug');
             $table->timestamps();

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cornford/googlmapper",
-            "version": "v2.28.0",
+            "version": "v2.29.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bradcornford/Googlmapper.git",
-                "reference": "40074be258df827ae36b9e74040a9020d16ae72e"
+                "reference": "09ef2279c8469cb43089dc9dc35d4b6d4d2ec670"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bradcornford/Googlmapper/zipball/40074be258df827ae36b9e74040a9020d16ae72e",
-                "reference": "40074be258df827ae36b9e74040a9020d16ae72e",
+                "url": "https://api.github.com/repos/bradcornford/Googlmapper/zipball/09ef2279c8469cb43089dc9dc35d4b6d4d2ec670",
+                "reference": "09ef2279c8469cb43089dc9dc35d4b6d4d2ec670",
                 "shasum": ""
             },
             "require": {
@@ -30,6 +30,16 @@
                 "phpspec/phpspec": "2.0.*@dev"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Cornford\\Googlmapper\\MapperServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mapper": "Cornford\\Googlmapper\\Facades\\MapperFacade"
+                    }
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Cornford\\Googlmapper": "src/"
@@ -54,7 +64,7 @@
                 "maps",
                 "streetview"
             ],
-            "time": "2017-09-12T14:11:34+00:00"
+            "time": "2017-10-24T11:49:52+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

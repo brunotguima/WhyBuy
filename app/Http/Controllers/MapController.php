@@ -14,7 +14,7 @@ class MapController extends Controller
      */
     public function index()
     {
-        Mapper::map(53.381128999999990000, -1.470085000000040000);
+        Mapper::map(-22.4317433, -46.9594419);
         
             return view('app_localizacao/gps');
     }

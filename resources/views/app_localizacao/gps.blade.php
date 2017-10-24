@@ -2,6 +2,7 @@
 
 @section('content')
 <div>
-	{!! Mapper::render() !!}
+	{!!Mapper::render()!!}
+
 </div>
 @endsection
