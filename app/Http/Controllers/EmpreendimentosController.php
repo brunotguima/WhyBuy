@@ -34,7 +34,6 @@ class EmpreendimentosController extends Controller
     public function create()
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-//        $empreendimentos = User::with('user')->find(User::user()->id);
         return view ('empreendimentos.create',compact('mainPerfil'));
     }
 
@@ -127,7 +126,7 @@ class EmpreendimentosController extends Controller
     public function destroy(Empreendimentos $empreendimentos)
     {
         $empreendimentos->delete();
-        return redirect('empreendimentos');
+        return redirect('/empreendimentos');
     }
     
     public function criar_slug($nomeFantasia){
