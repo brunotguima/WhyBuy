@@ -12,167 +12,62 @@
                     A equipe é constituída também por mais outros 7 membros que fazem parte de todo o desenvolvimento.</span><h5>
                     <br>
                     <br>
+                    <div class="center">
+                       <span class='orange-text'><h2>MEMBROS DESENVOLVEDORES</h2></span>
+                      </div>
 
+            <ul class="collapsible" data-collapsible="accordion">
 
-                    <div class="col s1 m8 offset-m2 l6 offset-l3">
-                        <div class="card-panel orange lighten-1">
-                            <div class="row valign-wrapper">
-                                <div class="col s2">
-                                    <img src="images/brunotguima.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="col s10"> 
-                                    <span class="white-text">
-                                        <h4>
-                                            BRUNO
-                                        </h4>
-                                    </span>
-                                    <span class="white-text">                
-                                        <h5>Curte programação e informática, pretende cursar Engenharia da Computação. Curte jogar games, pesquisar sobre a àrea, etc.</h5>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <li class ='white-text'>
 
-                    <div class="col s12 m8 offset-m2 l6 offset-l3">
-                        <div class="card-panel orange lighten-1">
-                            <div class="row valign-wrapper">
-                                <div class="col s2">
-                                    <img src="images/fifi.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                </div>
-                                <div class="col s10">
-                                    <span class="white-text">
-                                        <h4>
-                                            FILÍCIO
-                                            <h4>
-                                                </span>
-                                                <span class="white-text">                
-                                                    <h5>Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</h5>
-                                                </span>
-                                                </div>
-                                                </div>
-                                                </div>
-                                                </div>
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">desktop_windows</i>Bruno</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2">
+               
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                     <img src="C:\Users\bruno\Desktop\WhyBuy\public\images\brunotguima.jpg" alt="" class="circle responsive-img">
+                        <span></div>Curte programação e informática, pretende cursar Engenharia da Computação. Curte jogar games, pesquisar sobre a àrea, etc.</span></div>
+        </div>
+        </li>
+        <li class ='white-text'>
 
-                                                <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                    <div class="card-panel orange lighten-1">
-                                                        <div class="row valign-wrapper">
-                                                            <div class="col s2">
-                                                                <img src="images/luana.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                            </div>
-                                                            <div class="col s10">
-                                                                <span class="white-text">
-                                                                    <h4>
-                                                                        LUANA
-                                                                        <h4>
-                                                                            </span>
-                                                                            <span class="white-text">                
-                                                                                <h5>Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</h5>
-                                                                            </span>
-                                                                            </div>
-                                                                            </div>
-                                                                            </div>
-                                                                            </div>
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">share</i>Filício</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</span></div>
+        
+        </li>
+        <li class ='white-text'>
 
-                                                                            <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                <div class="card-panel orange lighten-1">
-                                                                                    <div class="row valign-wrapper">
-                                                                                        <div class="col s2">
-                                                                                            <img src="images/gabriel.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                                                        </div>
-                                                                                        <div class="col s10">
-                                                                                            <span class="white-text">
-                                                                                                <h4>
-                                                                                                    GABRIEL
-                                                                                                    <h4>
-                                                                                                        </span>
-                                                                                                        <span class="white-text">                
-                                                                                                            <h5>Curte música e pretende cursar direito. Adora jogar games, etc.</h5>
-                                                                                                        </span>
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        </div>
-                                                                                                        </div>
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">web</i>Luana</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</span></div>
 
-                                                                                                        <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                            <div class="card-panel orange lighten-1">
-                                                                                                                <div class="row valign-wrapper">
-                                                                                                                    <div class="col s2">
-                                                                                                                        <img src="images/victor.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                                                                                    </div>
-                                                                                                                    <div class="col s10">
-                                                                                                                        <span class="white-text">
-                                                                                                                            <h4>
-                                                                                                                                VICTOR HUGO
-                                                                                                                                <h4>
-                                                                                                                                    </span>
-                                                                                                                                    <span class="white-text">                
-                                                                                                                                        <h5>Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</h5>
-                                                                                                                                    </span>
-                                                                                                                                    </div>
-                                                                                                                                    </div>
-                                                                                                                                    </div>
-                                                                                                                                    </div>
+            </li>
+        <li class ='white-text'> 
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">web</i>Gabriel</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte música e pretende cursar direito. Adora jogar games, etc.</span></div>
 
-                                                                                                                                    <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                                                        <div class="card-panel orange lighten-1">
-                                                                                                                                            <div class="row valign-wrapper">
-                                                                                                                                                <div class="col s2">
-                                                                                                                                                    <img src="images/gustavo.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                                                                                                                </div>
-                                                                                                                                                <div class="col s10">
-                                                                                                                                                    <span class="white-text">
-                                                                                                                                                        <h4>
-                                                                                                                                                            GUSTAVO
-                                                                                                                                                            <h4>
-                                                                                                                                                                </span>
-                                                                                                                                                                <span class="white-text">                
-                                                                                                                                                                    <h5>Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</h5>
-                                                                                                                                                                </span>
-                                                                                                                                                                </div>
-                                                                                                                                                                </div>
-                                                                                                                                                                </div>
-                                                                                                                                                                </div>
+            </li>
+        <li class ='white-text'>
+            <div class="collapsible-header z-depth-4 orange lighten-1" ><i class="material-icons">whatshot</i>Victor Hugo</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</span></div>
 
-                                                                                                                                                                <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                                                                                    <div class="card-panel orange lighten-1">
-                                                                                                                                                                        <div class="row valign-wrapper">
-                                                                                                                                                                            <div class="col s2">
-                                                                                                                                                                                <img src="images/milena2.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                                                                                                                                            </div>
-                                                                                                                                                                            <div class="col s10">
-                                                                                                                                                                                <span class="white-text">
-                                                                                                                                                                                    <h4>
-                                                                                                                                                                                        MILENA
-                                                                                                                                                                                        <h4>
-                                                                                                                                                                                            </span>
-                                                                                                                                                                                            <span class="white-text">                
-                                                                                                                                                                                                <h5>Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</h5>
-                                                                                                                                                                                            </span>
-                                                                                                                                                                                            </div>
-                                                                                                                                                                                            </div>
-                                                                                                                                                                                            </div>
+            </li>
+        <li class ='white-text'>
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">whatshot</i>Gustavo</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</span></div>
 
+            </li>
+        <li class ='white-text'>
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">library_books</i>Milena</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</span></div>
 
-                                                                                                                                                                                            <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                                                                                                                                                                                <div class="card-panel orange lighten-1">
-                                                                                                                                                                                                    <div class="row valign-wrapper">
-                                                                                                                                                                                                        <div class="col s2">
-                                                                                                                                                                                                        <img src="images/juliana2.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                        <div class="col s10 ">
-                                                                                                                                                                                                        <span class="white-text">
-                                                                                                                                                                                                        <h4>
-                                                                                                                                                                                                        JULIANA
-                                                                                                                                                                                                        <h4>
-                                                                                                                                                                                                        </span>
-                                                                                                                                                                                                        <span class="white-text">                
-                                                                                                                                                                                                        <h5>Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</h5>
-                                                                                                                                                                                                        </span>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                        </div>
+            </li>
+        <li class ='white-text'>
+            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">library_books</i>Juliana</div>
+            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</span></div>
+        </li>
+    </ul>
+                                   
+       
+                                                                                                                                                                                                        
 
                                                                                                                                                                                                         @endsection

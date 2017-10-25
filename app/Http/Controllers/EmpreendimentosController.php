@@ -46,7 +46,7 @@ class EmpreendimentosController extends Controller
      */
     public function store(Request $request)
     {
-        \validator($request,$this->rules);
+        \validate($request, Empreendimentos->rules);
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         $testeNotRepeat = DB::table('empreendimentos')->where('nomeFantasia', $request->nomeFantasia)
         ->orWhere('cnpj',$request->cnpj)->count();
