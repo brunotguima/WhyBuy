@@ -7,6 +7,7 @@ use App\User;
 use Auth;
 use Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class EmpreendimentosController extends Controller
 {
@@ -43,29 +44,17 @@ class EmpreendimentosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-     protected function validator(Request $request)
-     {
-         return validator::make($request, [
-             'nomeFantasia' => 'required|string|max:255',
-             'cnpj' => 'required|formato_cnpj|cnpj',
-             'inscEst' => 'string|max:15',
-             'razaoSocial' => 'required|string|max:255',
-         ]);
-     }
     public function store(Request $request)
     {
+        \validator($request,$this->rules);
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        $testeNotRepeat = DB::table('empreendimentos')->where('nomeEstab', $request->nomeEstab)
+        $testeNotRepeat = DB::table('empreendimentos')->where('nomeFantasia', $request->nomeFantasia)
         ->orWhere('cnpj',$request->cnpj)->count();
         if($testeNotRepeat >= 1) {
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             $errorMessage = true;
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil','errorMessage'));
         }else{
-        if($request->has('EmpImage')){
-        $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
-        $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
-
         $empreendimentos = new Empreendimentos();
             $empreendimentos->user_id = Auth::user()->id;
             $empreendimentos->nomeFantasia = $request->nomeFantasia;
@@ -76,31 +65,20 @@ class EmpreendimentosController extends Controller
             $empreendimentos->estado = $request ->estado;
             $empreendimentos->ramoAtiv = $request ->ramoAtiv;
             $empreendimentos->razaoSocial = $request ->razaoSocial;
-            $empreendimentos->EmpImage = $EmpImage;
+
+            if($request->has('EmpImage')){
+                $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
+                $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
+                $empreendimentos->EmpImage = $EmpImage;
+            }
+
             $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
             $empreendimentos-> save();
             unset($empreendimentos);
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
-        }else{
-            $empreendimentos = new Empreendimentos();
-            $empreendimentos->user_id = Auth::user()->id;
-            $empreendimentos->nomeFantasia = $request->nomeFantasia;
-            $empreendimentos->cnpj = $request ->cnpj;
-            $empreendimentos->inscEst = $request ->inscEst;
-            $empreendimentos->cep = $request ->cep;
-            $empreendimentos->cidade = $request ->cidade;
-            $empreendimentos->estado = $request ->estado;
-            $empreendimentos->ramoAtiv = $request ->ramoAtiv;
-            $empreendimentos->razaoSocial = $request ->razaoSocial;
-            $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
-            $empreendimentos-> save();
-            unset($empreendimentos);
-            $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
-            return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
-    }
+        }
 }
-    }
     /**
      * Display the specified resource.
      *

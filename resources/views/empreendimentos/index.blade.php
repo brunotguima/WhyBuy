@@ -30,7 +30,7 @@
               <span>Cidade:</span><p>{{$e->cidade}}</p>
               <span>Estado:</span><p>{{$e->estado}}</p>
               <span>Ramo de Atividade:</span><p>{{$e->ramoAtiv}}</p>
-              <span>Nome Fantasia:</span><p>{{$e->nomeFant}}</p> -->
+              <span>Razão Social:</span><p>{{$e->razaoSocial}}</p> -->
             </div>
             <div class="card-action">
               <form style="display: inline;" action="{{route('empreendimentos.destroy', $e->nomeFantasia)}}" method="post">
