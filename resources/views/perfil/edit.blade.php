@@ -1,22 +1,26 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="container">
         <div class="row">
 
             <h1 class="page-header">Edição de Perfil</h1>
 
             <div class="col-md-6">
-                <form action="{{ route('perfil.edit', $mainPerfil->perfil->id) }}" method="post">
+                <form action="{{ route('perfil.edit', $perfil->id) }}" method="post">
                     {{csrf_field()}}
 
                     <input type="hidden" name="_method" value="put">
             </div>
                     <div class="form-group">
                         <label for="telUm">Telefone</label>
-                        <input id="telUm" class="form-control" type="text" name="telUm" value="{{$mainPerfil->perfil>telUm}}">
+                        <input id="telUm" class="form-control" type="text" name="telUm" value="{{$perfil->telUm}}">
 
                     </div>
                     <div class="form-group">
                         <label for="cell">Celular</label>
-                        <input id="cell" class="form-control" type="text" name="cell" value="{{$mainPerfil->perfil>cell}}">
+                        <input id="cell" class="form-control" type="text" name="cell" value="{{$perfil->cell}}">
 
                     </div>
                     
@@ -26,3 +30,4 @@
             </div>
         </div>
     </div>
+@endsection

@@ -46,7 +46,8 @@ class EmpreendimentosController extends Controller
      */
     public function store(Request $request)
     {
-        \validator($request,$this->rules);
+       //\validate($request,$this->Empreendimentos->rules);
+       
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         $testeNotRepeat = DB::table('empreendimentos')->where('nomeFantasia', $request->nomeFantasia)
         ->orWhere('cnpj',$request->cnpj)->count();
@@ -78,6 +79,12 @@ class EmpreendimentosController extends Controller
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
         }
+        $request->validate([
+            'nomeFantasia' => 'required|string|max:50',
+            'cnpj' => 'required|formato_cnpj|cnpj',
+            'inscEst' => 'string|max:15',
+            'razaoSocial' => 'required|string|max:255',
+           ]);
 }
     /**
      * Display the specified resource.
