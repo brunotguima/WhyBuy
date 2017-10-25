@@ -99,11 +99,8 @@ class PerfilController extends Controller
      */
     public function update(Request $request, Perfil $perfil)
     {
-        if ($request->hasFile('image')) {
-            $image = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images\perfils'), $image);
-        }
-        $perfil->image = $image;
+        $perfil->rg = $request->rg;
+        $perfil->cpf = $request->cpf;
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
         $perfil->save();
