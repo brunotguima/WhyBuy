@@ -92,14 +92,14 @@
                         
                         <ul>
                         <div class="row">
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/Brunoguima99"> <i class="tiny material-icons">account_circle</i>  Bruno Guimarães</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/luana.caetanorondon"> <i class="tiny material-icons">account_circle</i>  Luana Caetano</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100004115914623"> <i class="tiny material-icons">account_circle</i>  Filicio Rocha</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/gabriel.jacinto.16"> <i class="tiny material-icons">account_circle</i>  Gabriel Pereira</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/victorhugo.martonifranco"> <i class="tiny material-icons">account_circle</i>  Victor Hugo Martoni</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100005638779563"> <i class="tiny material-icons">account_circle</i>  Gustavo Borborena</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/slepwalkingmi"> <i class="tiny material-icons">account_circle</i>  Milena Cavallaro</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/juuhhferreira"> <i class="tiny material-icons">account_circle</i>  Juliana Ferreira</a></li>
                         </ul>
                         </div>
                     </div>
