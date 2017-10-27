@@ -20,7 +20,7 @@
                 <div class='row'><a href="/" class="brand-logo center"><img src="../images/logocabeca.png" alt="logotipo"></a>
                     <div class="col s4">
                         <ul id="nav-mobile">
-                            <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a></li>
+                            <li><a href="#" data-activates="slide-out" class=" button-collapse show-on-large"><i class="material-icons ">menu</i></a></li>
 
                             <ul id="slide-out" class="side-nav">
                                 <!-- aqui é as informações do usuario -->
@@ -66,7 +66,7 @@
                         <nav>
                             <div class="nav-wrapper">
                                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                    <li><a href='gps.blade.php'class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
+                                    <li><a href='/maps'class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
                                     
                                 </ul>
                             </div>
