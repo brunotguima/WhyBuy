@@ -8,7 +8,7 @@
                 <div class="panel-heading"><h1 class="center">Registro</h1></div>
 
                 <div class="panel-body">
-                {!! Form::open(['url' => 'foo/bar', 'method' => 'POST', 'action'=> route('register')]) !!} 
+                {!! Form::open(['method' => 'POST', 'action'=> route('register')]) !!} 
 
                 <div class="col-md-6 form-group">
                 {!! Form::label('name', 'Seu nome completo:', array('class' => 'control-label' )) !!} 
