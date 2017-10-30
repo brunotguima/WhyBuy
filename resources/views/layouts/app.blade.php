@@ -20,7 +20,7 @@
                 <div class='row'><a href="/" class="brand-logo center"><img src="../images/logocabeca.png" alt="logotipo"></a>
                     <div class="col s4">
                         <ul id="nav-mobile">
-                            <li><a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">menu</i></a></li>
+                            <li><a href="#" data-activates="slide-out" class=" button-collapse show-on-large"><i class="material-icons ">menu</i></a></li>
 
                             <ul id="slide-out" class="side-nav">
                                 <!-- aqui é as informações do usuario -->
@@ -66,7 +66,7 @@
                         <nav>
                             <div class="nav-wrapper">
                                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                                    <li><a href='gps.blade.php'class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
+                                    <li><a href='/maps'class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O APP<i class="material-icons right">shop</i></a></li>
                                     
                                 </ul>
                             </div>
@@ -92,14 +92,14 @@
                         
                         <ul>
                         <div class="row">
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/Brunoguima99">Bruno Guimarães</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/luana.caetanorondon">Luana Caetano</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100004115914623">Filicio Rocha</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/gabriel.jacinto.16">Gabriel Pereira</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/victorhugo.martonifranco">Victor Hugo Martoni</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100005638779563">Gustavo Borborena</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/slepwalkingmi">Milena Cavallaro</a></li>
-                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/juuhhferreira">Juliana Ferreira</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/Brunoguima99"> <i class="tiny material-icons">account_circle</i>  Bruno Guimarães</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/luana.caetanorondon"> <i class="tiny material-icons">account_circle</i>  Luana Caetano</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100004115914623"> <i class="tiny material-icons">account_circle</i>  Filicio Rocha</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/gabriel.jacinto.16"> <i class="tiny material-icons">account_circle</i>  Gabriel Pereira</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/victorhugo.martonifranco"> <i class="tiny material-icons">account_circle</i>  Victor Hugo Martoni</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/profile.php?id=100005638779563"> <i class="tiny material-icons">account_circle</i>  Gustavo Borborena</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/slepwalkingmi"> <i class="tiny material-icons">account_circle</i>  Milena Cavallaro</a></li>
+                            <li><a class="grey-text text-lighten-3 col s6" href="https://www.facebook.com/juuhhferreira"> <i class="tiny material-icons">account_circle</i>  Juliana Ferreira</a></li>
                         </ul>
                         </div>
                     </div>

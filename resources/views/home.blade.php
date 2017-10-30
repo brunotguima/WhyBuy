@@ -6,6 +6,13 @@
     <a class="carousel-item" href="#one!"><img src="images/Banner-1.png"></a>
     <a class="carousel-item" href="#two!"><img src="images/Banner-2.jpg"></a>
   </div>  
+  <br>
+  <!-- <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="C:\Users\aluno\Desktop\WhyBuy\public\images\Empreendimento.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="C:\Users\aluno\Desktop\WhyBuy\public\images\Empreendimento2.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="C:\Users\aluno\Desktop\WhyBuy\public\images\Empreendimento3.jpg"></a>
+  </div> -->
+
    <h2 class="center"><span class="orange-text">SOBRE O APLICATIVO</span><h2>
   <div class="container">
 <div class="row">

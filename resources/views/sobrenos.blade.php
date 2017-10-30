@@ -20,8 +20,8 @@
 
                 <li class ='white-text'>
 
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">desktop_windows</i>Bruno</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2">
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">desktop_windows</i>Bruno</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1">
                
             <div class="row valign-wrapper">
                 <div class="col s2">
@@ -31,39 +31,39 @@
         </li>
         <li class ='white-text'>
 
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">share</i>Filício</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">share</i>Filício</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</span></div>
         
         </li>
         <li class ='white-text'>
 
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">web</i>Luana</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">web</i>Luana</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</span></div>
 
             </li>
         <li class ='white-text'> 
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">web</i>Gabriel</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte música e pretende cursar direito. Adora jogar games, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">web</i>Gabriel</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte música e pretende cursar direito. Adora jogar games, etc.</span></div>
 
             </li>
         <li class ='white-text'>
-            <div class="collapsible-header z-depth-4 orange lighten-1" ><i class="material-icons">whatshot</i>Victor Hugo</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2" ><i class="material-icons">whatshot</i>Victor Hugo</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</span></div>
 
             </li>
         <li class ='white-text'>
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">whatshot</i>Gustavo</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">whatshot</i>Gustavo</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</span></div>
 
             </li>
         <li class ='white-text'>
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">library_books</i>Milena</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">library_books</i>Milena</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</span></div>
 
             </li>
         <li class ='white-text'>
-            <div class="collapsible-header z-depth-4 orange lighten-1"><i class="material-icons">library_books</i>Juliana</div>
-            <div class="collapsible-body z-depth-4 orange lighten-2"><span>Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">library_books</i>Juliana</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</span></div>
         </li>
     </ul>
                                    

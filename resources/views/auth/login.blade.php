@@ -19,15 +19,7 @@
                         <label for="password" class="col-md-4 control-label">Senha</label>
                         <div class="col-md-6">
                             <input id="password" type="password" class="form-control" name="password" required>
-                        </div>
-
-                        <div class="col-md-6 col-md-offset-4">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> 
-                                </label>
-                            </div>
-                        </div>
+                        </div>        
 
                         <div class="col-md-8 col-md-offset-4">
                             <button type="submit" class="btn btn-primary orange darken-4">
@@ -36,6 +28,12 @@
                             <a class="btn btn-link orange darken-4" href="{{ route('password.request') }}">
                                 Esqueceu sua senha?
                             </a>
+                            <form action="#">
+
+                        <p>
+                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                            <label for="filled-in-box">Lembre-se de mim</label>
+                        </p>
                         </div>
                     </form>
                 </div>

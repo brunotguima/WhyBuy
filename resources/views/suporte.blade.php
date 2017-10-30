@@ -13,10 +13,10 @@
                 <form action="{{route('suporte.post')}}" method="post">
                     {{csrf_field()}}
                     <label for="name" class="control-label">Nome Completo:</label>
-                    <input disabled id="name" type="text" class="form-control" name="name" placeholder="{{$mainUser->name}}">
+                    <input disabled id="name" type="text" class="form-control" name="name" placeholder="{{$mainPerfil->name}}">
 
                     <label for="email" class="control-label">Email:</label>
-                    <input disabled id="email" type="text" class="form-control" name="email" placeholder="{{$mainUser->email}}">
+                    <input disabled id="email" type="text" class="form-control" name="email" placeholder="{{$mainPerfil->email}}">
 
                     <label for="mensagem" class="control-label">Digite sua mensagem:</label>
                     <textarea id="mensagem" type="text" class="materialize-textarea" name="mensagem" placeholder="Digite sua mensagem!" required autofocus></textarea>
