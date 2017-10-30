@@ -48,6 +48,9 @@ class PerfilController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'cpf' => 'required|cpf|formato_cpf',
+    ]);
         if ($request->hasFile('image')) {
             $image = time().'.'.$request->image->getClientOriginalExtension();
             $request->image->move(public_path('images\perfils'), $image);

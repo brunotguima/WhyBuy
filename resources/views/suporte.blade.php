@@ -12,11 +12,19 @@
             <div class="col s5 m5 l5">
                 <form action="{{route('suporte.post')}}" method="post">
                     {{csrf_field()}}
+                    @if (Auth::check())
                     <label for="name" class="control-label">Nome Completo:</label>
                     <input disabled id="name" type="text" class="form-control" name="name" placeholder="{{$mainPerfil->name}}">
 
                     <label for="email" class="control-label">Email:</label>
                     <input disabled id="email" type="text" class="form-control" name="email" placeholder="{{$mainPerfil->email}}">
+                    @else
+                    <label for="name" class="control-label">Nome Completo:</label>
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Digite seu Nome!">
+
+                    <label for="email" class="control-label">Email:</label>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Digite seu Email!">
+                    @endif
 
                     <label for="mensagem" class="control-label">Digite sua mensagem:</label>
                     <textarea id="mensagem" type="text" class="materialize-textarea" name="mensagem" placeholder="Digite sua mensagem!" required autofocus></textarea>

@@ -9,18 +9,18 @@
 <div class="col s4 center">
 </br>
 <img class="circle" width="100" height="100" src="{{asset('/images/empreendimentos')}}/{{$empreendimento->EmpImage}}">
-<button class="btn waves-effect deep-orange" onClick="window.location.href='/empreendimentos/{{$mainPerfil->id}}/edit'">Editar o Local</button>
+<button class="btn waves-effect deep-orange" onClick="window.location.href='/empreendimentos/{{$empreendimento->id}}/edit'">Editar o Local</button>
 </div>
 </br>
     <div class="col s8 center">
-            <label for="email" class="control-label">Seu Email:</label>
-            <h5 class="black-text">{{$mainPerfil->email}}<h5>
+            <label for="email" class="control-label">CNPJ:</label>
+            <h5 class="black-text">{{$empreendimento->cnpj}}<h5>
 
             <label for="dateNasc" class="control-label">Sua Data de Nascimento:</label>
-            <h5 class="black-text">{{$mainPerfil->dateNasc}}<h5>
+            <h5 class="black-text">{{$empreendimento->dateNasc}}<h5>
 
             <label for="sexo" class="control-label">Sexo:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->sexo}}<h5>
+            <h5 class="black-text">{{$empreendimento->}}<h5>
 
             <label for="rg" class="control-label">Seu RG:</label>
             <h5 class="black-text">{{$mainPerfil->perfil->rg}}<h5>

@@ -13,8 +13,11 @@ class EmailController extends Controller {
     public function getContato() {
         if (Auth::check()){
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        }
         return view('suporte',compact('mainPerfil'));
+        }else{
+            return view('suporte');
+        }
+        
     }
 
     public function postContato(Request $request) {
