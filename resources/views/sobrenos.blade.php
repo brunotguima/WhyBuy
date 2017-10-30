@@ -26,7 +26,7 @@
             <div class="row valign-wrapper">
                 <div class="col s2">
                      <img src="C:\Users\bruno\Desktop\WhyBuy\public\images\brunotguima.jpg" alt="" class="circle responsive-img">
-                        <span></div>Curte programação e informática, pretende cursar Engenharia da Computação. Curte jogar games, pesquisar sobre a àrea, etc.</span></div>
+                        <span></div>Curte programação e diversas áreas da informática, pretende cursar Engenharia da Computação. Curte jogar games, está sempre pesquisando e procurando se aprofundar nas diversas tecnologias que existem nessa área, informática.</span></div>
         </div>
         </li>
         <li class ='white-text'>

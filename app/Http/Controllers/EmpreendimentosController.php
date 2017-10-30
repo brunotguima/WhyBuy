@@ -46,6 +46,12 @@ class EmpreendimentosController extends Controller
     public function store(Request $request)
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        $request->validate([
+            'nomeFantasia' => 'required|string|max:50',
+            'cnpj' => 'required|formato_cnpj|cnpj',
+            'inscEst' => 'string|max:15',
+            'razaoSocial' => 'required|string|max:255'
+    ]);
         $testeNotRepeat = DB::table('empreendimentos')->where('nomeFantasia', $request->nomeFantasia)
         ->orWhere('cnpj',$request->cnpj)->count();
         if($testeNotRepeat >= 1) {
@@ -63,25 +69,17 @@ class EmpreendimentosController extends Controller
             $empreendimentos->estado = $request ->estado;
             $empreendimentos->ramoAtiv = $request ->ramoAtiv;
             $empreendimentos->razaoSocial = $request ->razaoSocial;
-
             if($request->has('EmpImage')){
                 $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
                 $request->EmpImage->move(public_path('images\empreendimentos'),$EmpImage);
                 $empreendimentos->EmpImage = $EmpImage;
             }
-
-            $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeEstab);
+            $empreendimentos->slug = $this->criar_slug($empreendimentos->nomeFantasia);
             $empreendimentos-> save();
             unset($empreendimentos);
             $empreendimentos = DB::table('empreendimentos')->where('user_id', Auth::id())->get();
             return view('empreendimentos.index',compact('empreendimentos','mainPerfil'));
         }
-        $request->validate([
-            'nomeFantasia' => 'required|string|max:50',
-            'cnpj' => 'required|formato_cnpj|cnpj',
-            'inscEst' => 'string|max:15',
-            'razaoSocial' => 'required|string|max:255',
-           ]);
 }
     /**
      * Display the specified resource.
@@ -91,7 +89,9 @@ class EmpreendimentosController extends Controller
      */
     public function show(Empreendimentos $empreendimentos)
     {
-        //
+        $empreendimento = Empreendimentos::find($empreendimentos);
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        return view('empreendimentos.show',compact('empreendimento','mainPerfil'));
     }
 
     /**

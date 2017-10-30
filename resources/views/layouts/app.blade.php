@@ -50,8 +50,8 @@
                                 <li><a href="/suporte"><i class="material-icons">contact_mail</i>Suporte</a></li>
                                 <li class="divider"></li>
                                 @if (Auth::check()) 
-                                <li><a href="perfil"><i class="material-icons">person</i>Seu Perfil</a></li>     
-                                <li><a href="empreendimentos"><i class="material-icons">shopping_basket</i>Seus Empreendimentos</a></li>                               
+                                <li><a href="/perfil"><i class="material-icons">person</i>Seu Perfil</a></li>     
+                                <li><a href="/empreendimentos"><i class="material-icons">shopping_basket</i>Seus Empreendimentos</a></li>                               
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
     document.getElementById('logout-form').submit();"> <i class="material-icons">cancel</i>
                                             Sair

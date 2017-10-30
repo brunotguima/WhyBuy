@@ -67,9 +67,12 @@
     </div>
 </div>
 </div>
- @if(isset($errors) && count($errors) > 0 )
+ @if($errors->any())
  @foreach ($errors->all() as $error)
-    <script>Materialize.toast({{$error}}, 5000);</script>
+    <script>
+    var error = "<?=$error?>"
+    Materialize.toast(error, 5000);
+    </script>
     @endforeach
     @endif
 @endsection

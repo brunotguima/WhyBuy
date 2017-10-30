@@ -14,10 +14,4 @@ class Empreendimentos extends Model
   protected $fillable = [
     'nomeFantasia','cnpj','inscEst','cep','cidade','estado','telUm','ramoAtiv','razaoSocial','EmpImage',
   ];
-  public $rules = [
-            'nomeFantasia' => 'required|string|max:50',
-            'cnpj' => 'required|formato_cnpj|cnpj',
-            'inscEst' => 'string|max:15',
-            'razaoSocial' => 'required|string|max:255',
-  ];
 }

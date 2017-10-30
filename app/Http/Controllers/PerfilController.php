@@ -86,7 +86,8 @@ class PerfilController extends Controller
     {
        // $mainPerfil = DB::table('perfils')->find(Auth::user()->id);
        // return $perfil; 
-        return view ("perfil.edit", compact('perfil'));
+       $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        return view ("perfil.edit", compact('perfil','mainPerfil'));
 
     }
 
@@ -99,12 +100,13 @@ class PerfilController extends Controller
      */
     public function update(Request $request, Perfil $perfil)
     {
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         $perfil->rg = $request->rg;
         $perfil->cpf = $request->cpf;
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
         $perfil->save();
-        return redirect('perfil');
+        return redirect('perfil','mainPerfil');
     }
 
     /**
