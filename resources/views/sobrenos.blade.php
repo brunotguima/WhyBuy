@@ -26,7 +26,7 @@
             <div class="row valign-wrapper">
                 <div class="col s2">
                      <img src="C:\Users\bruno\Desktop\WhyBuy\public\images\brunotguima.jpg" alt="" class="circle responsive-img">
-                        <span></div>Curte programação e diversas áreas da informática, pretende cursar Engenharia da Computação. Curte jogar games, está sempre pesquisando e procurando se aprofundar nas diversas tecnologias que existem nessa área, informática.</span></div>
+                        <span></div>Nasci em Mogi-Mirim, tenho 17 anos, venho desde criança estudando em escolas públicas. Sempre apreciei tudo na área da informática, programar, mexer com peças de computador ou de qualquer aparelho eletrônico em geral, sempre foi um hobby. Pretendo cursar uma faculdade de Engenharia da Computação ou de Ciências da Computação. Dessa forma podendo trabalhar com o que eu sempre apreciei.</span></div>
         </div>
         </li>
         <li class ='white-text'>
@@ -37,8 +37,8 @@
         </li>
         <li class ='white-text'>
 
-            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">web</i>Luana</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Aprecia as áreas da biologia em geral, pretende cursar ciências biológicas. Gosta de games, adora dança, etc.</span></div>
+            <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">brush</i>Luana</div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci na cidade de Mogi-Mirim, tenho 18 anos, estudei desde criança em escolas públicas. Sempre admirei a beleza que a natureza possui, a perfeição em cada detalhe me fascina. Decidi então que irei cursar uma faculdade de Ciências Biológicas e depois uma pós-graduação no ramo. Podendo assim trabalhar com o que amo.</span></div>
 
             </li>
         <li class ='white-text'> 
@@ -48,7 +48,7 @@
             </li>
         <li class ='white-text'>
             <div class="collapsible-header z-depth-4 orange darken-2" ><i class="material-icons">whatshot</i>Victor Hugo</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte esportes, pretende cursar nutrição ou ed.física. Adora jogar games, basquete, etc.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em Mogi-Mirim, tenho 17 anos, sempre estudei em escolas públicas. Sempre curti praticar esportes, por isso pretendo me fomar em Educação Física, e talvez, quando eu for mais experiente, fazer uma pós em Fisioterapia.</span></div>
 
             </li>
         <li class ='white-text'>
