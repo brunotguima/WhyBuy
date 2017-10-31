@@ -29,6 +29,7 @@
                             <input disabled id="email" type="text" class="form-control" name="email" placeholder="{{$mainUser->email}}">
                         </div>
 
+<<<<<<< HEAD
                         		                         <label for="sexo" class="col m4 control-label">Sexo:</label>
                       <div class="col m6 input-field">	
                         <div class="col m6">
@@ -40,10 +41,23 @@
                          </div>		
                         </div>
                    </br>
+=======
+                        <label for="sexo" class="col m4 control-label">Sexo:</label>
+                         <div class="col m6 input-field">
+                             <input id="sexo" type="text" class="form-control" name="sexo"required>
+                         <div class="col m6">
+                          <select name="sexo" id="sexo" class="form-control container">
+                             <option value="Masculino">Masculino</option>
+                             <<option value="Feminino">Feminino</option>
+                          </select>
+                          </div>
+                          </div>
+                     </br>
+>>>>>>> cff95b49d08152a16ad361bfcf5d2ba08c0d0989
 
                         <label for="rg" class="col m4 control-label">RG:</label>
                         <div class="col m6 input-field">
-                            <input id="rg" type="text" class="form-control rg" name="rg"required placeholder="00.000.000-0" maxlength="12">
+                            <input id="rg" type="text" class="form-control rg" name="rg" required placeholder="00.000.000-0" maxlength="12">
                         </div>
 
                         <label for="cpf" class="col m4 control-label">CPF:</label>
@@ -54,12 +68,20 @@
                         <label for="telUm" class="col m4 control-label">Telefone:</label>
                         <div class="col m6 input-field">
                         
+<<<<<<< HEAD
                         <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" maxlength="13" id="telUm">                 
+=======
+                        <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" maxlength="13" id="telUm" name="telUm">                 
+>>>>>>> cff95b49d08152a16ad361bfcf5d2ba08c0d0989
                         </div>
 
                         <label for="cell" class="col m4 control-label">Celular:</label>
                         <div class="col m6 input-field">
+<<<<<<< HEAD
                         <input id="cell" type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14">
+=======
+                        <input type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" id="cell" name="cell">
+>>>>>>> cff95b49d08152a16ad361bfcf5d2ba08c0d0989
                         </div>
 
                         <label for="image" class="col m4 control-label">Sua foto de Perfil:</label>
@@ -83,7 +105,6 @@
     </div>
 </div>
 </div>
-
 <script>
 $(document).ready(function(){
 $('#sexo').select2();
