@@ -23,7 +23,6 @@ class CreateEmpreendimentosTable extends Migration
             $table->string('cep');
             $table->string('cidade');
             $table->string('estado');
-            $table->string('ramoAtiv');
             $table->string('razaoSocial');
             $table->integer('ramoAtividade_id')->unsigned();
             $table->foreign('ramoAtividade_id')->references('id')->on('ramoatividade');

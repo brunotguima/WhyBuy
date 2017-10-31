@@ -8,6 +8,7 @@ use Auth;
 use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\RamoAtivEmpreendimento;
 
 class EmpreendimentosController extends Controller
 {
@@ -68,7 +69,7 @@ class EmpreendimentosController extends Controller
             $empreendimentos->cep = $request ->cep;
             $empreendimentos->cidade = $request ->cidade;
             $empreendimentos->estado = $request ->estado;
-            $empreendimentos->ramoAtiv = $request ->ramoAtiv;
+            $empreendimentos->ramoAtividade_id = $request ->ramoAtiv;
             $empreendimentos->razaoSocial = $request ->razaoSocial;
             if($request->has('EmpImage')){
                 $EmpImage = time().'.'.$request->EmpImage->getClientOriginalExtension();
