@@ -6,7 +6,7 @@
     <h2 class="center"><span class="orange-text text-darken-2 center">SUPORTE</span><h2>
             <div class="col s5 m5 l5">
                 <div class="container">
-                    <h5 class="center">Envie um email com sugestões, criticas, e duvidas sobre o uso de nossa aplicação. Envie seu nome e mail para retornarmos sua mensagem. A equipe FOX developers agradece o contato.</h5>
+                    <h5 class="center-justify">Escreva um email com sugestões, críticas e dúvidas sobre o uso de nossa aplicação. Envie seu nome e email para que possamos responder suas perguntas. A equipe FOX developers agradece o contato.</h5>
                 </div>
             </div>
             <div class="col s5 m5 l5">

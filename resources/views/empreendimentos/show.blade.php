@@ -13,20 +13,20 @@
 </div>
 </br>
     <div class="col s8 center">
-            <label for="email" class="control-label">CNPJ:</label>
+            <label for="email" class="control-label">Nome Fantasia:</label>
+            <h5 class="black-text">{{$empreendimento->nomeFantasia}}<h5>
+
+            <label for="dateNasc" class="control-label">CNPJ:</label>
             <h5 class="black-text">{{$empreendimento->cnpj}}<h5>
 
-            <label for="dateNasc" class="control-label">Sua Data de Nascimento:</label>
-            <h5 class="black-text">{{$empreendimento->dateNasc}}<h5>
+            <label for="sexo" class="control-label">Inscrição Estadual:</label>
+            <h5 class="black-text">{{$empreendimento->inscEst}}<h5>
 
-            <label for="sexo" class="control-label">Sexo:</label>
-            <h5 class="black-text">{{$empreendimento->}}<h5>
+            <label for="rg" class="control-label">CEP:</label>
+            <h5 class="black-text">{{$empreendimento->cep}}<h5>
 
-            <label for="rg" class="control-label">Seu RG:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->rg}}<h5>
-
-            <label for="cpf" class="control-label">Seu CPF:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->cpf}}<h5>
+            <label for="cpf" class="control-label">Cidade:</label>
+            <h5 class="black-text">{{$empreendimento}}<h5>
 
             <label for="telUm" class="control-label">Seu Telefone:</label>
             <h5 class="black-text">{{$mainPerfil->perfil->telUm}}<h5>
