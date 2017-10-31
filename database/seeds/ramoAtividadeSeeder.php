@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\RamoAtivEmpreendimento;
 
 class ramoAtividadeSeeder extends Seeder
 {
@@ -11,8 +12,14 @@ class ramoAtividadeSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('ramoatividade')->insert([
-            'name' => '..',
-        ]);
+            $json = File::get("public/js/ramoatividade.json");
+            $data = json_decode($json);
+            foreach ($data as $item)
+            {
+                RamoAtivEmpreendimento::create(array(
+                    'id' => $item->id,
+                    'name' => $item->name
+                ));
+            }
     }
 }

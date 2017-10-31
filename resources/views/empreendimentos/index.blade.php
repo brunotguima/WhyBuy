@@ -24,13 +24,6 @@
 
             <div class="card-content">
               <span class="card-title black-text center">{{$e->nomeFantasia}}</span>
-             <!-- <span>CNPJ:</span><p>{{$e->cnpj}}</p>
-              <span>Inscrição Estadual:</span><p>{{$e->inscEst}}</p>
-              <span>CEP:</span><p>{{$e->cep}}</p>
-              <span>Cidade:</span><p>{{$e->cidade}}</p>
-              <span>Estado:</span><p>{{$e->estado}}</p>
-              <span>Ramo de Atividade:</span><p>{{$e->ramoAtiv}}</p>
-              <span>Razão Social:</span><p>{{$e->razaoSocial}}</p> -->
             </div>
             <div class="card-action">
               <form style="display: inline;" action="{{route('empreendimentos.destroy',$e -> id)}}" method="post">

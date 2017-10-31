@@ -14,6 +14,8 @@ class CreatePromocaosTable extends Migration
     public function up()
     {
         Schema::create('promocaos', function (Blueprint $table) {
+            $table->integer('empreendimentos_id')->unsigned();
+            $table->foreign('empreendimentos_id')->references('id')->on('empreendimentos');
             $table->increments('id');
             $table->string('nomeProd');
             $table->string('marcaProd');

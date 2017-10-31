@@ -27,3 +27,4 @@ Route::post('suporte','EmailController@postContato')->name('suporte.post');
 Route::resource('empreendimentos','EmpreendimentosController');
 Route::resource('perfil','PerfilController');
 Route::resource('maps','MapController');
+Route::resource('promocao','PromocaoController');
