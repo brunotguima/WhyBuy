@@ -25,7 +25,7 @@
               <form style="display: inline;" action="{{route('empreendimentos.destroy',$e->id)}}" method="post">
                                     {{csrf_field()}}
                   <input type="hidden" name="_method" value="delete">
-                  <input type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+                  <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></button></a>
                </form>
             </div>
           </div>
