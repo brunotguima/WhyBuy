@@ -4,7 +4,7 @@
 <div class="container">
 <div class="row">
 <div class="col l12 center orange-text">
-<h2>Promoção cadastrada <a class="btn-floating btn-large waves-effect waves-light orange right" href="/promocao/create"><i class="material-icons">add</i></a> </h2> 
+<h2>Promoção cadastrada <a class="btn-floating btn-large waves-effect waves-light orange right" href="promocao/create"><i class="material-icons">add</i></a> </h2> 
 </div>
 </div>
 <div class="row">

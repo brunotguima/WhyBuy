@@ -6,7 +6,7 @@ use App\promocao;
 Use App\User;
 use App\Empreendimentos;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class PromocaoController extends Controller
 {
     /**
@@ -16,9 +16,9 @@ class PromocaoController extends Controller
      */
     public function index()
     {
-        $empreendimentos = User::with('perfil')->find(Auth::user()->id);
-        $promocaos = DB::table('promocaos')->where('user_id', Auth::id())->get();
-             return view ('promocao.index',compact('promocao','promocao'));
+        //$empreendimentos = DB::table('empreendimento')->find(Auth::user()->id);
+        $promocaos = DB::table('promocaos')->where('id','empreendimentos->id')->get();
+             return view ('promocao.index',compact('promocaos','empreendimentos'));
     }
 
     /**
@@ -28,7 +28,9 @@ class PromocaoController extends Controller
      */
     public function create()
     {
-        return view ('empreendimentos.create',compact('mainPerfil'));
+        $idEmpreendimento = DB::table('empreendimentos')->Where('id','empreendimento->id');
+        $promocaos = DB::table('promocaos')->where('id','empreendimentos->id')->get();
+        return view ('promocao.create',compact('promocaos'));
     }
 
     /**
@@ -39,11 +41,16 @@ class PromocaoController extends Controller
      */
     public function store(Request $request)
     {
+        $promocaos =new Promocao;
+    $promocaos ->empreendimentos_id = $promocaos->id;
      $promocaos ->nomeProd = $request->nomeProd;
      $promocaos ->marcaProd = $request->marcaProd;
      $promocaos ->valorProd = $request->valorProd;
      $promocaos ->categoria = $request->categoria;
     $promocaos ->codProd = $request->codProd;
+    $promocaos ->save();
+    return $promocaos;
+    return view ('promocao.create',compact('promocaos'));
     }
 
     /**
