@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\Perfil;
 use App\User;
+use App\promocao;
 
 class Empreendimentos extends Model
 {
@@ -14,4 +15,7 @@ class Empreendimentos extends Model
   protected $fillable = [
     'nomeFantasia','cnpj','inscEst','cep','cidade','estado','telUm','ramoAtiv','razaoSocial','EmpImage',
   ];
+}
+public function user(){
+  return $this->HasMany('App\promocao');
 }
