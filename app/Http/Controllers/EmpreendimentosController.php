@@ -125,8 +125,9 @@ class EmpreendimentosController extends Controller
      * @param  \App\Empreendimentos  $empreendimentos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Empreendimentos $empreendimentos)
+    public function destroy(Empreendimentos $empreendimentos, $id)
     {
+        $empreendimentos = Empreendimentos::find($id);
         $empreendimentos->delete();
         return redirect('/empreendimentos');
     }
