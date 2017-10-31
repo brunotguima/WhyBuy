@@ -31,7 +31,7 @@
                         <input id="cell" class="form-control" type="text" name="cell" value="{{$perfil->cell}}">
 
                     </div>                 
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary deep-orange">Enviar</button>
                 </form>
             </div>
         </div>
