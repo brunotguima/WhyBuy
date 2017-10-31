@@ -29,6 +29,7 @@
                             <input disabled id="email" type="text" class="form-control" name="email" placeholder="{{$mainUser->email}}">
                         </div>
 
+<<<<<<< HEAD
 
 <label for="sexo" class="col m4 control-label">Sexo:</label>
                         <div class="col-md-6">
@@ -38,6 +39,19 @@
                           </select>
                           </div>
                     </br>
+=======
+                        		                         <label for="sexo" class="col m4 control-label">Sexo:</label>
+                      <div class="col m6 input-field">	
+                        <div class="col m6">
+                           <input id="sexo" type="text" class="form-control" name="sexo"required>		
+                     <select name="sexo" id="sexo" class="form-control container">
+                           <option value="Masculino">Masculino</option>
+                           <option value="Feminino">Feminino</option>
+                        </select>
+                         </div>		
+                        </div>
+                   </br>
+>>>>>>> ecb5683081712e9988011c5a0821905d55b26f54
 
                         <label for="rg" class="col m4 control-label">RG:</label>
                         <div class="col m6 input-field">
@@ -57,7 +71,11 @@
 
                         <label for="cell" class="col m4 control-label">Celular:</label>
                         <div class="col m6 input-field">
+<<<<<<< HEAD
                         <input id="cell" type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" name="cell">
+=======
+                        <input type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" id="cell" name="cell">
+>>>>>>> ecb5683081712e9988011c5a0821905d55b26f54
                         </div>
 
                         <label for="image" class="col m4 control-label">Sua foto de Perfil:</label>
