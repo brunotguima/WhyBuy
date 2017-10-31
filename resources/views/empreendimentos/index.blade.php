@@ -9,12 +9,8 @@
 </div>
 <div class="row">
 <div class="col s12 center">
-@empty($empreendimentos)
-  <i class="large material-icons">sentiment_very_dissatisfied</i>
-            <h4 class="center"><span class="orange-text">Você ainda não possui um empreendimento cadastrado.</span></h4>
-            @endempty
 @isset($empreendimentos)
-@foreach ($empreendimentos as $e)
+@forelse ($empreendimentos as $e)
         <div class="col s6 m4 center">
           <div class="card">
           
@@ -26,15 +22,20 @@
               <span class="card-title black-text center">{{$e->nomeFantasia}}</span>
             </div>
             <div class="card-action">
-              <form style="display: inline;" action="{{route('empreendimentos.destroy',$e -> id)}}" method="post">
+            
+              <form style="display: inline;" action="{{route('empreendimentos.destroy',$e->id)}}" method="post">
                                     {{csrf_field()}}
                   <input type="hidden" name="_method" value="delete">
-                  <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>
+                  <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></button></a>
                </form>
             </div>
           </div>
         </div>
-@endforeach
+        @empty
+            <i class="large material-icons">sentiment_very_dissatisfied</i>
+            <h4 class="center"><span class="orange-text">Você ainda não possui um empreendimento cadastrado.</span></h4>
+
+@endforelse
 @endisset
       </div>
   </div>

@@ -29,17 +29,15 @@
                             <input disabled id="email" type="text" class="form-control" name="email" placeholder="{{$mainUser->email}}">
                         </div>
 
-                        		                         <label for="sexo" class="col m4 control-label">Sexo:</label>
-                      <div class="col m6 input-field">	
-                        <div class="col m6">
-                           <input id="sexo" type="text" class="form-control" name="sexo"required>		
-                     <select name="sexo" id="sexo" class="form-control container">
+
+<label for="sexo" class="col m4 control-label">Sexo:</label>
+                        <div class="col-md-6">
+                          <select name="sexo" id="sexo" class="form-control container">
                            <option value="Masculino">Masculino</option>
                            <option value="Feminino">Feminino</option>
-                        </select>
-                         </div>		
-                        </div>
-                   </br>
+                          </select>
+                          </div>
+                    </br>
 
                         <label for="rg" class="col m4 control-label">RG:</label>
                         <div class="col m6 input-field">
@@ -59,7 +57,7 @@
 
                         <label for="cell" class="col m4 control-label">Celular:</label>
                         <div class="col m6 input-field">
-                        <input type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" id="cell" name="cell">
+                        <input id="cell" type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" name="cell">
                         </div>
 
                         <label for="image" class="col m4 control-label">Sua foto de Perfil:</label>
@@ -86,9 +84,9 @@
 <script>
 $(document).ready(function(){
 $('#sexo').select2();
-$('.cpf').mask('000.000.000-00');
-$('.telUm').mask('(00)0000-0000');
-$('.cell').mask('(00)90000-0000');
+$('#cpf').mask('000.000.000-00');
+$('#telUm').mask('(00)0000-0000');
+$('#cell').mask('(00)90000-0000');
 });
 </script>
 
