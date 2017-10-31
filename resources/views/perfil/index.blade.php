@@ -3,40 +3,67 @@
 @section('content')
 <div class="container">
     <div class="row">
-                <h3 class="center"><span class="orange-text">SUAS INFORMAÇÕES</span></h3>
+               
         </div>
       @if ($mainPerfil->perfil != null)
 <div class="row">
-<div class="col s4 center">
+<div class="col l5 center">
 </br>
-<img class="circle" width="100" height="100" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}">
-<h5 class="orange-text">{{$mainPerfil->name}}</h5>
-<button class="btn waves-effect deep-orange" onClick="window.location.href='/perfil/{{$mainPerfil->id}}/edit'">Editar o Perfil</button>
+<img class="circle" width="200" height="200" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}">
 </div>
-</br>
-    <div class="col s8 center">
-            <label for="email" class="control-label">Seu Email:</label>
-            <h5 class="black-text">{{$mainPerfil->email}}<h5>
+</br> 
 
-            <label for="dateNasc" class="control-label">Sua Data de Nascimento:</label>
-            <h5 class="black-text">{{$mainPerfil->dateNasc}}<h5>
 
-            <label for="sexo" class="control-label">Sexo:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->sexo}}<h5>
 
-            <label for="rg" class="control-label">Seu RG:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->rg}}<h5>
+<footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l4 offset-l2 s12">
+                        <h4 class="center-align" class="white-text" >MINHAS INFORMAÇÕES</h4>
+                        <li class="divider"></li>
+                        
+                        <ul>
+                        <div class="row">
+                            <li><a class="grey-text text-lighten-3 col s6">  
+                             <label for="email" class="control-label white-text">Seu Email:</label>
+                                <h6 class="white-text">{{$mainPerfil->email}}<h6></a></li>
 
-            <label for="cpf" class="control-label">Seu CPF:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->cpf}}<h5>
+                            <li><a class="grey-text text-lighten-3 col s6"> 
+                             <label for="dateNasc" class="control-label white-text">Data de Nascimento:</label>
+                                <h6 class="white-text">{{$mainPerfil->dateNasc}}<h6></a></li>
 
-            <label for="telUm" class="control-label">Seu Telefone:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->telUm}}<h5>
+                            <li><a class="grey-text text-lighten-3 col s6"> 
+                             <label for="sexo" class="control-label white-text">Sexo:</label>
+                                <h6 class="white-text">{{$mainPerfil->perfil->sexo}}<h6></a></li>
 
-            <label for="cell" class="control-label">Seu Celular:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->cell}}<h5>
+                            <li><a class="grey-text text-lighten-3 col s6"> 
+                            <label for="rg" class="control-label white-text">Seu RG:</label>
+                                <h6 class="white-text">{{$mainPerfil->perfil->rg}}<h6></a></li>
+
+                            <li><a class="grey-text text-lighten-3 col s6">  
+                            <label for="cpf" class="control-label white-text">Seu CPF:</label>
+                                <h6 class="white-text">{{$mainPerfil->perfil->cpf}}<h6></a></li>
+
+                            <li><a class="grey-text text-lighten-3 col s6"> 
+                             <label for="telUm" class="control-label white-text">Seu Telefone:</label>
+                                 <h6 class="white-text">{{$mainPerfil->perfil->telUm}}<h6></a></li>
+
+                            <li><a class="grey-text text-lighten-3 col s6"> 
+                            <label for="cell" class="control-label white-text">Seu Celular:</label>
+                                <h6 class="white-text">{{$mainPerfil->perfil->cell}}<h6></a></li>
+
+                        </ul>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="btn waves-effect deep-orange align center" onClick="window.location.href='/perfil/{{$mainPerfil->id}}/edit'">Editar o Perfil</button>
     </div>
 </div>
+
+
 @else
 <br>
 <div class="col s12 center">
