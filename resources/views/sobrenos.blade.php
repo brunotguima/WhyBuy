@@ -32,7 +32,7 @@
         <li class ='white-text'>
 
             <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">share</i>Filício</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Aprecia a leitura, pretende cursar Engenharia mecânica. Adora jogar games, etc.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em Jaguariúna, cresci estudando em grande parte do tempo em escola de ensino privado, tenho 17 anos. Gosto de ver filmes de gênero de ação e fantasia, ler livros e ouvir músicas. Pretendo cursar uma faculdade de Engenharia Mecânica para poder exercer essa carreira.</span></div>
         
         </li>
         <li class ='white-text'>
@@ -43,27 +43,27 @@
             </li>
         <li class ='white-text'> 
             <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">web</i>Gabriel</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte música e pretende cursar direito. Adora jogar games, etc.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em Mogi Mirim, tenho 18 anos e estudei minha vida inteira em escolas públicas. Após o Ensino Médio, pretendo cursar Direito e, em minhas horas vagas, jogo video game, leio livros, ouço muitas músicas e assisto a filmes.</span></div>
 
             </li>
         <li class ='white-text'>
             <div class="collapsible-header z-depth-4 orange darken-2" ><i class="material-icons">whatshot</i>Victor Hugo</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em Mogi-Mirim, tenho 17 anos, sempre estudei em escolas públicas. Sempre curti praticar esportes, por isso pretendo me fomar em Educação Física, e talvez, quando eu for mais experiente, fazer uma pós em Fisioterapia.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em Mogi-Mirim, tenho 17 anos, sempre estudei em escolas públicas. Sempre curti praticar esportes, por isso pretendo me fomar em Educação Física, e talvez, quando eu for mais experiente, fazer Fisioterapia.</span></div>
 
             </li>
         <li class ='white-text'>
             <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">whatshot</i>Gustavo</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte basquete, pretende cursar ed.física. Adora jogar basquete, etc.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em São Paulo capital, tenho 17 anos. Depois de me formar no Ensino Médio, pretendo trabalhar e juntar dinheiro para minha faculdade, nas minhas horas vagas, gosto de jogar basquete e video game.</span></div>
 
             </li>
         <li class ='white-text'>
             <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">library_books</i>Milena</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte a área de humanas, pretende cursar psicologia. Adora ler, etc.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em mogi Mirim, tenho 17 anos, sou muito impática, pretendo cursar Psicologia para poder atuar mais na parte neural, quero muito ir para Federal de Curitiba (UFPR). </span></div>
 
             </li>
         <li class ='white-text'>
             <div class="collapsible-header z-depth-4 orange darken-2"><i class="material-icons">library_books</i>Juliana</div>
-            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Curte sair com os amigos, pretende cursar direito. Adora a natureza, etc.</span></div>
+            <div class="collapsible-body z-depth-4 orange lighten-1"><span>Nasci em Mogi Mirim, tenho 18 anos, estudei sempre em escolas públicas. Pretendo cursar Direito. Nas minhas horas vagas Aprecio músicas de Reggae, a natureza e gosto de escrever.</span></div>
         </li>
     </ul>
                                    
