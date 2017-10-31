@@ -34,7 +34,8 @@ class EmpreendimentosController extends Controller
     public function create()
     {
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        return view ('empreendimentos.create',compact('mainPerfil'));
+        $ramoAtividade = DB::table('ramoatividade')->get();
+        return view ('empreendimentos.create',compact('mainPerfil','ramoAtividade'));
     }
 
     /**

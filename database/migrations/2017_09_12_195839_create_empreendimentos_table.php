@@ -25,6 +25,8 @@ class CreateEmpreendimentosTable extends Migration
             $table->string('estado');
             $table->string('ramoAtiv');
             $table->string('razaoSocial');
+            $table->integer('ramoAtividade_id')->unsigned();
+            $table->foreign('ramoAtividade_id')->references('id')->on('ramoatividade');
             $table->string('EmpImage')->default(('images/empresa.png')); 
             $table->string('slug');
             $table->timestamps();

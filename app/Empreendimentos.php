@@ -9,13 +9,16 @@ use App\promocao;
 
 class Empreendimentos extends Model
 {
-  public function user(){
-        return $this->belongsTo('App\User');
-  }
   protected $fillable = [
     'nomeFantasia','cnpj','inscEst','cep','cidade','estado','telUm','ramoAtiv','razaoSocial','EmpImage',
   ];
-}
-public function user(){
-  return $this->HasMany('App\promocao');
+  public function user(){
+        return $this->belongsTo('App\User');
+  }
+  public function promocao(){
+    return $this->HasMany('App\promocao');
+  }
+  public function ramoativempreendimento(){
+    return $this->belongsTo('App\RamoAtivEmpreendimento');
+  }
 }
