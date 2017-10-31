@@ -30,20 +30,16 @@
                         </div>
 
                         <label for="sexo" class="col m4 control-label">Sexo:</label>
-                        <div class="col m6">
-                        <form action="#">
-                        <p>
-                            <input name="sexo" type="radio" id="masculino" />
-                        <label for="masculino">Masculino</label>
-                        </p>
-                        <p>
-                            <input name="sexo" type="radio" id="feminino" />
-                        <label for="feminino">Feminino</label>
-                         </p>
-                         
-                        </div>
-
-                    </br>
+                         <div class="col m6 input-field">
+                             <input id="sexo" type="text" class="form-control" name="sexo"required>
+                         <div class="col m6">
+                          <select name="sexo" id="sexo" class="form-control container">
+                             <option value="Masculino">Masculino</option>
+                             <<option value="Feminino">Feminino</option>
+                          </select>
+                          </div>
+                          </div>
+                     </br>
 
                         <label for="rg" class="col m4 control-label">RG:</label>
                         <div class="col m6 input-field">
@@ -58,12 +54,12 @@
                         <label for="telUm" class="col m4 control-label">Telefone:</label>
                         <div class="col m6 input-field">
                         
-                        <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" maxlength="13">                 
+                        <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" maxlength="13" id="telUm" name="telUm">                 
                         </div>
 
                         <label for="cell" class="col m4 control-label">Celular:</label>
                         <div class="col m6 input-field">
-                        <input type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14">
+                        <input type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" id="cell" name="cell">
                         </div>
 
                         <label for="image" class="col m4 control-label">Sua foto de Perfil:</label>
