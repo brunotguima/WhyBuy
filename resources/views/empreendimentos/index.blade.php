@@ -22,6 +22,7 @@
               <span class="card-title black-text center">{{$e->nomeFantasia}}</span>
             </div>
             <div class="card-action">
+            
               <form style="display: inline;" action="{{route('empreendimentos.destroy',$e->id)}}" method="post">
                                     {{csrf_field()}}
                   <input type="hidden" name="_method" value="delete">
