@@ -43,7 +43,7 @@
 
                         <label for="rg" class="col m4 control-label">RG:</label>
                         <div class="col m6 input-field">
-                            <input id="rg" type="text" class="form-control rg" name="rg"required placeholder="00.000.000-0" maxlength="12">
+                            <input id="rg" type="text" class="form-control rg" name="rg" required placeholder="00.000.000-0" maxlength="12">
                         </div>
 
                         <label for="cpf" class="col m4 control-label">CPF:</label>
@@ -83,7 +83,6 @@
     </div>
 </div>
 </div>
-
 <script>
 $(document).ready(function(){
 $('#sexo').select2();
