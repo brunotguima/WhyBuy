@@ -19,6 +19,6 @@ class Empreendimentos extends Model
     return $this->HasMany('App\promocao');
   }
   public function ramoativempreendimento(){
-    return $this->belongsTo('App\RamoAtivEmpreendimento');
+    return $this->belongsTo('App\RamoAtivEmpreendimento','ramoAtividade_id');
   }
 }

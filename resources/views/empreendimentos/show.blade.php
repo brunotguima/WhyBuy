@@ -2,49 +2,76 @@
 @section('content')
 
 <div class="container">
+ @foreach($empreendimento as $emp)
     <div class="row">
-                <h3 class="center"><span class="orange-text">{{$empreendimento->nomeFantasia}}</span></h3>
         </div>
 <div class="row">
 <div class="col s4 center">
 </br>
-<img class="circle" width="100" height="100" src="{{asset('/images/empreendimentos')}}/{{$empreendimento->EmpImage}}">
-<button class="btn waves-effect deep-orange" onClick="window.location.href='/empreendimentos/{{$empreendimento->id}}/edit'">Editar o Local</button>
 </div>
 </br>
-    <div class="col s8 center">
-            <label for="email" class="control-label">Nome Fantasia:</label>
-            <h5 class="black-text">{{$empreendimento->nomeFantasia}}<h5>
+    <div class="col s12 center">
+    <div class="row">
+        <div class="card-panel orange">
+          <span class="white-text"> {{$emp->nomeFantasia}}
+          </span>
+      </div>
+    </div>
+    <footer class="page-footer">
+            <div class="container">
+                <img class="circle center-align" width="150" height="150" src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">
+<br />
+<br />
 
-            <label for="dateNasc" class="control-label">CNPJ:</label>
-            <h5 class="black-text">{{$empreendimento->cnpj}}<h5>
+<div class="row center">
+                
+                <div class="row">
+                    
+                        <h4 class="center-align" class="white-text" >INFORMAÇÕES DO EMPREENDEDORISMO</h4>
+                        <li class="divider"></li>
+                        
+                        <ul>
+                            <div class="center-align">
+                            <li>  
+                             <label for="nomeFantasia" class="control-label white-text ">Nome Fantasia:</label>
+            <h7 class="white-text">{{$emp->nomeFantasia}}</h7>
+                                <br />
 
-            <label for="sexo" class="control-label">Inscrição Estadual:</label>
-            <h5 class="black-text">{{$empreendimento->inscEst}}<h5>
+                                <label for="cnpj" class="control-label white-text">CNPJ:</label>
+            <h7 class="white-text">{{$emp->cnpj}}</h7>
+            <br />
 
-            <label for="rg" class="control-label">CEP:</label>
-            <h5 class="black-text">{{$empreendimento->cep}}<h5>
+            <label for="inscEst" class="control-label white-text">Inscrição Estadual:</label>
+            <h7 class="white-text">{{$emp->inscEst}}</h7>
+            <br />
 
-            <label for="cpf" class="control-label">Cidade:</label>
-            <h5 class="black-text">{{$empreendimento}}<h5>
+            <label for="cep" class="control-label white-text">CEP:</label>
+            <h7 class="white-text">{{$emp->cep}}</h7>
+            <br />
 
-            <label for="telUm" class="control-label">Seu Telefone:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->telUm}}<h5>
+            <label for="cidade" class="control-label white-text">Cidade:</label>
+            <h7 class="white-text">{{$emp->cidade}}</h7>
+            <br />
 
-            <label for="cell" class="control-label">Seu Celular:</label>
-            <h5 class="black-text">{{$mainPerfil->perfil->cell}}<h5>
+            <label for="estado" class="control-label white-text">Estado:</label>
+            <h7 class="white-text">{{$emp->estado}}</h7>
+            <br />
+
+            <label for="razaoSocial" class="control-label white-text">Razão Social:</label>
+            <h7 class="white-text">{{$emp->razaoSocial}}</h7>
+            <br />
+
+            <label for="ramoAtiv" class="control-label white-text">Ramo de Atividade:</label>
+            <h7 class="white-text">{{$emp->RamoAtivEmpreendimento->name}}
+@endforeach
+                               
+                        </ul>
+                    
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
     </div>
 </div>
-@else
-<br>
-<div class="col s12 center">
-  <i class="large material-icons">sentiment_very_dissatisfied</i>
-            <h4 class="center"><span class="orange-text">Você ainda não possui cadastro no seu perfil, complete-o.</span></h4>
-            <br>
-            <button class="btn waves-effect deep-orange" onClick="window.location.href='perfil/create'">Editar o Perfil</button>
-</div>
-<br>
-@endif
-</div>
-
-@endsection

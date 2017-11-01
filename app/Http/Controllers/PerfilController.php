@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use File;
 use Image;
+use Carbon\Carbon;
 
 class PerfilController extends Controller
 {
@@ -52,8 +53,9 @@ class PerfilController extends Controller
             'cpf' => 'required|cpf|formato_cpf',
     ]);
         if ($request->hasFile('image')) {
+           
             $image = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path('images\perfils'), $image);
+            $request->image->move(public_path().'images\perfils', $image);
         }
 
         $perfil = new Perfil();
@@ -64,7 +66,7 @@ class PerfilController extends Controller
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
         $perfil->image = $image;
-        $perfil->save();
+        $perfil->save(); 
         return redirect('perfil');
     }
 

@@ -30,7 +30,7 @@
                         </div>
 
 
-<label for="sexo" class="col m4 control-label">Sexo:</label>
+                        <label for="sexo" class="col m4 control-label">Sexo:</label>
                         <div class="col-md-6">
                           <select name="sexo" id="sexo" class="form-control container">
                            <option value="Masculino">Masculino</option>
@@ -41,23 +41,24 @@
 
                         <label for="rg" class="col m4 control-label">RG:</label>
                         <div class="col m6 input-field">
-                            <input id="rg" type="text" class="form-control rg" name="rg" required placeholder="00.000.000-0" maxlength="12">
+                            <input id="rg" type="text" class="form-control rg" name="rg" required placeholder="00.000.000-0" OnKeyPress="formatar('##.###.###-#', this)" maxlength="12">
                         </div>
 
                         <label for="cpf" class="col m4 control-label">CPF:</label>
                         <div class="col m6 input-field">
-                            <input id="cpf" type="text" class="cpf" name="cpf"required placeholder="000.000.000-00" maxlength="14">
+                            <input id="cpf" type="text" class="cpf" name="cpf"required placeholder="000.000.000-00" OnKeyPress="formatar('###.###.###-##', this)" maxlength="14">
                         </div>
 
                         <label for="telUm" class="col m4 control-label">Telefone:</label>
                         <div class="col m6 input-field">
                         
-                        <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" maxlength="13" id="telUm" name="telUm">                 
+                        <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" OnKeyPress="formatar('##-####-####', this)" maxlength="12" id="telUm" name="telUm">                 
                         </div>
 
                         <label for="cell" class="col m4 control-label">Celular:</label>
                         <div class="col m6 input-field">
-                        <input id="cell" type="text" class="form-control cell" placeholder="(00) 00000-0000" maxlength="14" name="cell">
+                        <input id="cell" 
+                        type="text" class="form-control cell" placeholder="(00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" maxlength="13" name="cell">
                         </div>
 
                         <label for="image" class="col m4 control-label">Sua foto de Perfil:</label>
@@ -84,10 +85,19 @@
 <script>
 $(document).ready(function(){
 $('#sexo').select2();
-$('#cpf').mask('000.000.000-00');
-$('#telUm').mask('(00)0000-0000');
-$('#cell').mask('(00)90000-0000');
 });
+</script>
+<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}
 </script>
 
 @if($errors->any())

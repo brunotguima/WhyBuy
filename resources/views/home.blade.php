@@ -21,7 +21,7 @@
             <h1 class="center light-orange-text"><i class="material-icons">flash_on</i></h1>
             <h4 class="center">Facilidade e agilidade na procura</h4>
 
-            <h5 class="light center-justify">O app facilita a vida do usuário, trazendo diversas opções de produtos com base nos seus interesses, sem perder horas procurando, indo sempre direto a melhor oferta!</h5>
+            <h5 class="light center">O app facilita a vida do usuário, trazendo diversas opções de produtos com base nos seus interesses, sem perder horas procurando, indo sempre direto a melhor oferta!</h5>
           </div>
         </div>
 

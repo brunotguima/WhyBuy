@@ -22,39 +22,39 @@
                     </br>
                         <label for="nomeFantasia" class="col-md-4 control-label">Nome Fantasia:</label>
                         <div class="col-md-6">
-                        <input id="nomeFantasia" type="text" class="form-control" name="nomeFantasia"required>
+                        <input id="nomeFantasia" type="text" class="form-control" name="nomeFantasia"required required placeholder="Nome Fantasia">
                         </div>
 
                         <label for="cnpj" class="col-md-4 control-label">CNPJ:</label>
                         <div class="col-md-6">
-                            <input id="cnpj" type="text" class="form-control" name="cnpj"required>
+                            <input id="cnpj" type="text" class="form-control" name="cnpj"required required placeholder="00.000.000/0000-00" OnKeyPress="formatar('##.###.###/####-##', this)"  maxlength="18">
                         </div>
 
                         <label for="inscEst" class="col-md-4 control-label">Inscrição Estadual:</label>
                         <div class="col-md-6">
-                            <input id="inscEst" type="text" class="form-control" name="inscEst"required>
+                            <input id="inscEst" type="text" class="form-control" name="inscEst"required required placeholder="Incrição Estadual">
                         </div>
 
                         <label for="cep" class="col-md-4 control-label">CEP:</label>
                         <div class="col-md-6">
-                            <input id="cep" type="text" class="form-control" name="cep"required>
+                            <input id="cep" type="text" class="form-control" name="cep"required required placeholder="00000-000" OnKeyPress="formatar('00000-000', this)"  maxlength="9">
                         </div>
 
                         <label for="cidade" class="col-md-4 control-label">Cidade:</label>
                         <div class="col-md-6">
-                            <input id="cidade" type="text" class="form-control" name="cidade"required>
+                            <input id="cidade" type="text" class="form-control" name="cidade"required required placeholder="Cidade">
                         </div>
                         <label for="estado" class="col-md-4 control-label">Estado:</label>
                         <div class="col-md-6">
-                            <input id="estado" type="text" class="form-control" name="estado"required>
+                            <input id="estado" type="text" class="form-control" name="estado"required required placeholder="Estado">
                         </div>
                         <label for="telUm" class="col-md-4 control-label">Telefone:</label>
                         <div class="col-md-6">
-                            <input id="telUm" type="text" class="form-control" name="telUm"required>
+                            <input id="telUm" type="text" class="form-control" name="telUm" required placeholder="(00) 0000-0000" OnKeyPress="formatar('##-####-####', this)"  maxlength="12">
                         </div>
                         <label for="razaoSocial" class="col-md-4 control-label">Razão Social:</label>
                         <div class="col-md-6">
-                            <input id="razaoSocial" type="text" class="form-control" name="razaoSocial"required>
+                            <input id="razaoSocial" type="text" class="form-control" name="razaoSocial"required required placeholder="Razão Social">
                         </div>
                         <label for="EmpImage" class="col-md-4 control-label">Logotipo:</label>
                         <div class="col-md-6">
@@ -72,6 +72,18 @@
     </div>
 </div>
 </div>
+<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}
+</script>
 <script>
 $(document).ready(function() {
     $('#ramoAtiv').select2();

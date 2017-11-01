@@ -89,11 +89,11 @@ class EmpreendimentosController extends Controller
      * @param  \App\Empreendimentos  $empreendimentos
      * @return \Illuminate\Http\Response
      */
-    public function show(Empreendimentos $empreendimentos,$id)
+    public function show($slug)
     {
-        $empreendimentos = Empreendimentos::find($id);
+        $empreendimento = Empreendimentos::with('RamoAtivEmpreendimento')->where('slug','=',$slug)->get();
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        return view('empreendimentos.show',compact('empreendimentos','mainPerfil'));
+        return view('empreendimentos.show',compact('empreendimento','mainPerfil','ramoAtiv'));
     }
 
     /**
