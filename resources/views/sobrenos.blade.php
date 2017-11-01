@@ -7,9 +7,9 @@
 
     <h2 class="center text-principal"><span class="orange-text">SOBRE NÓS</span><h2>
 
-            <h5 class="center"><span class="black-text text-principal">
-                    O Why Buy é um projeto que teve início no primeiro semestre de 2017, suprindo o tema no nosso Trabalho de Conclusão de Curso para a ETEC Pedro Ferreira Alves, cuja a ideia foi desenvolvida pelo aluno e regente do projeto Bruno Guimarães. 
-                    A equipe é constituída também por mais outros 7 membros que fazem parte de todo o desenvolvimento.</span><h5>
+            <h5 class="center-justify"><span class="black-text text-principal">
+                    O WhyBuy é um projeto que teve início no primeiro semestre de 2017, suprindo o tema no nosso Trabalho de Conclusão de Curso para a ETEC Pedro Ferreira Alves, cuja a idéia foi desenvolvida pelo aluno e regente do projeto Bruno Guimarães. 
+                    A equipe é constituída também por mais outros 7 membros que fazem parte de todo o processo de desenvolvimento.</span><h5>
                     <br>
                     <br>
                     <div class="center">
