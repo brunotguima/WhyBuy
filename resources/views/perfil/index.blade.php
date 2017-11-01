@@ -19,7 +19,7 @@
 <br />
 
                 <div class="row center">
-                <button class="btn waves-effect deep-orange align center" onClick="window.location.href='/perfil/{{$mainPerfil->id}}/edit'">Editar o Perfil</button>
+                <button class="btn waves-effect deep-orange align center" onClick="window.location.href='perfil/{{$mainPerfil->id}}/edit'">Editar o Perfil</button>
                 </div>
                 </div>
                 <div class="row">

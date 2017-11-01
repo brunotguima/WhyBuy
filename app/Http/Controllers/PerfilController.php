@@ -90,7 +90,7 @@ class PerfilController extends Controller
        // $mainPerfil = DB::table('perfils')->find(Auth::user()->id);
        // return $perfil; 
        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        return view ("perfil.edit", compact('perfil','mainPerfil'));
+        return view('perfil.edit', compact('perfil','mainPerfil'));
 
     }
 

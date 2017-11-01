@@ -14,6 +14,9 @@ class PromocaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->middleware('auth');
+       }
     public function index()
     {
         $empreendimentos = DB::table('empreendimentos')->find(Auth::user()->id);
@@ -28,8 +31,7 @@ class PromocaoController extends Controller
      */
     public function create()
     {
-        $empreendimentos = DB::table('empreendimentos')->Where('id','empreendimento->id')->get();
-        $promocaos = DB::table('promocaos')->where('id','empreendimentos->id')->get();
+        $empreendimentos = Empreendimentos::all();
         return view ('promocao.create',compact('promocaos', 'empreendimentos'));
     }
 
