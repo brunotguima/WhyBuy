@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 Use App\Empreendimentos;
 class promocao extends Model
 {
-    public function user(){
-        return $this->HasOne('App\Empreendimentos');
+    public function empreendimento(){
+        return $this->belongsTo('App\Empreendimentos');
   }
 }

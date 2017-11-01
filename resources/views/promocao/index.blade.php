@@ -9,14 +9,9 @@
 </div>
 <div class="row">
 <div class="col s12 center">
-@empty($promocaos)
-  <i class="large material-icons">sentiment_very_dissatisfied</i>
-            <h4 class="center"><span class="orange-text">Você ainda não possui uma Promoção cadastrada.</span></h4>
-            @endempty
 @isset($promocaos)
-@foreach ($promocaos as $promocao)
-        <div class="col s6 m4 center">
-          <div class="card">
+@forelse ($promocaos as $promocao)
+        <div class="col s6 m4 center">S
             <div class="card-content">
               <span class="card-title black-text center">{{$promocao->nomeProd}}</span>
             </div>
@@ -29,7 +24,11 @@
             </div>
           </div>
         </div>
-@endforeach
+        @empty
+  <i class="large material-icons">sentiment_very_dissatisfied</i>
+            <h4 class="center"><span class="orange-text">Você ainda não possui uma Promoção cadastrada.</span></h4>
+
+@endforelse
 @endisset
       </div>
   </div>

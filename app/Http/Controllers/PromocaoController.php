@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use App\promocao;
 Use App\User;
 use App\Empreendimentos;
@@ -16,7 +16,7 @@ class PromocaoController extends Controller
      */
     public function index()
     {
-        //$empreendimentos = DB::table('empreendimento')->find(Auth::user()->id);
+        $empreendimentos = DB::table('empreendimentos')->find(Auth::user()->id);
         $promocaos = DB::table('promocaos')->where('id','empreendimentos->id')->get();
              return view ('promocao.index',compact('promocaos','empreendimentos'));
     }
@@ -28,9 +28,9 @@ class PromocaoController extends Controller
      */
     public function create()
     {
-        $idEmpreendimento = DB::table('empreendimentos')->Where('id','empreendimento->id');
+        $empreendimentos = DB::table('empreendimentos')->Where('id','empreendimento->id')->get();
         $promocaos = DB::table('promocaos')->where('id','empreendimentos->id')->get();
-        return view ('promocao.create',compact('promocaos'));
+        return view ('promocao.create',compact('promocaos', 'empreendimentos'));
     }
 
     /**
