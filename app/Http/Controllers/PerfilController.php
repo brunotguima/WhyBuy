@@ -103,14 +103,18 @@ class PerfilController extends Controller
      */
     public function update(Request $request, Perfil $perfil)
     {
-        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        $perfil->rg = $request->rg;
-        $perfil->cpf = $request->cpf;
+        if ($request->hasFile('image')) {
+            $request = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+            $image = time().'.'.$request->image->getClientOriginalExtension();
+            $perfil->image = $image;
+            $request->image->move(public_path().'images\perfils', $image);
+        }
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
         $perfil->save();
-        return redirect('perfil','mainPerfil');
+        return redirect('perfil');
     }
+    
 
     /**
      * Remove the specified resource from storage.

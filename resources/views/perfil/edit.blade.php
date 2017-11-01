@@ -9,16 +9,11 @@
                 <form action="{{ route('perfil.update', $perfil->id) }}" method="post">
                     {{csrf_field()}}
                      <div class="form-group">
-                        <label for="cpf">CPF</label>
-                        <input id="cpf" class="form-control" type="text" name="cpf" value="{{$perfil->cpf}}">
+                        <label for="image" >Imagem de Perfil</label>
+                        </br>
+                        <input id="image"  class="form-control" type="file" name="image"  value="{{$perfil-> image}}">
 
                     </div>
-                    <div class="form-group">
-                        <label for="rg">RG</label>
-                        <input id="rg" class="form-control" type="text" name="rg" value="{{$perfil->rg}}">
-
-                    </div>
-
                     <input type="hidden" name="_method" value="put">
             </div>
                     <div class="form-group">

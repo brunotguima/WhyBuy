@@ -11,7 +11,15 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('promocao.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
-
+                        <div class="form-group">
+                         <div class="input-field col s12">
+                         <label for="empreendimento">Empreendimento</label>
+                            <select>
+                            @foreach($empreendimentos as $empreendimento)                            
+                                <option value="{{$empreendimento->id}}">{{$empreendimento->nomeFantasia}}</option>
+                            @endforeach
+                            </select>
+                        </div>
                         <label for="nomeProd" class="col m4 control-label">Nome Produto:</label>
                         <div class="col m6 input-field">
                             <input  id="nomeProd" type="text" class="form-control" name="nomeProd" >
