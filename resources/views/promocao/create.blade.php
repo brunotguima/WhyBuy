@@ -12,9 +12,9 @@
                     <form class="form-horizontal" method="POST" action="{{ route('promocao.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                         <div class="input-field col s12">
-                         <label for="empreendimento">Empreendimento</label>
-                            <select>
+                            <label for="empreendimento">Empreendimento</label>                        
+                            <div class="input-field col s12">
+                            <select class="browser-default" name="empreendimento" id="empreendimento">                         
                             @foreach($empreendimentos as $empreendimento)                            
                                 <option value="{{$empreendimento->id}}">{{$empreendimento->nomeFantasia}}</option>
                             @endforeach
@@ -22,22 +22,22 @@
                         </div>
                         <label for="nomeProd" class="col m4 control-label">Nome Produto:</label>
                         <div class="col m6 input-field">
-                            <input  id="nomeProd" type="text" class="form-control" name="nomeProd" >
+                            <input  id="nomeProd" type="text" class="validate" name="nomeProd" >
                         </div>
 
                         <label for="marcaProd" class="col m4 control-label">Marca do Produto:</label>
                         <div class="col m6 input-field">
-                            <input  id="marcaProd" type="text" class="form-control" name="marcaProd">
+                            <input  id="marcaProd" type="text" class="validate" name="marcaProd">
                         </div>
 
                         <label for="valorProd" class="col m4 control-label">Valor do Produto:</label>
                         <div class="col m6 input-field">
-                            <input  id="valorProd" type="text" class="form-control" name="valorProd">
+                            <input  id="valorProd" type="text" class="validate" name="valorProd">
                         </div>
 
                         <label for="categoria" class="col m4 control-label">Categoria do Produto:</label>
                         <div class="col m6 input-field">
-                            <input id="categoria" type="text" class="form-control categoria" name="categoria"required>
+                            <input id="categoria" type="text" class="validate categoria" name="categoria"required>
                         </div>
                         <label for="codProd" class="col m4 control-label">Codigo do Produto:</label>
                         <div class="col m6 input-field">
@@ -56,14 +56,21 @@
     </div>
 </div>
 </div>
-<!--@if($errors->any())
+<script>
+ $(document).ready(function() {
+        $('select').select2();
+  });
+</script>
+@if($errors->any())
  @foreach ($errors->all() as $error)
     <script>
     var error = "<?=$error?>"
     Materialize.toast(error, 5000);
+    
+       
     </script>
     @endforeach
-    @endif -->>
+    @endif
  @endsection
     
 
