@@ -22,7 +22,7 @@ class CreatePerfilsTable extends Migration
             $table->string('sexo');
             $table->string('telUm');
             $table->string('cell');
-            $table->string('image');            
+            $table->string('image')->default('person.png');            
             $table->timestamps();
         });
     }

@@ -52,12 +52,6 @@ class PerfilController extends Controller
         $request->validate([
             'cpf' => 'required|cpf|formato_cpf',
     ]);
-        if ($request->hasFile('image')) {
-           
-            $image = time().'.'.$request->image->getClientOriginalExtension();
-            $request->image->move(public_path().'images\perfils', $image);
-        }
-
         $perfil = new Perfil();
         $perfil->user_id = Auth::user()->id;
         $perfil->rg = $request->rg;
@@ -65,7 +59,12 @@ class PerfilController extends Controller
         $perfil->sexo = $request->sexo;
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
-        $perfil->image = $image;
+        if ($request->hasFile('image')) {
+            $request = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+            $image = time().'.'.$request->image->getClientOriginalExtension();
+            $perfil->image = $image;
+            $request->image->move(public_path().'images\perfils', $image);
+        }
         $perfil->save(); 
         return redirect('perfil');
     }

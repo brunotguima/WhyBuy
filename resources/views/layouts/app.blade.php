@@ -19,7 +19,7 @@
     <div id="app">
         <header class="page-header">
             <nav class="nav-wrapper">
-                <div class='row'><a href="/" class="brand-logo center"><img src="../images/logocabeca.png" alt="logotipo"></a>
+                <div class='row'><a href="/"><img src="../images/logocabeca.png" alt="logotipo" class="brand-logo center"></a>
                     <div class="col s4">
                         <ul id="nav-mobile">
                             <li><a href="#" data-activates="slide-out" class=" button-collapse show-on-large"><i class="material-icons ">menu</i></a></li>
