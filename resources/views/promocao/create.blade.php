@@ -12,9 +12,9 @@
                     <form class="form-horizontal" method="POST" action="{{ route('promocao.store') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
-                         <div class="input-field col s12">
-                         <label for="empreendimento">Empreendimento</label>
-                            <select name="empreendimento" id="empreendimento">
+                            <label for="empreendimento">Empreendimento</label>                        
+                            <div class="input-field col s12">
+                            <select class="browser-default" name="empreendimento" id="empreendimento">                         
                             @foreach($empreendimentos as $empreendimento)                            
                                 <option value="{{$empreendimento->id}}">{{$empreendimento->nomeFantasia}}</option>
                             @endforeach
@@ -56,14 +56,21 @@
     </div>
 </div>
 </div>
-<!--@if($errors->any())
+<script>
+ $(document).ready(function() {
+        $('select').select2();
+  });
+</script>
+@if($errors->any())
  @foreach ($errors->all() as $error)
     <script>
     var error = "<?=$error?>"
     Materialize.toast(error, 5000);
+    
+       
     </script>
     @endforeach
-    @endif -->>
+    @endif
  @endsection
     
 

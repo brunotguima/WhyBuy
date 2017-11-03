@@ -21,7 +21,9 @@ Route::get('/sobrenos', 'HomeController@sobrenos');
 Route::get('/empreendimentos', function (){
     return view('/empreendimentos');
 });
-
+Route::get('/teste',function(){
+    return view('promocao/teste');
+});
 Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
 Route::resource('empreendimentos','EmpreendimentosController');
