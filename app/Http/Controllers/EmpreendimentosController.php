@@ -9,6 +9,7 @@ use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\RamoAtivEmpreendimento;
+use Geocoder\Laravel\Facades\Geocoder;
 
 class EmpreendimentosController extends Controller
 {
@@ -67,6 +68,7 @@ class EmpreendimentosController extends Controller
             $empreendimentos->cnpj = $request ->cnpj;
             $empreendimentos->inscEst = $request ->inscEst;
             $empreendimentos->cep = $request ->cep;
+            $empreendimentos->endereco = $request->endereco;
             $empreendimentos->cidade = $request ->cidade;
             $empreendimentos->estado = $request ->estado;
             $empreendimentos->ramoAtividade_id = $request ->ramoAtiv;
@@ -93,7 +95,8 @@ class EmpreendimentosController extends Controller
     {
         $empreendimento = Empreendimentos::with('RamoAtivEmpreendimento')->where('slug','=',$slug)->get();
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        return view('empreendimentos.show',compact('empreendimento','mainPerfil','ramoAtiv'));
+        $latlong = Geocoder::geocode($empreendimento[0]->endereco.','.$empreendimento[0]->cidade.','.$empreendimento[0]->estado.','.$empreendimento[0]->cep);
+        return view('empreendimentos.show',compact('empreendimento','mainPerfil','latlong'));
     }
 
     /**

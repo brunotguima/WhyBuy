@@ -21,6 +21,7 @@ class CreateEmpreendimentosTable extends Migration
             $table->string('cnpj');
             $table->string('inscEst');
             $table->string('cep');
+            $table->string('endereco');
             $table->string('cidade');
             $table->string('estado');
             $table->string('razaoSocial');

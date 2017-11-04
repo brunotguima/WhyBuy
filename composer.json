@@ -9,6 +9,7 @@
         "cornford/googlmapper": "2.*",
         "fideloper/proxy": "~3.3",
         "geekcom/validator-docs": "1.*",
+        "geocoder-php/google-maps-provider": "^4.1",
         "guzzlehttp/guzzle": "~5.3|~6.0",
         "igorescobar/jquery-mask-plugin": "^1.14",
         "intervention/image": "^2.4",
@@ -16,6 +17,9 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "~5.4",
         "nesbot/carbon": "^1.22",
+        "php-http/curl-client": "^1.7",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/message": "^1.6",
         "toin0u/geocoder-laravel": "^4.0",
         "willdurand/geocoder": "^4.1"
     },
