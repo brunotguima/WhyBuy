@@ -15,7 +15,7 @@
                             <label for="empreendimento">Empreendimento</label>                        
                             <div class="input-field col s12">
                             <select class="browser-default" name="empreendimento" id="empreendimentos_id">                         
-                            @foreach($empreendimentos as $empreendimento)                            
+                            @foreach( $empreendimento)                            
                                 <option value="{{$empreendimento->id}}">{{$empreendimento->nomeFantasia}}</option>
                             @endforeach
                             </select>

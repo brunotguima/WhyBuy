@@ -16,7 +16,7 @@
               <span class="card-title black-text center">{{$promocao->nomeProd}}</span>
             </div>
             <div class="card-action">
-              <form style="display: inline;" action="{{route('empreendimentos.destroy',$promocao -> id)}}" method="post">
+              <form style="display: inline;" action="{{route('promocao.destroy',$promocao -> id)}}" method="post">
                                     {{csrf_field()}}
                   <input type="hidden" name="_method" value="delete">
                   <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></a>

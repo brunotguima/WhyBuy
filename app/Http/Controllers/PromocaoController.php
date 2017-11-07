@@ -44,14 +44,14 @@ class PromocaoController extends Controller
     public function store(Request $request)
     {
         $promocaos =new Promocao;
-    $promocaos ->empreendimentos_id = $promocaos->id;
+    $promocaos ->empreendimentos_id = $request->empreendimento;
      $promocaos ->nomeProd = $request->nomeProd;
      $promocaos ->marcaProd = $request->marcaProd;
      $promocaos ->valorProd = $request->valorProd;
      $promocaos ->categoria = $request->categoria;
     $promocaos ->codProd = $request->codProd;
     $promocaos ->save();
-    return $promocaos;
+    //return $promocaos;
     return view ('promocao.create',compact('promocaos'));
     }
 
