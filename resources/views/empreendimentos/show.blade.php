@@ -44,7 +44,7 @@
                         <br />
 
                         <label for="ramoAtiv" class="control-label white-text">Ramo de Atividade:</label>
-                        <h7 class="white-text">{{$emp->RamoAtivEmpreendimento->name}}
+                        <h7 class="white-text">{{$ramoAtividade->name}}
                     </div>
                 </div>
             </div>

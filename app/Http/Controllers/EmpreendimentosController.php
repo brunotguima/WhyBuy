@@ -94,14 +94,18 @@ class EmpreendimentosController extends Controller
      */
     public function show($slug)
     {
-        $empreendimento = Empreendimentos::with('RamoAtivEmpreendimento')->where('slug','=',$slug)->get();
+        $empreendimento = DB::table('empreendimentos')->where('slug','=',$slug)->get();
+        //dd($empreendimento[0]);
+        $ramoAtividade = RamoAtivEmpreendimento::find($empreendimento[0]->ramoAtividade_id);
+        //$empreendimento = Empreendimentos::with('RamoAtivEmpreendimento')->where('slug', '=', $slug)->first()->get();
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        $coordenadas = Geocoder::geocode($empreendimento[0]->endereco.','.$empreendimento[0]->cidade.','.$empreendimento[0]->estado.','.$empreendimento[0]->cep)->get();
+        $coordenadas = Geocoder::geocode($empreendimento[0]->endereco . ', ' . $empreendimento[0]->cidade . ', ' . $empreendimento[0]->estado)->get();
+        if(isset($coordenadas[0])){
         $latitude = $coordenadas[0]->getCoordinates()->getLatitude();
         $longitude = $coordenadas[0]->getCoordinates()->getLongitude();
-        
         Mapper::map($latitude,$longitude);
-        return view('empreendimentos.show',compact('empreendimento','mainPerfil'));
+    };
+        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade'));
     }
 
     /**
