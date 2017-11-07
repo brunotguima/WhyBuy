@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\RamoAtivEmpreendimento;
 use Geocoder\Laravel\Facades\Geocoder;
+use Mapper;
 
 class EmpreendimentosController extends Controller
 {
@@ -95,8 +96,12 @@ class EmpreendimentosController extends Controller
     {
         $empreendimento = Empreendimentos::with('RamoAtivEmpreendimento')->where('slug','=',$slug)->get();
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        $latlong = Geocoder::geocode($empreendimento[0]->endereco.','.$empreendimento[0]->cidade.','.$empreendimento[0]->estado.','.$empreendimento[0]->cep);
-        return view('empreendimentos.show',compact('empreendimento','mainPerfil','latlong'));
+        $coordenadas = Geocoder::geocode($empreendimento[0]->endereco.','.$empreendimento[0]->cidade.','.$empreendimento[0]->estado.','.$empreendimento[0]->cep)->get();
+        $latitude = $coordenadas[0]->getCoordinates()->getLatitude();
+        $longitude = $coordenadas[0]->getCoordinates()->getLongitude();
+        
+        Mapper::map($latitude,$longitude);
+        return view('empreendimentos.show',compact('empreendimento','mainPerfil'));
     }
 
     /**
