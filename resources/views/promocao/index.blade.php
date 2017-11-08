@@ -9,7 +9,6 @@
 </div>
 <div class="row">
 <div class="col s12 center">
-@isset($promocaos)
 @forelse ($promocaos as $promocao)
         <div class="col s6 m4 center">S
             <div class="card-content">
@@ -26,10 +25,9 @@
         </div>
         @empty
   <i class="large material-icons">sentiment_very_dissatisfied</i>
-            <h4 class="center"><span class="orange-text">Você ainda não possui uma Promoção cadastrada.</span></h4>
+            <h4 class="center"><span class="orange-text">Você ainda não possui uma Promoção cadastrada.  By: Homão da Poha</span></h4>
 
 @endforelse
-@endisset
       </div>
   </div>
   @isset ($promocaorrorMessage)

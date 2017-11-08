@@ -20,7 +20,7 @@ class PromocaoController extends Controller
     public function index()
     {
         $empreendimentos = DB::table('empreendimentos')->find(Auth::user()->id);
-        $promocaos = DB::table('promocaos')->where('id','empreendimentos->id')->get();
+        $promocaos = DB::table('promocaos')->where('id', $empreendimentos->id)->get();
              return view ('promocao.index',compact('promocaos','empreendimentos'));
     }
 
@@ -32,7 +32,7 @@ class PromocaoController extends Controller
     public function create()
     {
         $empreendimentos = Empreendimentos::all();
-        return view ('promocao.create',compact('promocaos', 'empreendimentos'));
+        return view ('promocao.create',compact('empreendimentos'));
     }
 
     /**
@@ -44,15 +44,16 @@ class PromocaoController extends Controller
     public function store(Request $request)
     {
         $promocaos =new Promocao;
-    $promocaos ->empreendimentos_id = $request->empreendimento;
+    $promocaos ->empreendimentos_id = $request->empreendimentos_id;
      $promocaos ->nomeProd = $request->nomeProd;
      $promocaos ->marcaProd = $request->marcaProd;
      $promocaos ->valorProd = $request->valorProd;
      $promocaos ->categoria = $request->categoria;
     $promocaos ->codProd = $request->codProd;
     $promocaos ->save();
-    //return $promocaos;
-    return view ('promocao.create',compact('promocaos'));
+
+    $empreendimento = Empreendimentos::find($request->empreendimentos_id);
+    return redirect()->route('empreendimentos.show', $empreendimento->slug);
     }
 
     /**

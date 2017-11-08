@@ -60,7 +60,6 @@ class PerfilController extends Controller
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
         if ($request->hasFile('image')) {
-            $request = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
             $image = time().'.'.$request->image->getClientOriginalExtension();
             $perfil->image = $image;
             $request->image->move(public_path().'images\perfils', $image);

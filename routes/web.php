@@ -26,7 +26,7 @@ Route::get('/teste',function(){
 });
 Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
+Route::resource('promocao','PromocaoController');
 Route::resource('empreendimentos','EmpreendimentosController');
 Route::resource('perfil','PerfilController');
 Route::resource('maps','MapController');
-Route::resource('promocao','PromocaoController');
