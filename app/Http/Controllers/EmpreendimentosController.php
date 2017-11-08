@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Empreendimentos;
+use App\Promocaos;
 use App\User;
 use Auth;
 use Image;
@@ -94,6 +95,7 @@ class EmpreendimentosController extends Controller
      */
     public function show($slug)
     {
+        $promocaos = DB::table('promocaos')->find(Auth::user()->id);
         $empreendimento = DB::table('empreendimentos')->where('slug','=',$slug)->get();
         //dd($empreendimento[0]);
         $ramoAtividade = RamoAtivEmpreendimento::find($empreendimento[0]->ramoAtividade_id);
@@ -105,7 +107,8 @@ class EmpreendimentosController extends Controller
         $longitude = $coordenadas[0]->getCoordinates()->getLongitude();
         Mapper::map($latitude,$longitude);
     };
-        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade'));
+    //dd($promocaos);
+        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade','promocaos'));
     }
 
     /**

@@ -61,9 +61,24 @@
         </div>
     </div>
     <div class="row">
-        <div class="card orange">
-            <h1>AQUI O FILICIO POE AS PROMOÇÕES FUNCIONANDO!</h1>
+        @forelse ($promocaos as $promocao)
+       <div class="col s6 m4 center">
+          <div class="card">
+            <div class="card-painel orange">
+              <span class="card-title black-text center">{{$promocao->nomeProd}}</span></br>
+              <span class="card-title black-text center">{{$promocao->marcaProd}}</span></br>
+              <span class="card-title black-text center">{{$promocao->valorProd}}</span></br>
+            </div>
+            <div class="card-action orange">
+             <form style="display: inline;" action="{{route('promocao.destroy',$promocao->id)}}" method="post">
+                           {{csrf_field()}}
+                  <input type="hidden" name="_method" value="delete">
+                  <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></button></a>
+               </form>
+            </div>
+          </div>
         </div>
     </div>
 </div>
+@endforeach
 @endsection

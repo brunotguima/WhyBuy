@@ -53,7 +53,8 @@ class PromocaoController extends Controller
     $promocaos ->save();
 
     $empreendimento = Empreendimentos::find($request->empreendimentos_id);
-    return redirect()->route('empreendimentos.show', $empreendimento->slug);
+    dd($promocao);
+    return redirect()->route('empreendimentos.show', $empreendimento->slug, compact('promocaos'));
     }
 
     /**
