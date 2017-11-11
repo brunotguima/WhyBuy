@@ -97,8 +97,10 @@ class PromocaoController extends Controller
      * @param  \App\promocao  $promocao
      * @return \Illuminate\Http\Response
      */
-    public function destroy(promocao $promocao)
+    public function destroy(promocao $promocao,$id)
     {
-        //
+        $promocao = promocao::find($id);
+        $promocao->delete();
+        return redirect('/empreendimentos');
     }
 }

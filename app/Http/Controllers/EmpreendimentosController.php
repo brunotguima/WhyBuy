@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Empreendimentos;
-use App\Promocaos;
+use App\promocao;
 use App\User;
 use Auth;
 use Image;
@@ -95,11 +95,11 @@ class EmpreendimentosController extends Controller
      */
     public function show($slug)
     {
-        $promocaos = DB::table('promocaos')->find(Auth::user()->id);
+        
         $empreendimento = DB::table('empreendimentos')->where('slug','=',$slug)->get();
-        //dd($empreendimento[0]);
+        $countPromo = DB::table('promocaos')->where('empreendimentos_id',$empreendimento[0]->id)->count();
+        $promocoes = DB::table('promocaos')->where('empreendimentos_id',$empreendimento[0]->id)->take($countPromo)->get();
         $ramoAtividade = RamoAtivEmpreendimento::find($empreendimento[0]->ramoAtividade_id);
-        //$empreendimento = Empreendimentos::with('RamoAtivEmpreendimento')->where('slug', '=', $slug)->first()->get();
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         $coordenadas = Geocoder::geocode($empreendimento[0]->endereco . ', ' . $empreendimento[0]->cidade . ', ' . $empreendimento[0]->estado)->get();
         if(isset($coordenadas[0])){
@@ -107,8 +107,8 @@ class EmpreendimentosController extends Controller
         $longitude = $coordenadas[0]->getCoordinates()->getLongitude();
         Mapper::map($latitude,$longitude);
     };
-    //dd($promocaos);
-        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade','promocaos'));
+    //dd($promocoes);
+        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade','promocoes'));
     }
 
     /**

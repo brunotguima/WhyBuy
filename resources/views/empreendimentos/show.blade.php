@@ -1,4 +1,5 @@
-@extends('layouts.app') @section('content')
+@extends('layouts.app') 
+@section('content')
 
 <div class="container">
     @foreach($empreendimento as $emp)
@@ -60,25 +61,24 @@
             <h4 class="center-align" class="white-text">PROMOÇÕES E OFERTAS</h4>
         </div>
     </div>
-    <div class="row">
-        @forelse ($promocaos as $promocao)
-       <div class="col s6 m4 center">
-          <div class="card">
-            <div class="card-painel orange">
-              <span class="card-title black-text center">{{$promocao->nomeProd}}</span></br>
-              <span class="card-title black-text center">{{$promocao->marcaProd}}</span></br>
-              <span class="card-title black-text center">{{$promocao->valorProd}}</span></br>
-            </div>
-            <div class="card-action orange">
-             <form style="display: inline;" action="{{route('promocao.destroy',$promocao->id)}}" method="post">
-                           {{csrf_field()}}
-                  <input type="hidden" name="_method" value="delete">
-                  <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></button></a>
-               </form>
-            </div>
-          </div>
+            @foreach($promocoes as $promocao)
+<div class="row">
+<div class="col s12 m7">
+    <h2 class="header">{{$promocao->nomeProd}}</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>{{$promocao->marcaProd}}</p>
         </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
 @endforeach
 @endsection
