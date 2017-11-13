@@ -67,14 +67,27 @@
     <h2 class="header">{{$promocao->nomeProd}}</h2>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
+        <img src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">  
       </div>
       <div class="card-stacked">
         <div class="card-content">
+        <label for="marcaProd">Marca do Produto</label>
           <p>{{$promocao->marcaProd}}</p>
         </div>
+        <div class="card-content">
+        <label for="categoria">Categoria do Produto</label>
+          <p>{{$promocao->categoria}}</p>
+        </div>
+        <div class="card-content">
+        <label for="valorProd">Valor do Produto</label>
+          <p>{{$promocao->valorProd}}</p>
+        </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+         <form style="display: inline;" action="{{route('promocao.destroy',$promocao->id)}}" method="post">
+                                    {{csrf_field()}}
+                  <input type="hidden" name="_method" value="delete">
+                  <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></button></a>
+               </form>
         </div>
       </div>
     </div>
