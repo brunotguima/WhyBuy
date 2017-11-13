@@ -60,10 +60,11 @@
         <div class="card orange center">
             <h4 class="center-align" class="white-text">PROMOÇÕES E OFERTAS</h4>
         </div>
+         <a class="btn-floating btn-large waves-effect waves-light orange right" href="{{route('promocao.create')}}"><i class="material-icons">add</i></a>  
     </div>
             @foreach($promocoes as $promocao)
 <div class="row">
-<div class="col s12 m7">
+<div class="col s12 m5">
     <div class="card horizontal">
       <div class="card-image">
         <img class="circle" src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">  
@@ -72,16 +73,10 @@
        <div class="card-content">
         <label for="marcaProd">Nome do Produto</label>
           <p>{{$promocao->nomeProd}}</p>
-        </div>
-        <div class="card-content">
         <label for="marcaProd">Marca do Produto</label>
           <p>{{$promocao->marcaProd}}</p>
-        </div>
-        <div class="card-content">
         <label for="categoria">Categoria do Produto</label>
           <p>{{$promocao->categoria}}</p>
-        </div>
-        <div class="card-content">
         <label for="valorProd">Valor do Produto</label>
           <p>{{$promocao->valorProd}}</p>
         </div>
