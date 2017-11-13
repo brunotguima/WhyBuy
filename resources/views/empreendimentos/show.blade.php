@@ -64,12 +64,15 @@
             @foreach($promocoes as $promocao)
 <div class="row">
 <div class="col s12 m7">
-    <h2 class="header">{{$promocao->nomeProd}}</h2>
     <div class="card horizontal">
       <div class="card-image">
-        <img src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">  
+        <img class="circle" src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">  
       </div>
       <div class="card-stacked">
+       <div class="card-content">
+        <label for="marcaProd">Nome do Produto</label>
+          <p>{{$promocao->nomeProd}}</p>
+        </div>
         <div class="card-content">
         <label for="marcaProd">Marca do Produto</label>
           <p>{{$promocao->marcaProd}}</p>
