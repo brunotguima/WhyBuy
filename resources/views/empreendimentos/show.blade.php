@@ -62,8 +62,8 @@
         </div>
          <a class="btn-floating btn-large waves-effect waves-light orange right" href="{{route('promocao.create')}}"><i class="material-icons">add</i></a>  
     </div>
+    <div class="row">
             @foreach($promocoes as $promocao)
-<div class="row">
 <div class="col s12 m5">
     <div class="card horizontal">
       <div class="card-image">
@@ -90,6 +90,6 @@
       </div>
     </div>
   </div>
+  @endforeach
 </div>
-@endforeach
 @endsection
