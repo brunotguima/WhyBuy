@@ -27,6 +27,17 @@ Route::get('/teste',function(){
 Route::get('suporte','EmailController@getContato')->name('suporte.get');
 Route::post('suporte','EmailController@postContato')->name('suporte.post');
 Route::resource('promocao','PromocaoController');
-Route::resource('empreendimentos','EmpreendimentosController');
+//Route::resource('empreendimentos','EmpreendimentosController');
+Route::prefix('empreendimentos')->group(function() {
+    Route::get('/create', 'EmpreendimentosController@create')->name('empreendimentos.create');
+    Route::get('/{empreendimento}', ['uses' => 'EmpreendimentosController@show', 'as' => 'empreendimentos.show']);
+    Route::post('/', ['uses' => 'EmpreendimentosController@store', 'as' => 'empreendimentos.store']);
+    Route::get('/{empreendimento}/edit', ['uses' => 'EmpreendimentosController@edit', 'as' => 'empreendimentos.edit']);
+    Route::put('/{empreendimento}', ['uses' => 'EmpreendimentosController@update', 'as' => 'empreendimentos.update']);
+    Route::delete('/{empreendimento}', ['uses' => 'EmpreendimentosController@destroy', 'as' => 'empreendimentos.destroy']);
+    Route::get('/', 'EmpreendimentosController@index')->name('empreendimentos.index');
+});
+
 Route::resource('perfil','PerfilController');
 Route::resource('maps','MapController');
+

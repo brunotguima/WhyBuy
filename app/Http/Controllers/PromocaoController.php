@@ -29,7 +29,8 @@ class PromocaoController extends Controller
 
     public function store(Request $request)
     {
-        $promocaos =new Promocao;
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        $promocaos = new Promocao;
         $promocaos ->empreendimentos_id = $request->empreendimentos_id;
         $promocaos ->nomeProd = $request->nomeProd;
         $promocaos ->marcaProd = $request->marcaProd;
@@ -37,8 +38,9 @@ class PromocaoController extends Controller
         $promocaos ->categoria = $request->categoria;
         $promocaos ->codProd = $request->codProd;
         $promocaos ->save();
-        $empreendimento = Empreendimentos::find($request->empreendimentos_id);
-        return redirect()->route('empreendimentos.show', $empreendimento->slug, compact('promocaos', 'empreendimento'));
+        $empreendimento = DB::table('empreendimentos')->where('id',$request->empreendimentos_id)->first();
+        $slug = $empreendimento->slug;
+        return redirect()->route('empreendimentos.show', ['empreendimento' => $slug])->withmainPerfil($mainPerfil)->withEmpreendimento($empreendimento);
     }
 
     public function edit(promocao $promocao)
