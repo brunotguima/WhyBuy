@@ -62,9 +62,10 @@ class PerfilController extends Controller
         if ($request->hasFile('image')) {
             $image = time().'.'.$request->image->getClientOriginalExtension();
             $perfil->image = $image;
-            $request->image->move(public_path().'images\perfils', $image);
+            $request->image->move(public_path().'publicimages\perfils', $image);
         }
         $perfil->save(); 
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         return redirect('perfil');
     }
 
@@ -101,13 +102,12 @@ class PerfilController extends Controller
      * @param  \App\Perfil  $perfil
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Perfil $perfil)
+    public function update(Perfil $perfil, Request $request)
     {
         if ($request->hasFile('image')) {
-            $request = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
             $image = time().'.'.$request->image->getClientOriginalExtension();
             $perfil->image = $image;
-            $request->image->move(public_path().'images\perfils', $image);
+            $request->image->move(public_path().'publicimages\perfils', $image);
         }
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;

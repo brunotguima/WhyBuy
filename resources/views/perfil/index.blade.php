@@ -14,12 +14,11 @@
 <footer class="page-footer">
             <div class="container">
                 <div class="col l4 align left">
-                <img class="circle" width="150" height="150" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}">
+                <img class="circle" width="150" height="150" src="{{asset('/publicimages/perfils')}}/{{$mainPerfil->perfil->image}}">
 <br />
 <br />
-
                 <div class="row center">
-                <button class="btn waves-effect deep-orange align center" onClick="window.location.href='perfil/{{$mainPerfil->id}}/edit'">Editar o Perfil</button>
+                <button class="btn waves-effect deep-orange align center" onClick="window.location.href='perfil/{{$mainPerfil->perfil->id}}/edit'">Editar o Perfil</button>
                 </div>
                 </div>
                 <div class="row">

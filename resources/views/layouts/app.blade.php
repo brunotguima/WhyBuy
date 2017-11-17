@@ -34,7 +34,7 @@
                                         </div>
                                         <!-- aqui são as informações do usuario -->
                                         @isset($mainPerfil->perfil->image)
-                                        <img class="circle responsive-img" src="{{asset('/images/perfils')}}/{{$mainPerfil->perfil->image}}">
+                                        <img class="circle responsive-img" src="{{asset('/publicimages/perfils')}}/{{$mainPerfil->perfil->image}}">
                                         @endisset 
                                         @isset($mainPerfil->name)
                                         <a href="#!name"><span class="white-text name">{{$mainPerfil->name}}</span></a> 
