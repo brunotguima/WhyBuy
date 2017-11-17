@@ -21,7 +21,7 @@ class PromocaoController extends Controller
         $this->middleware('auth');
     }
 
-    public function create()
+    public function create(Request $request )
     {
         $empreendimentos = Empreendimentos::all();
         return view ('promocao.create', compact('empreendimentos'));

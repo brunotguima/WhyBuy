@@ -61,7 +61,7 @@
             <h4 class="center-align" class="white-text">PROMOÇÕES E OFERTAS</h4>
         </div>
         <div class="center">
-         <a class="btn-floating btn-large waves-effect waves-light orange" href="{{route('promocao.create')}}"><i class="material-icons">add</i></a>  
+        <form action="{{route('promocao.create')}}" method="post">
     </div>
     </div>
     <div class="row">
