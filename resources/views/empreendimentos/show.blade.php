@@ -5,16 +5,17 @@
     @foreach($empreendimento as $emp)
     <div class="row">
         </br>
-        <div class="card orange center">
-            <h4 class="center-align" class="white-text">INFORMAÇÕES DO EMPREENDIMENTO</h4>
+        <div class="card orange ">
+            <h5 class="center-align white-text">INFORMAÇÕES DO EMPREENDIMENTO</h5>
         </div>
         <div class="col s6">
             <div class="row left">
                 <div style="width:450px; height:350px;">
                     <div class="card-panel orange">
                         <div class="row center">
-                            <label for="nomeFantasia" class="control-label white-text ">Nome Fantasia:</label>
-                            <h7 class="white-text">{{$emp->nomeFantasia}}</h7>
+                            <h6 for="nomeFantasia" class="control-label white-text ">Nome Fantasia:</label></h6>
+                            <h5 class="white-text">{{$emp->nomeFantasia}}</h5>
+                            <li class="divider"></li>
                             <br />
 
                             <label for="cnpj" class="control-label white-text">CNPJ:</label>
@@ -58,7 +59,7 @@
     @endforeach
     <div class="row">
         <div class="card orange center">
-            <h4 class="center-align" class="white-text">PROMOÇÕES E OFERTAS</h4>
+            <h5 class="center-align white-text">PROMOÇÕES E OFERTAS</h5>
         </div>
         <div class="center">
         <form action="{{route('promocao.create')}}" method="post">

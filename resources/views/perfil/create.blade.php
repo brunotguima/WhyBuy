@@ -39,20 +39,20 @@
                           </div>
                     </br>
 
-                        <label for="rg" class="col m4 control-label">RG:</label>
+                        <label for="rg" class="col m4 control-label">* RG:</label>
                         <div class="col m6 input-field">
                             <input id="rg" type="text" class="form-control rg" name="rg" required placeholder="00.000.000-0" OnKeyPress="formatar('##.###.###-#', this)" maxlength="12">
                         </div>
 
-                        <label for="cpf" class="col m4 control-label">CPF:</label>
+                        <label for="cpf" class="col m4 control-label">* CPF:</label>
                         <div class="col m6 input-field">
                             <input id="cpf" type="text" class="cpf" name="cpf"required placeholder="000.000.000-00" OnKeyPress="formatar('###.###.###-##', this)" maxlength="14">
                         </div>
 
-                        <label for="telUm" class="col m4 control-label">Telefone:</label>
+                        <label for="telUm" class="col m4 control-label">* Telefone:</label>
                         <div class="col m6 input-field">
                         
-                        <input type="text" class="form-control telUm" placeholder="(00) 0000-0000" OnKeyPress="formatar('##-####-####', this)" maxlength="12" id="telUm" name="telUm">                 
+                        <input type="text" class="form-control telUm" required placeholder="(00) 0000-0000" OnKeyPress="formatar('##-####-####', this)" maxlength="12" id="telUm" name="telUm">                 
                         </div>
 
                         <label for="cell" class="col m4 control-label">Celular:</label>
