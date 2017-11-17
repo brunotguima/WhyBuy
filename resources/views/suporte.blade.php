@@ -4,12 +4,11 @@
 
 <div class="container">
     <h2 class="center"><span class="orange-text text-darken-2 center">SUPORTE</span><h2>
-            <div class="col s5 m5 l5">
+            <div class="col 12">
                 <div class="container">
                     <h5 class="center-justify">Escreva um email com sugestões, críticas e dúvidas sobre o uso de nossa aplicação. Envie seu nome e email para que possamos responder suas perguntas. A equipe FOX developers agradece o contato.</h5>
-                </div>
-            </div>
-            <div class="col s5 m5 l5">
+                
+            
                 <form action="{{route('suporte.post')}}" method="post">
                     {{csrf_field()}}
                     @if (Auth::check())
@@ -26,13 +25,14 @@
                     <input id="email" type="text" class="form-control" name="email" placeholder="Digite seu Email!">
                     @endif
 
-                    <label for="mensagem" class="control-label">Digite sua mensagem:</label>
+                    <label for="mensagem" class="control-label">* Digite sua mensagem:</label>
                     <textarea id="mensagem" type="text" class="materialize-textarea" name="mensagem" placeholder="Digite sua mensagem!" required autofocus></textarea>
 
                     <button type="submit" class="btn btn-primary orange darken-4">
                         Enviar!
                     </button>
                 </form>
+            </div>
             </div>
             </div>
     @if(Session::has('sucess'))

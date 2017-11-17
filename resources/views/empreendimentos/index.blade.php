@@ -34,7 +34,7 @@
           </div>
         </div>
         @empty
-            <i class="large material-icons">sentiment_very_dissatisfied</i>
+            <i class="large material-icons orange-text">sentiment_very_dissatisfied</i>
             <h4 class="center"><span class="orange-text">Você ainda não possui um empreendimento cadastrado.</span></h4>
 
 @endforelse
