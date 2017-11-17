@@ -21,10 +21,11 @@ class PromocaoController extends Controller
         $this->middleware('auth');
     }
 
-    public function create()
+    public function create(Request $request )
     {
+        $emp_id = $request->empid; 
         $empreendimentos = Empreendimentos::all();
-        return view ('promocao.create', compact('empreendimentos'));
+        return view ('promocao.create', compact('empreendimentos','emp_id'));
     }
 
     public function store(Request $request)
@@ -53,10 +54,12 @@ class PromocaoController extends Controller
 
     public function destroy(promocao $promocaos, $id)
     {
-        $getPromocao = Promocao::find($id)->first();
-        $getEmpreendimento = DB::table('empreendimentos')->where('id', $getPromocao->empreendimentos_id)->first();
+        // o comando first estava pegando a primeira linha da tabela empreendimentos oque trazia apenas o emp 1
+        $getPromocao = Promocao::find($id);
+        $getEmpreendimento = DB::table('empreendimentos')->where('id', $getPromocao->empreendimentos_id);
         $promocaos = Promocao::find($id);
         $promocaos->delete();
-        return redirect('/empreendimentos/'.$getEmpreendimento->slug);
+        //return redirect('/empreendimentos/'.$getEmpreendimento->slug);
+       return redirect()->route('empreendimentos.show', $getEmpreendimento->slug);
     }
 }

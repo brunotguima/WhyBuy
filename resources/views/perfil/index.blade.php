@@ -31,39 +31,39 @@
                         <div class="row col s12">
                             <div align="center">
                             <li><a class="grey-text text-lighten-3 col s12">  
-                             <label for="email" class="control-label white-text">Seu Email:</label>
+                             <label for="email" class="control-label white-text">* Seu Email:</label>
                                 <h7 class="white-text">{{$mainPerfil->email}}<h7></a></li>
                                 <br />
                                
                                 
 
                             <li><a class="grey-text text-lighten-3 col s12"> 
-                             <label for="dateNasc" class="control-label white-text">Data de Nascimento:</label>
+                             <label for="dateNasc" class="control-label white-text">* Data de Nascimento:</label>
                                 <h7 class="white-text">{{$mainPerfil->dateNasc}}<h7></a></li>
                                 <br />
                                 
                                 
 
                             <li><a class="grey-text text-lighten-3 col s12"> 
-                             <label for="sexo" class="control-label white-text">Sexo:</label>
+                             <label for="sexo" class="control-label white-text">* Sexo:</label>
                                 <h7 class="white-text">{{$mainPerfil->perfil->sexo}}<h7></a></li>
                                 <br />
                                 
 
                             <li><a class="grey-text text-lighten-3 col s12"> 
-                            <label for="rg" class="control-label white-text">Seu RG:</label>
+                            <label for="rg" class="control-label white-text">* Seu RG:</label>
                                 <h7 class="white-text">{{$mainPerfil->perfil->rg}}<h7></a></li>
                                 <br />
                                
 
                             <li><a class="grey-text text-lighten-3 col s12">  
-                            <label for="cpf" class="control-label white-text">Seu CPF:</label>
+                            <label for="cpf" class="control-label white-text">* Seu CPF:</label>
                                 <h7 class="white-text">{{$mainPerfil->perfil->cpf}}<h7></a></li>
                                 <br />
                                 
 
                             <li><a class="grey-text text-lighten-3 col s12"> 
-                             <label for="telUm" class="control-label white-text">Seu Telefone:</label>
+                             <label for="telUm" class="control-label white-text">* Seu Telefone:</label>
                                  <h7 class="white-text">{{$mainPerfil->perfil->telUm}}<h7></a></li>
                                  <br />
                                  
@@ -86,7 +86,7 @@
 @else
 <br>
 <div class="col s12 center">
-  <i class="large material-icons">sentiment_very_dissatisfied</i>
+  <i class="large material-icons orange-text">sentiment_very_dissatisfied</i>
             <h4 class="center"><span class="orange-text">Você ainda não possui cadastro no seu perfil, complete-o.</span></h4>
             <br>
             <button class="btn waves-effect deep-orange" onClick="window.location.href='perfil/create'">Editar o Perfil</button>

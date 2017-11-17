@@ -13,7 +13,7 @@
                 <label for="empreendimento">Empreendimento:</label>                                               
                 <select class="browser-default" name="empreendimentos_id" id="empreendimentos_id">
                     @foreach($empreendimentos as $empreendimento)
-                    <option value="{{$empreendimento->id}}">{{$empreendimento->nomeFantasia}}</option>
+                    <option value="{{$empreendimento->id}}" @if ($empreendimento->id == $emp_id) selected @endif>{{$empreendimento->nomeFantasia}}</option>
                     @endforeach
                 </select>
                 <label for="nomeProd" class="col m4 control-label">Nome Produto:</label>

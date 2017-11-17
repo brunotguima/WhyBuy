@@ -61,11 +61,17 @@
         <div class="card orange center">
             <h5 class="center-align white-text">PROMOÇÕES E OFERTAS</h5>
         </div>
-         <a class="btn-floating btn-large waves-effect waves-light orange right" href="{{route('promocao.create')}}"><i class="material-icons">add</i></a>  
+        <div class="center">
+        <form action="{{route('promocao.create')}}" method="post">
+        {{ csrf_field() }}
+        <input type="hidden" value="{{$emp->id}}" name="emp_id" >
+         <a class="btn-floating btn-large waves-effect waves-light orange" type="submit"><i class="material-icons">add</i></a>  
+        </form>
+    </div>
     </div>
     <div class="row">
             @foreach($promocoes as $promocao)
-<div class="col s12 m5">
+<div class="col s6 m6 l6">
     <div class="card horizontal">
       <div class="card-image">
         <img class="circle" src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">  

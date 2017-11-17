@@ -142,9 +142,10 @@ class EmpreendimentosController extends Controller
      */
     public function destroy(Empreendimentos $empreendimentos, $id)
     {
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         $empreendimentos = Empreendimentos::find($id);
         $empreendimentos->delete();
-        return redirect('/empreendimentos');
+        return redirect('/empreendimentos')->withmainPerfil($mainPerfil);
     }
     
     public function criar_slug($nomeFantasia){

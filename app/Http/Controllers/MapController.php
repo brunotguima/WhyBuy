@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mapper;
+use Geocoder\Laravel\Facades\Geocoder;
+use App\Empreendimentos;
+use Auth;
+use App\User;
 
 class MapController extends Controller
 {
@@ -14,9 +18,20 @@ class MapController extends Controller
      */
     public function index()
     {
-        Mapper::map(-22.4317433, -46.9594419);
-        
-            return view('app_localizacao/gps');
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        $empreendimentos = Empreendimentos::all();
+        $geocoder = Geocoder::geocode($empreendimentos[0]->endereco . ', ' . $empreendimentos[0]->cidade . ', ' . $empreendimentos[0]->estado)->get();
+        $latitude = $geocoder[0]->getCoordinates()->getLatitude();
+        $longitude = $geocoder[0]->getCoordinates()->getLongitude();
+        Mapper::map($latitude, $longitude);
+        unset($geocoder,$latitude,$longitude);
+        foreach ($empreendimentos as $empreendimento){
+            $geocoder = Geocoder::geocode($empreendimento->endereco . ', ' . $empreendimento->cidade . ', ' . $empreendimento->estado)->get();
+            $latitude = $geocoder[0]->getCoordinates()->getLatitude();
+            $longitude = $geocoder[0]->getCoordinates()->getLongitude();
+            Mapper::marker($latitude,$longitude)->informationWindow($latitude, $longitude, 'Content', ['markers' => ['animation' => 'DROP']]);
+        }
+        return view('app_localizacao/gps',compact('mainPerfil'));
     }
 
     /**

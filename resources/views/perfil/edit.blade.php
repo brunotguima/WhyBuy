@@ -18,12 +18,12 @@
             </div>
                     <div class="form-group">
                         <label for="telUm">Telefone</label>
-                        <input id="telUm" class="form-control" type="text" name="telUm" value="{{$perfil->telUm}}">
+                        <input id="telUm" class="form-control" type="text" placeholder="(00) 0000-0000" OnKeyPress="formatar('##-####-####', this)" maxlength="12" name="telUm" value="{{$perfil->telUm}}">
 
                     </div>
                     <div class="form-group">
                         <label for="cell">Celular</label>
-                        <input id="cell" class="form-control" type="text" name="cell" value="{{$perfil->cell}}">
+                        <input id="cell" class="form-control" type="text" placeholder="(00) 00000-0000" OnKeyPress="formatar('##-#####-####', this)" maxlength="13" name="cell" value="{{$perfil->cell}}">
 
                     </div>                 
                     <button type="submit" class="btn btn-primary deep-orange">Enviar</button>
