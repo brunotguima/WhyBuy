@@ -62,11 +62,13 @@
             <h5 class="center-align white-text">PROMOÇÕES E OFERTAS</h5>
         </div>
         <div class="center">
-        <form action="{{route('promocao.create')}}" method="post">
+       <a class="btn-floating btn-large waves-effect waves-light orange right" href="{{route('promocao.create')}}"><i class="material-icons">add</i></a>  
+
+       <!-- <form action="{{route('promocao.create')}}" method="post">
         {{ csrf_field() }}
         <input type="hidden" value="{{$emp->id}}" name="emp_id" >
          <a class="btn-floating btn-large waves-effect waves-light orange" type="submit"><i class="material-icons">add</i></a>  
-        </form>
+        </form> -->
     </div>
     </div>
     <div class="row">
