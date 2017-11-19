@@ -26,12 +26,12 @@ class EmailController extends Controller {
             'email' => 'required|email',
             'mensagem' => 'required']);
 
-        
         $infoContato = array(
             'name' => $request->name,
             'email' => $request->email,
             'mensagem' => $request->mensagem
         );
+        
         Mail::send('emails.contato', $infoContato, function($mensagem) use ($infoContato){
             $mensagem->from($infoContato['email']);
             $mensagem->to('whybuy.tcc1@gmail.com','whybuytcc');
