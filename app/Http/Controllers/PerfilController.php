@@ -88,9 +88,9 @@ class PerfilController extends Controller
      */
     public function edit(Perfil $perfil)
     {
-       // $mainPerfil = DB::table('perfils')->find(Auth::user()->id);
-       // return $perfil; 
-       $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        $mainPerfil = DB::table('perfils')->find(Auth::user()->id);
+       //return $perfil; 
+       //$mainPerfil = User::with('perfil')->find(Auth::user()->id);
         return view('perfil.edit', compact('perfil','mainPerfil'));
 
     }
@@ -104,15 +104,14 @@ class PerfilController extends Controller
      */
     public function update(Perfil $perfil, Request $request)
     {
-        if ($request->hasFile('image')) {
-            $image = time().'.'.$request->image->getClientOriginalExtension();
-            $perfil->image = $image;
-            $request->image->move(public_path().'\images\perfils', $image);
-        }
+        return $request;
+        return $perfil;
+        $perfil = find(Auth::user()->id);
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
-        $perfil->save();
-        return redirect('perfil');
+        $perfil->update();
+        return $perfil;
+        return redirect('perfil/'.$perfil->id);
     }
     
 

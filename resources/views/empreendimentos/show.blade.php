@@ -45,7 +45,6 @@
 							<label for="ramoAtiv" class="control-label white-text">Ramo de Atividade:</label>
 							<h7 class="white-text">{{$ramoAtividade->name}}
 
-<<<<<<< HEAD
 						</div>
 					</div>
 				</div>
@@ -112,62 +111,3 @@ function goCreatepromo() {
 }
 </script>
 	@endsection
-=======
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s6">
-            <div style="width: 450px; height: 350px;">
-                {!!Mapper::render()!!}
-            </div>
-        </div>
-    </div>
-    @endforeach
-    <div class="row">
-        <div class="card orange center">
-            <h5 class="center-align white-text">PROMOÇÕES E OFERTAS</h5>
-        </div>
-        <div class="center">
-       <a class="btn-floating btn-large waves-effect waves-light orange right" href="{{route('promocao.create')}}"><i class="material-icons">add</i></a>  
-
-       <!-- <form action="{{route('promocao.create')}}" method="post">
-        {{ csrf_field() }}
-        <input type="hidden" value="{{$emp->id}}" name="emp_id" >
-         <a class="btn-floating btn-large waves-effect waves-light orange" type="submit"><i class="material-icons">add</i></a>  
-        </form> -->
-    </div>
-    </div>
-    <div class="row">
-            @foreach($promocoes as $promocao)
-<div class="col s6 m6 l6">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img class="circle" src="{{asset('/images/empreendimentos')}}/{{$emp->EmpImage}}">  
-      </div>
-      <div class="card-stacked">
-       <div class="card-content">
-        <label for="marcaProd">Nome do Produto</label>
-          <p>{{$promocao->nomeProd}}</p>
-        <label for="marcaProd">Marca do Produto</label>
-          <p>{{$promocao->marcaProd}}</p>
-        <label for="categoria">Categoria do Produto</label>
-          <p>{{$promocao->categoria}}</p>
-        <label for="valorProd">Valor do Produto</label>
-          <p>{{$promocao->valorProd}}</p>
-        </div>
-        <div class="card-action">
-         <form style="display: inline;" action="{{route('promocao.destroy',$promocao->id)}}" method="post">
-                                    {{csrf_field()}}
-                  <input type="hidden" name="_method" value="delete">
-                  <button type="submit" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete_forever</i></button></a>
-               </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  @endforeach
-</div>
-@endsection
->>>>>>> 61da972b8367c68189ba78541ee29635cb9fd548
