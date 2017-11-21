@@ -1,19 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="row">
   <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="images/Banner-1.png"></a>
-    <a class="carousel-item" href="#two!"><img src="images/Banner-2.jpg"></a>
+    <a class="carousel-item"><img src="images/Banner-1.png"></a>
+    <a class="carousel-item"><img src="images/Banner-2.jpg"></a>
+    <a class="carousel-item"><img src="images/Banner-3.jpg"></a>
   </div>  
-  <br>
-  <!-- <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="C:\Users\aluno\Desktop\WhyBuy\public\images\Empreendimento.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="C:\Users\aluno\Desktop\WhyBuy\public\images\Empreendimento2.jpg"></a>
-    <a class="carousel-item" href="#three!"><img src="C:\Users\aluno\Desktop\WhyBuy\public\images\Empreendimento3.jpg"></a>
-  </div> -->
-
-   <h2 class="center"><span class="orange-text">SOBRE O APLICATIVO</span><h2>
+  </div>
+  <div class="row">
+  <h2 class="center"><span class="orange-text">COLABORADORES</span></h2>
+    <a class="carousel-item"><img src="images/Colaboradores/mauchsouza.jpg" width="502px" height="102px"></a>
+    <a class="carousel-item"><img src="images/Colaboradores/sportcaetano.png" width="420" height="290px"></a>
+       <div class="divider"></div>
+  </div>
+  </div>
+   <h2 class="center"><span class="orange-text">SOBRE O APLICATIVO</span></h2>
   <div class="container">
 <div class="row">
         <div class="col s12 m4">
@@ -46,5 +48,8 @@
   </div>
   </div>
         
-<script> $('.carousel.carousel-slider').carousel({fullWidth: true});</script>
+<script> $('.carousel.carousel-slider').carousel({fullWidth: true, indicators:true});
+    $(document).ready(function(){
+      $('.carousel').carousel({indicators:true});
+    });</script>
 @endsection

@@ -23,9 +23,10 @@ class PromocaoController extends Controller
 
     public function create(Request $request )
     {
-        $emp_id = $request->empid; 
-        $empreendimentos = Empreendimentos::all();
-        return view ('promocao.create', compact('empreendimentos','emp_id'));
+        $empId = $request->emp_id;
+        $empreendimentos = Empreendimentos::find($empId)->get();
+        $mainPerfil = User::with('perfil')->find(Auth::user()->id);
+        return view ('promocao.create', compact('empreendimentos','empId','mainPerfil'));
     }
 
     public function store(Request $request)

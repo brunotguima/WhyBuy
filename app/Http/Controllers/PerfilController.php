@@ -62,7 +62,7 @@ class PerfilController extends Controller
         if ($request->hasFile('image')) {
             $image = time().'.'.$request->image->getClientOriginalExtension();
             $perfil->image = $image;
-            $request->image->move(public_path().'publicimages\perfils', $image);
+            $request->image->move(public_path().'\images\perfils', $image);
         }
         $perfil->save(); 
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
@@ -107,7 +107,7 @@ class PerfilController extends Controller
         if ($request->hasFile('image')) {
             $image = time().'.'.$request->image->getClientOriginalExtension();
             $perfil->image = $image;
-            $request->image->move(public_path().'publicimages\perfils', $image);
+            $request->image->move(public_path().'\images\perfils', $image);
         }
         $perfil->telUm = $request->telUm;
         $perfil->cell = $request->cell;
