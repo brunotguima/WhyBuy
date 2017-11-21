@@ -57,10 +57,10 @@ class PromocaoController extends Controller
     {
         // o comando first estava pegando a primeira linha da tabela empreendimentos oque trazia apenas o emp 1
         $getPromocao = Promocao::find($id);
-        $getEmpreendimento = DB::table('empreendimentos')->where('id', $getPromocao->empreendimentos_id);
+        $getEmpreendimento = DB::table('empreendimentos')->where('id', '=' ,$getPromocao->empreendimentos_id)->get();
         $promocaos = Promocao::find($id);
         $promocaos->delete();
-        //return redirect('/empreendimentos/'.$getEmpreendimento->slug);
-       return redirect()->route('empreendimentos.show', $getEmpreendimento->slug);
+        return redirect('/empreendimentos/'.$getEmpreendimento[0]->slug);
+      // return redirect()->route('empreendimentos.show', $getEmpreendimento->slug);
     }
 }
