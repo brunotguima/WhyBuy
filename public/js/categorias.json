@@ -1,0 +1,28 @@
+[
+    {"id":1,"name":"Adubo Orgânico"},
+    {"id":2,"name":"Agricultura"},
+    {"id":3,"name":"Agrotóxicos"},
+    {"id":4,"name":"Equipamentos Agricolas"},
+    {"id":5,"name":"Equipamentos de Irrigação"},
+    {"id":6,"name":"Fertilizantes"},
+    {"id":7,"name":"Insumos Agricolas"},
+    {"id":8,"name":"Alimentos Industrializados"},
+    {"id":9,"name":"Alimentos Naturais"},
+    {"id":10,"name":"Bebidas Alcoólicas"},
+    {"id":11,"name":"Bebidas não Alcoólicas"},
+    {"id":12,"name":"Doces e Chocolates"},
+    {"id":13,"name":"Artigos para Festas"},
+    {"id":14,"name":"Calçados"},
+    {"id":15,"name":"Produtos de Beleza"},
+    {"id":16,"name":"Salão de Beleza"},
+    {"id":17,"name":"Peças Automotivas"},
+    {"id":18,"name":"Ferramentas Diversas"},
+    {"id":19,"name":"Informática"},
+    {"id":20,"name":"Games"},
+    {"id":21,"name":"Lazer"},
+    {"id":22,"name":"Monitores "},
+    {"id":23,"name":"Nootebooks"},
+    {"id":24,"name":"Alianças e Aneis"},
+    {"id":25,"name":"Instrumentos Musicais"}
+    
+]

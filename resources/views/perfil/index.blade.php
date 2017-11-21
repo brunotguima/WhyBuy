@@ -17,7 +17,7 @@
 				<br />
 				<br />
 				<div class="row center">
-					<button class="btn waves-effect deep-orange align center" onClick="window.location.href='perfil/{{$mainPerfil->perfil->id}}/edit'">Editar o Perfil</button>
+				<!--	<button class="btn waves-effect deep-orange align center " onClick="window.location.href='perfil/{{$mainPerfil->perfil->id}}/edit'">Editar o Perfil</button> -->
 				</div>
 			</div>
 			
@@ -117,7 +117,7 @@
 		<span class="orange-text">Você ainda não possui cadastro no seu perfil, complete-o.</span>
 	</h4>
 	<br>
-	<button class="btn waves-effect deep-orange" onClick="window.location.href='perfil/create'">Editar o Perfil</button>
+	<button class="btn waves-effect deep-orange "  onClick="window.location.href='perfil/create'">Editar o Perfil</button>
 </div>
 <br> @endif
 </div>

@@ -6,6 +6,7 @@ use Auth;
 use App\promocao;
 use App\User;
 use App\Empreendimentos;
+use App\Categorias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -25,8 +26,9 @@ class PromocaoController extends Controller
     {
         $empId = $request->emp_id;
         $empreendimentos = Empreendimentos::find($empId)->get();
+        $categorias = DB::table('categorias')->get();
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
-        return view ('promocao.create', compact('empreendimentos','empId','mainPerfil'));
+        return view ('promocao.create', compact('empreendimentos','empId','mainPerfil','categorias'));
     }
 
     public function store(Request $request)
@@ -34,6 +36,7 @@ class PromocaoController extends Controller
         $mainPerfil = User::with('perfil')->find(Auth::user()->id);
         $promocaos = new Promocao;
         $promocaos ->empreendimentos_id = $request->empreendimentos_id;
+        $promocaos ->categorias_id = $request->categorias;
         $promocaos ->nomeProd = $request->nomeProd;
         $promocaos ->marcaProd = $request->marcaProd;
         $promocaos ->valorProd = $request->valorProd;
