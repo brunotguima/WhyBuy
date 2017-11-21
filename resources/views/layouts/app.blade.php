@@ -19,7 +19,7 @@
     <div id="app">
         <header class="page-header">
             <nav class="nav-wrapper">
-                <div class='row'><a href="/"><img src="../images/logocabeca.png" alt="logotipo" class="brand-logo center"></a>
+                <div class='row'><a href="C:\Users\LABORATORIO\Desktop\WhyBuy\resources\views\home.blade.php"><img src="../images/logocabeca.png" alt="logotipo" class="brand-logo center"></a>
                     <div class="col s4">
                         <ul id="nav-mobile">
                             <li><a href="#" data-activates="slide-out" class=" button-collapse show-on-large"><i class="material-icons ">menu</i></a></li>
@@ -86,7 +86,7 @@
                     <div class="col l6 s12">
                         <h5 class="center-align" class="white-text">Projeto WhyBuy</h5>
                         <li class="divider"></li>
-                        <p class="center-align" class="grey-text text-lighten-4">O projeto é desenvolvido por alunos do 3ºEMIA!</p>
+                        <p class="center-align" class="grey-text text-lighten-4">O projeto foi desenvolvido para facilitar a inclusão e promover novas lojas físicas, que hoje vem perdendo espaço para lojas virtuais ou físicas que já são reconhecidas.</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="center-align" class="white-text" >Contato</h5>
