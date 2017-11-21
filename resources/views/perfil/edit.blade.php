@@ -1,4 +1,8 @@
 @extends('layouts.app') @section('content')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61da972b8367c68189ba78541ee29635cb9fd548
 <div class="container">
     <div class="row">
         <h1 class="page-header">Edição de Perfil</h1>
@@ -8,7 +12,11 @@
                 <div class="form-group">
                     <label for="image">Imagem de Perfil</label>
                     </br>
+<<<<<<< HEAD
                     <input id="image" class="form-control" type="file" name="image" value="{{$perfil->image}}">
+=======
+                    <input id="image" class="form-control" type="file" name="image" value="{{$perfil-> image}}">
+>>>>>>> 61da972b8367c68189ba78541ee29635cb9fd548
 
                 </div>
                 <input type="hidden" name="_method" value="put">
