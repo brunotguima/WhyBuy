@@ -13,7 +13,9 @@
   <h2 class="center"><span class="orange-text">COLABORADORES</span></h2>
   
     <a class="carousel-item"><img src="images/Colaboradores/mauchsouza.jpg" width="390px" height="160px"></a>
-    <a class="carousel-item"><img src="images/Colaboradores/sportcaetano.png" width="280" height="160px"></a>
+    <a class="carousel-item"><img src="images/Colaboradores/sportcaetano.png" width="290" height="160px"></a>
+    <a class="carousel-item"><img src="images\Colaboradores\Rose-cabelereira.png" width="290" height="180px"></a>
+    <a class="carousel-item"><img src="images\Colaboradores\Reifer Logo Camiseta.png" width="310" height="180px"></a>
     </div>
   </div>
   <div class="container">
