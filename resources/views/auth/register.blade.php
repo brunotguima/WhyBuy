@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading"><h1 class="center">Registro</h1></div>
+                <div class="panel-heading"><h1 class=" center"><span class="orange-text">Registro</span></h1></div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
