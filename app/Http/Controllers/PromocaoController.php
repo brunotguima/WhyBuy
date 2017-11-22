@@ -40,7 +40,7 @@ class PromocaoController extends Controller
         $promocaos ->nomeProd = $request->nomeProd;
         $promocaos ->marcaProd = $request->marcaProd;
         $promocaos ->valorProd = $request->valorProd;
-        $promocaos ->categoria = $request->categoria;
+        $promocaos ->categorias_id = $request->categorias;
         $promocaos ->codProd = $request->codProd;
         $promocaos ->save();
         $empreendimento = DB::table('empreendimentos')->where('id',$request->empreendimentos_id)->first();

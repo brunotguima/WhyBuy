@@ -111,7 +111,7 @@ class MapController extends Controller
         return '
         <div class="col s12 m7" style="width:600px;">
         <div class="orange-text">
-            <h3 class="header center">'.$empreendimento->nomeFantasia.'</h3>
+            <h4 class="header center">'.$empreendimento->nomeFantasia.'</h4>
         </div>
         <div class="card horizontal">
             <div class="card-image" style="width:200px;height:200px;">
@@ -120,7 +120,7 @@ class MapController extends Controller
             <div class="card-stacked">
                 <div class="card-content">
                     <label>Ramo Atividade</label>
-                    
+                    <p>'.$ramoAtividade[0]->name.'</p>
                     </br>
                     <label>Endereço</label>
                     <p>'.$empreendimento->endereco.', '.$empreendimento->cidade.', '.$empreendimento->estado.', '.$empreendimento->cep.'</p>

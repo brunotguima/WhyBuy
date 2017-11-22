@@ -17,26 +17,28 @@
 				</select>
 				<label for="nomeProd" class="col m4 control-label">Nome Produto:</label>
 				<div class="col m6 input-field">
-					<input id="nomeProd" type="text" class="validate" name="nomeProd"placeholder="heinniken"required>
+					<input id="nomeProd" type="text" class="validate" name="nomeProd"placeholder="Bicicleta"required>
 				</div>
 
 				<label for="marcaProd" class="col m4 control-label">Marca do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="marcaProd" type="text" class="validate" name="marcaProd"placeholder="heinniken" required>
+					<input id="marcaProd" type="text" class="validate" name="marcaProd"placeholder="Caloi" required>
 				</div>
 
 				<label for="valorProd" class="col m4 control-label">Valor do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="valorProd" type="text" class="validate" name="valorProd" OnKeyPress="formatar('###,##', this)"required placeholder="00100,00">
+					<input id="valorProd" type="text" class="validate" name="valorProd" required placeholder="R$100,00">
 				</div>
 
 				<label for="categoria" class="col m4 control-label">Categoria do Produto:</label>
-				<div class="col m6 input-field">
-				<input id="categoria" type="text" class="validate categoria" name="categoria" required>
-				</div>
+				<select class="browser-default" name="categorias" id="categorias">
+				@foreach($categorias as $categoria)
+					<option value="{{$categoria->id}}">{{$categoria->name}}</option>
+					@endforeach
+					</select>
 				<label for="codProd" class="col m4 control-label">Codigo do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="codProd" type="text" class="codProd" name="codProd" placeholder="heinniken" required>
+					<input id="codProd" type="text" class="codProd" name="codProd" placeholder="17309" required>
 				</div>
 
 				<div class="col m6 input-field">

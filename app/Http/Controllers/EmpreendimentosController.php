@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use App\RamoAtivEmpreendimento;
 use Geocoder\Laravel\Facades\Geocoder;
 use Mapper;
+use App\Categorias;
 
 class EmpreendimentosController extends Controller
 {
@@ -108,7 +109,7 @@ class EmpreendimentosController extends Controller
         Mapper::map($latitude,$longitude);
     };
     //dd($promocoes);
-        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade','promocoes'));
+        return view('empreendimentos.show', compact('empreendimento','mainPerfil','ramoAtividade','promocoes','categorias'));
     }
 
     /**

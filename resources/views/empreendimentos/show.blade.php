@@ -86,7 +86,7 @@
 						<label for="marcaProd">Marca do Produto</label>
 						<p>{{$promocao->marcaProd}}</p>
 						<label for="categoria">Categoria do Produto</label>
-						<p>{{$promocao->categoria}}</p>
+						<p>{{$promocao->categorias_id}}</p>
 						<label for="valorProd">Valor do Produto</label>
 						<p>{{$promocao->valorProd}}</p>
 					</div>
