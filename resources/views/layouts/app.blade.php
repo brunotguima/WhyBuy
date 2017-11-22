@@ -22,7 +22,7 @@
                 <div class='row'><a href="/"><img src="../images/logocabeca.png" alt="logotipo" class="brand-logo center"></a>
                     <div class="col s4">
                         <ul id="nav-mobile">
-                            <li><a href="#" data-activates="slide-out" class=" button-collapse show-on-large"><i class="material-icons ">menu</i></a></li>
+                            <li><a id="button-collapse" data-activates="slide-out" class=" button-collapse show-on-large"><i class="material-icons ">menu</i></a></li>
 
                             <ul id="slide-out" class="side-nav">
                                 <!-- aqui é as informações do usuario -->
@@ -67,7 +67,7 @@
                         </div>
                         <nav>
                             <div class="nav-wrapper">
-                                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                                <ul id="nav-mobile" class="right">
                                     <li><a href='/maps'class="waves-effect waves-light btn-large card-panel orange darken-4">ACESSE O MAPA<i class="material-icons right">shop</i></a></li>
                                     
                                 </ul>
@@ -116,7 +116,7 @@
         </footer>
         </div>
         <script>
-            $(".button-collapse").sideNav();
+            $("#button-collapse").sideNav();
         </script>
 </body>
 
