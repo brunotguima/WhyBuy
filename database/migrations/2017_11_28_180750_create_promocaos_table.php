@@ -20,7 +20,8 @@ class CreatePromocaosTable extends Migration
             $table->string('nomeProd');
             $table->string('marcaProd');
             $table->string('valorProd');
-            $table->string('categoria');
+            $table->integer('categorias_id')->unsigned();
+            $table->foreign('categorias_id')->references('id')->on('categorias');
             $table->string('codProd');
             $table->timestamps();
         });

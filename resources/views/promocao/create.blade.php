@@ -17,26 +17,26 @@
 				</select>
 				<label for="nomeProd" class="col m4 control-label">Nome Produto:</label>
 				<div class="col m6 input-field">
-					<input id="nomeProd" type="text" class="validate" name="nomeProd">
+					<input id="nomeProd" type="text" class="validate" name="nomeProd"placeholder="heinniken"required>
 				</div>
 
 				<label for="marcaProd" class="col m4 control-label">Marca do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="marcaProd" type="text" class="validate" name="marcaProd">
+					<input id="marcaProd" type="text" class="validate" name="marcaProd"placeholder="heinniken" required>
 				</div>
 
 				<label for="valorProd" class="col m4 control-label">Valor do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="valorProd" type="text" class="validate" name="valorProd">
+					<input id="valorProd" type="text" class="validate" name="valorProd" OnKeyPress="formatar('###,##', this)"required placeholder="00100,00">
 				</div>
 
 				<label for="categoria" class="col m4 control-label">Categoria do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="categoria" type="text" class="validate categoria" name="categoria" required>
+				<input id="categoria" type="text" class="validate categoria" name="categoria" required>
 				</div>
 				<label for="codProd" class="col m4 control-label">Codigo do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="codProd" type="text" class="codProd" name="codProd" required>
+					<input id="codProd" type="text" class="codProd" name="codProd" placeholder="heinniken" required>
 				</div>
 
 				<div class="col m6 input-field">
@@ -48,6 +48,18 @@
 		</form>
 	</div>
 </div>
+<script>
+    function formatar(mascara, documento) {
+        var i = documento.value.length;
+        var saida = mascara.substring(0, 1);
+        var texto = mascara.substring(i)
+
+        if (texto.substring(0, 1) != saida) {
+            documento.value += texto.substring(0, 1);
+        }
+
+    }
+</script>
 <script>
 	$(document).ready(function () {
         $('select').select2({minimumResultsForSearch: Infinity});

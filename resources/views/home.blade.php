@@ -9,16 +9,18 @@
   </div>  
   </div>
   <div class="row">
+  <div class="card-panel orange lighten-4">
   <h2 class="center"><span class="orange-text">COLABORADORES</span></h2>
-    <a class="carousel-item"><img src="images/Colaboradores/mauchsouza.jpg" width="502px" height="102px"></a>
-    <a class="carousel-item"><img src="images/Colaboradores/sportcaetano.png" width="420" height="290px"></a>
-       <div class="divider"></div>
+  
+    <a class="carousel-item"><img src="images/Colaboradores/mauchsouza.jpg" width="390px" height="160px"></a>
+    <a class="carousel-item"><img src="images/Colaboradores/sportcaetano.png" width="280" height="160px"></a>
+    </div>
   </div>
-  </div>
-   <h2 class="center"><span class="orange-text">SOBRE O APLICATIVO</span></h2>
   <div class="container">
-<div class="row">
-        <div class="col s12 m4">
+   <h2 class="center"><span class="orange-text">SOBRE O APLICATIVO</span></h2>
+  
+<div class="row col s12">
+        <div class="col s12 ">
           <div class="icon-block">
             <h1 class="center light-orange-text"><i class="material-icons">flash_on</i></h1>
             <h4 class="center">Facilidade e agilidade na procura</h4>
@@ -26,17 +28,7 @@
             <h5 class="light center">O app facilita a vida do usuário, trazendo diversas opções de produtos com base nos seus interesses, sem perder horas procurando, indo sempre direto a melhor oferta!</h5>
           </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h1 class="center light-orange-text"><i class="material-icons">location_on</i></h1>
-            <h4 class="center">Baseado sempre em sua Localização</h4>
-
-            <h5 class="light center">O app traz as informações pertinentes com base na sua localização. Nada de ofertas à Km de distância! Tudo bem pertinho de você.</h5>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
+        <div class="col s12 ">
           <div class="icon-block">
             <h1 class="center light-orange-text"><i class="material-icons">local_grocery_store</i></h1>
             <h4 class="center">Não é um site de compras online!</h4>
