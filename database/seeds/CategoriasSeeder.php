@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Categorias;
 
 class CategoriasSeeder extends Seeder
 {
@@ -15,7 +16,7 @@ class CategoriasSeeder extends Seeder
         $data = json_decode($json);
         foreach ($data as $item)
         {
-            RamoAtivEmpreendimento::create(array(
+            Categorias::create(array(
                 'id' => $item->id,
                 'name' => $item->name
             ));

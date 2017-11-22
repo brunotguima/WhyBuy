@@ -8,7 +8,7 @@ use App\promocao;
 
 class Categorias extends Model
 {
-    protected $table = 'ramoatividade';
+    protected $table = 'categorias';
     
     public function promocao(){
         return $this->HasMany('App\promocao');
