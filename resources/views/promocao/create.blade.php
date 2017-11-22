@@ -17,17 +17,17 @@
 				</select>
 				<label for="nomeProd" class="col m4 control-label">Nome Produto:</label>
 				<div class="col m6 input-field">
-					<input id="nomeProd" type="text" class="validate" name="nomeProd"placeholder="Bicicleta"required>
+					<input id="nomeProd" type="text" class="validate" name="nomeProd"placeholder="Nome do Produto"required>
 				</div>
 
 				<label for="marcaProd" class="col m4 control-label">Marca do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="marcaProd" type="text" class="validate" name="marcaProd"placeholder="Caloi" required>
+					<input id="marcaProd" type="text" class="validate" name="marcaProd"placeholder="Marca do Produto" required>
 				</div>
 
 				<label for="valorProd" class="col m4 control-label">Valor do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="valorProd" type="text" class="validate" name="valorProd" required placeholder="R$100,00">
+					<input id="valorProd" type="text" class="validate" name="valorProd" required placeholder="R$000,00">
 				</div>
 
 				<label for="categoria" class="col m4 control-label">Categoria do Produto:</label>
@@ -38,7 +38,7 @@
 					</select>
 				<label for="codProd" class="col m4 control-label">Codigo do Produto:</label>
 				<div class="col m6 input-field">
-					<input id="codProd" type="text" class="codProd" name="codProd" placeholder="17309" required>
+					<input id="codProd" type="text" class="codProd" name="codProd" placeholder="Codigo do Produto" required>
 				</div>
 
 				<div class="col m6 input-field">

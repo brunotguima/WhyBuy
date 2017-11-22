@@ -18,7 +18,7 @@
 
                         <label for="dateNasc" class="col-md-4 control-label">Data de Nascimento</label>
                         <div class="col-md-6">
-                            <input id="dateNasc" type="date" class="form-control" name="dateNasc" required>
+                            <input id="dateNasc" type="date" class="form-control" name="dateNasc"   required>
                         </div>
 
                                  <label for="email" class="col-md-4 control-label">Endereço de E-Mail</label>
@@ -52,4 +52,8 @@ $(document).ready(function(){
   $('.dateNasc').mask('00/00/0000');
 });
     </script>
-@endsection
+   @if($errors->any()) @foreach ($errors->all() as $error)
+   <script>
+       var error = "<?=$error?>"
+       Materialize.toast(error, 5000);
+   </script> @endforeach @endif @endsection
