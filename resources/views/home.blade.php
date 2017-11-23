@@ -9,8 +9,11 @@
   </div>  
   </div>
   <div class="row">
-  <div class="card-panel orange lighten-4">
-  <h2 class="center"><span class="orange-text">COLABORADORES</span></h2>
+  <div class="card-panel orange ">
+  <h2 class="center"><span class="white-text">COLABORADORES</span></h2>
+  <div class="divider">
+  </div>
+  </br>
   
     <a class="carousel-item"><img src="images/Colaboradores/mauchsouza.jpg" width="390px" height="160px"></a>
     <a class="carousel-item"><img src="images/Colaboradores/sportcaetano.png" width="290" height="160px"></a>
