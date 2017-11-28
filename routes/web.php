@@ -41,3 +41,4 @@ Route::prefix('empreendimentos')->group(function() {
 Route::resource('perfil','PerfilController');
 Route::resource('maps','MapController');
 
+Route::get('getPromocoes/{id}','PromocaoController@getPromocoes');

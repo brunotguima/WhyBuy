@@ -66,4 +66,9 @@ class PromocaoController extends Controller
         return redirect('/empreendimentos/'.$getEmpreendimento[0]->slug);
       // return redirect()->route('empreendimentos.show', $getEmpreendimento->slug);
     }
+
+    public function getPromocoes($id){
+        $promocoes = promocao::where('empreendimentos_id',$id)->get();
+        return response()->json($promocoes);
+    }
 }

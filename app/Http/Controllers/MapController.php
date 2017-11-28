@@ -124,9 +124,9 @@ class MapController extends Controller
                     </br>
                     <label>Endereço</label>
                     <p>'.$empreendimento->endereco.', '.$empreendimento->cidade.', '.$empreendimento->estado.', '.$empreendimento->cep.'</p>
-                </div>
+                </div> 
                 <div class="card-action">
-                    <ul><li><a onClick="sideNav1()" data-activates="slide-out1" id="button-collapse1" class="button-collapse">Veja as ofertas!</a></li></ul>
+                    <ul><li><a data-activates="slide-out1" data-empreendimentoid="'.$empreendimento->id.'" class="button-collapse">Veja as ofertas!</a></li></ul>
                 </div>
             </div>
         </div>
